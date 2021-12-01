@@ -248,7 +248,9 @@ namespace GetUID
                 /* Load and parse output */
                 var htmldoc = new HtmlDocument();
                 htmldoc.LoadHtml(response_data);
+#nullable enable // So that the compiler is happy with what we do
                 HtmlNode? uid_node = htmldoc.DocumentNode.SelectSingleNode(xpath);
+#nullable disable
                 if (uid_node == null) continue;
                 string uid = uid_node.InnerText;
                 if (uid.All(char.IsDigit)) return Convert.ToInt64(uid);
@@ -291,7 +293,10 @@ namespace GetUID
             link = $"https://www.facebook.com/{handle}";
             (string url, IDictionary<string, string> data, string xpath)[] services =
             {
-                ("https://id.atpsoftware.vn/", new Dictionary<string, string>{ { "linkCheckUid", link } }, "//div[@id='menu1']/textarea")
+                ("https://id.atpsoftware.vn/", new Dictionary<string, string>{ { "linkCheckUid", link } }, "//div[@id='menu1']/textarea"),
+                ("https://findidfb.com/#", new Dictionary<string, string>{ { "url", link } }, "//div[@class='alert alert-success alert-dismissable']/b"),
+                ("https://lookup-id.com/#", new Dictionary<string, string>{ { "fburl", link }, { "check", "Lookup" } }, "//span[@id='code']")
+                /* TODO: Add more services. The more services we have in here, the more chance we have at getting UIDs without ratelimiting the user. */
             };
             foreach(var service in services)
             {
@@ -315,7 +320,9 @@ namespace GetUID
             var htmldoc = new HtmlDocument();
             htmldoc.LoadHtml(response_data);
             /* In some cases we can get the UID by checking the [Join] button while not logged in */
+#nullable enable
             HtmlNode? e = htmldoc.DocumentNode.SelectSingleNode("//a[starts-with(@href, '/r.php')]");
+#nullable disable
             if(e != null)
             {
                 uid = Convert.ToInt64(Regex.Replace(e.Attributes["href"].Value, "(^.*\\&rid=)|(\\&.*$)", ""));
