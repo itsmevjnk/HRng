@@ -38,11 +38,13 @@ namespace GetUID
          *    - :[UID] (if the UID exists instead of the user name, e.g.
          *              https://www.facebook.com/profile.php?id=[UID])
          *   Input : link: A [string] variable containing the Facebook profile link.
-         *   Output: The handle in [string] type.
+         *   Output: The handle in [string] type, or "" if the passed URL is invalid.
          */
         public string GetHandle(string link)
         {
             link = Regex.Replace(link, "^.*://", ""); // Remove the schema (aka http(s)://) from the link
+
+            if (link == "") return ""; // Totally invalid link
 
             /* Split the link up into elements */
             string[] link_elements = link.ToLower().Split("/").Where(x => !String.IsNullOrEmpty(x)).ToArray(); // Use LINQ to handle removal of empty elements
