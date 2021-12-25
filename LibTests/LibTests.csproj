@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FakeUA\FakeUA.csproj" />
-    <ProjectReference Include="..\GetUID\GetUID.csproj" />
+    <ProjectReference Include="..\HRngBackend\HRngBackend.csproj" />
   </ItemGroup>
 
 </Project>
