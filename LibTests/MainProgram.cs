@@ -88,6 +88,12 @@ namespace LibTests
             Console.Write("Updating Chromium and/or ChromeDriver...");
             if (await chrome.Update() != 0) Console.WriteLine("failed.");
             else Console.WriteLine("done.");
+            Console.Write("Starting Chrome/Chromium...");
+            var driver = chrome.InitializeSelenium(headless: false);
+            Console.WriteLine("done.");
+            Console.WriteLine("Press Enter to close browser.");
+            Console.ReadLine();
+            driver.Quit();
 
             Console.WriteLine("Tests completed");
             Console.ReadLine();
