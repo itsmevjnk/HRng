@@ -4,16 +4,15 @@
  * Author    : itsmevjnk
  */
 
+using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Net;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-
-using HtmlAgilityPack;
 
 namespace HRngBackend
 {
@@ -47,7 +46,7 @@ namespace HRngBackend
 
             /* Split the link up into elements */
             string[] link_elements = link.ToLower().Split("/").Where(x => !String.IsNullOrEmpty(x)).ToArray(); // Use LINQ to handle removal of empty elements
-            if(link_elements.Length == 1)
+            if (link_elements.Length == 1)
             {
                 /* We probably get a link in the form of [/]profile.php or [/](UID/user name), i.e. not even a link */
                 string[] query = link_elements[0].Split('?');
@@ -60,7 +59,8 @@ namespace HRngBackend
                         if (q.StartsWith("id=") && q.Length > "id=".Length && q.Substring("id=".Length).All(char.IsDigit)) return ":" + q.Substring("id=".Length);
                     }
                     return ""; // Cannot find id= parameter
-                } else
+                }
+                else
                 {
                     if (query[0].All(char.IsDigit)) return ":" + query[0]; // UID
                     else return query[0];
@@ -70,12 +70,13 @@ namespace HRngBackend
              * Now the first element contains the domain name, and we can use it to
              * determine if it's a valid link
              */
-            if(link_elements[0].EndsWith("m.me"))
+            if (link_elements[0].EndsWith("m.me"))
             {
                 /* m.me/(UID or user name) */
                 if (link_elements[1].All(char.IsDigit)) return ":" + link_elements[1]; // UID
                 else return link_elements[1];
-            } else
+            }
+            else
             {
                 string[] domain = link_elements[0].Split('.'); // We also split it here
                 if (Array.IndexOf(domain, "facebook") > -1)
@@ -156,7 +157,7 @@ namespace HRngBackend
         {
             Cache.Clear();
         }
-        
+
         /*
          * public void AddCookie(string key, string value)
          *   Add a cookie for logging into Facebook.
@@ -197,8 +198,6 @@ namespace HRngBackend
         {
             CommonHTTP.ClientHandler.CookieContainer = new CookieContainer();
         }
-
-        
 
         /*
          * private async static Task<long> LookupUID(string service_url,
@@ -242,14 +241,16 @@ namespace HRngBackend
                         var response = await CommonHTTP.Client.SendAsync(request_msg); // Perform POST request
                         response.EnsureSuccessStatusCode();
                         response_data = await response.Content.ReadAsStringAsync();
-                    } else
+                    }
+                    else
                     {
-                        CancellationToken token = (CancellationToken) ctoken;
+                        CancellationToken token = (CancellationToken)ctoken;
                         var response = await CommonHTTP.Client.SendAsync(request_msg, cancellationToken: token); // Perform POST request with cancellation token
                         response.EnsureSuccessStatusCode();
                         response_data = await response.Content.ReadAsStringAsync();
                     }
-                } catch (Exception exc)
+                }
+                catch (Exception exc)
                 {
                     if (ctoken != null && exc.GetType().IsAssignableFrom(typeof(TaskCanceledException)) && ((CancellationToken)ctoken).IsCancellationRequested) return -2; // Task cancelled
                     continue;
@@ -265,7 +266,7 @@ namespace HRngBackend
                 string uid = uid_node.InnerText;
                 if (uid.All(char.IsDigit)) return Convert.ToInt64(uid);
             }
-            if (ctoken != null && ((CancellationToken) ctoken).IsCancellationRequested) return -2; // Task cancelled
+            if (ctoken != null && ((CancellationToken)ctoken).IsCancellationRequested) return -2; // Task cancelled
             return -1; // Cannot retrieve UID
         }
 
@@ -328,7 +329,7 @@ namespace HRngBackend
                     goto retrieved;
                 }
             }
-            foreach(var service in services)
+            foreach (var service in services)
             {
                 // Console.WriteLine(service);
                 uid = await LookupUID(service.url, service.data, service.xpath);
@@ -353,7 +354,7 @@ namespace HRngBackend
 #nullable enable
             HtmlNode? e = htmldoc.DocumentNode.SelectSingleNode("//a[starts-with(@href, '/r.php')]");
 #nullable disable
-            if(e != null)
+            if (e != null)
             {
                 uid = Convert.ToInt64(Regex.Replace(e.Attributes["href"].Value, "(^.*\\&rid=)|(\\&.*$)", ""));
                 goto retrieved;
@@ -365,14 +366,14 @@ namespace HRngBackend
             if (htmldoc.DocumentNode.SelectSingleNode("//a[@href='https://www.facebook.com/help/177066345680802']") != null) return -4;
             /* Retrieve from block link, works for normal profiles */
             e = htmldoc.DocumentNode.SelectSingleNode("//a[starts-with(@href, '/privacy/touch/block/confirm/?bid=')]");
-            if(e != null)
+            if (e != null)
             {
                 uid = Convert.ToInt64(Regex.Replace(e.Attributes["href"].Value, "(^.*\\?bid=)|(&.*$)", ""));
                 goto retrieved;
             }
             /* Retrieve from [More] button link, works for pages */
             e = htmldoc.DocumentNode.SelectSingleNode("//a[starts-with(@href, '/pages/more/')]");
-            if(e != null)
+            if (e != null)
             {
                 uid = Convert.ToInt64(Regex.Replace(e.Attributes["href"].Value, "\\/.*$", ""));
                 goto retrieved;

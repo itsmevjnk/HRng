@@ -165,8 +165,8 @@ namespace HRngBackend
             {
                 case 0: ret += UAPlatformChrome(); break;
                 case 1: ret += UAPlatformFirefox(); break;
-                
-                /* TODO: Add more browsers */
+
+                    /* TODO: Add more browsers */
             }
 
             return ret;
