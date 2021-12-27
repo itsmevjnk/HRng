@@ -24,5 +24,15 @@ namespace HRngBackend
          *   (e.g. browser or driver) is stored.
          */
         public static string PlatformBase = Path.Combine(CommonBase, OSCombo.Combo);
+
+        /*
+         * static BaseDir()
+         *   Class constructor. Creates the PlatformBase directory
+         *   if it doesn't exist.
+         */
+        static BaseDir()
+        {
+            Directory.CreateDirectory(PlatformBase);
+        }
     }
 }
