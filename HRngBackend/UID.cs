@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 
 using HtmlAgilityPack;
@@ -202,7 +203,8 @@ namespace HRngBackend
         /*
          * private async static Task<long> LookupUID(string service_url,
          *                                           IDictionary<string, string> data,
-         *                                           string xpath)
+         *                                           string xpath,
+         *                                           [CancellationToken ctoken])
          *   Private helper function for looking up UID from services.
          *   This function sends a POST request with data specified in [data] to
          *   the service specified in [service_url], then retrieves the UID using
@@ -211,15 +213,18 @@ namespace HRngBackend
          *           data       : POST request data.
          *           xpath      : XPath pointing to the element containing the UID
          *                        returned by the service.
+         *           ctoken     : Cancellation token for cancelling the task (optional).
          *   Output: The retrieved UID, or -1 on failure.
+         *           If ctoken is specified, -2 will be returned if the task is
+         *           cancelled.
          */
-        private async static Task<long> LookupUID(string service_url, IDictionary<string, string> data, string xpath)
+        private async static Task<long> LookupUID(string service_url, IDictionary<string, string> data, string xpath, CancellationToken? ctoken = null)
         {
             var rq_content = new FormUrlEncodedContent(data); // POST request data, converted to work with HttpClient
-            for (int i = 0; i < 3; i++) // retry for 3 times at most
+            for (int i = 0; i < 3 && (ctoken == null || !((CancellationToken)ctoken).IsCancellationRequested); i++) // retry for 3 times at most
             {
                 /* Send POST request to service */
-                string response_data;
+                string response_data = "";
                 try
                 {
                     HttpRequestMessage request_msg = new HttpRequestMessage // For custom User-Agent
@@ -232,12 +237,22 @@ namespace HRngBackend
                         },
                         Content = rq_content
                     };
-                    var response = await CommonHTTP.Client.SendAsync(request_msg); // Perform POST request
-                    response.EnsureSuccessStatusCode();
-                    response_data = await response.Content.ReadAsStringAsync();
-                } catch
+                    if (ctoken == null)
+                    {
+                        var response = await CommonHTTP.Client.SendAsync(request_msg); // Perform POST request
+                        response.EnsureSuccessStatusCode();
+                        response_data = await response.Content.ReadAsStringAsync();
+                    } else
+                    {
+                        CancellationToken token = (CancellationToken) ctoken;
+                        var response = await CommonHTTP.Client.SendAsync(request_msg, cancellationToken: token); // Perform POST request with cancellation token
+                        response.EnsureSuccessStatusCode();
+                        response_data = await response.Content.ReadAsStringAsync();
+                    }
+                } catch (Exception exc)
                 {
-                    continue; // TODO: We might want to add extra exception handling logic
+                    if (ctoken != null && exc.GetType().IsAssignableFrom(typeof(TaskCanceledException)) && ((CancellationToken)ctoken).IsCancellationRequested) return -2; // Task cancelled
+                    continue;
                 }
 
                 /* Load and parse output */
@@ -250,6 +265,7 @@ namespace HRngBackend
                 string uid = uid_node.InnerText;
                 if (uid.All(char.IsDigit)) return Convert.ToInt64(uid);
             }
+            if (ctoken != null && ((CancellationToken) ctoken).IsCancellationRequested) return -2; // Task cancelled
             return -1; // Cannot retrieve UID
         }
 
@@ -293,6 +309,25 @@ namespace HRngBackend
                 ("https://lookup-id.com/#", new Dictionary<string, string>{ { "fburl", link }, { "check", "Lookup" } }, "//span[@id='code']")
                 /* TODO: Add more services. The more services we have in here, the more chance we have at getting UIDs without ratelimiting the user. */
             };
+            IList<Task<long>> svc_tasks = new List<Task<long>> { }; // Lookup task pool
+            IList<CancellationTokenSource> svc_cts = new List<CancellationTokenSource> { }; // List of cancellation token sources corresponding to the lookup tasks
+            foreach (var service in services)
+            {
+                svc_cts.Add(new CancellationTokenSource()); // Create cancellation token sources
+                svc_tasks.Add(Task.Run(() => { return LookupUID(service.url, service.data, service.xpath, svc_cts.Last().Token); }, cancellationToken: svc_cts.Last().Token)); // Add each lookup task to the pool
+            }
+            while (svc_tasks.Count > 0)
+            {
+                Task<long> finished_task = await Task.WhenAny(svc_tasks); // Wait until any task finishes
+                if (finished_task.Result >= 0)
+                {
+                    // Task finishes successfully, cancel all the other tasks and return
+                    foreach (var cts in svc_cts) cts.Cancel(); // Send cancellation signal to all tasks (including the one that finished, but that's okay)
+
+                    uid = finished_task.Result;
+                    goto retrieved;
+                }
+            }
             foreach(var service in services)
             {
                 // Console.WriteLine(service);
