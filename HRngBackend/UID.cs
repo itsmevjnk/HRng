@@ -155,18 +155,6 @@ namespace HRngBackend
         {
             Cache.Clear();
         }
-
-        /*
-         * private static HttpClientHandler HTTPClientHandler
-         *   Private handler instance for HTTPClient.
-         */
-        private static HttpClientHandler HTTPClientHandler = new HttpClientHandler();
-
-        /*
-         * private static HttpClient HTTPClient
-         *   Private HTTP client instance for UID lookup.
-         */
-        private static HttpClient HTTPClient = new HttpClient(HTTPClientHandler);
         
         /*
          * public void AddCookie(string key, string value)
@@ -181,8 +169,8 @@ namespace HRngBackend
             cookie.Name = key; cookie.Value = value; // Insert the key and value, very straightforward part
             cookie.Domain = ".facebook.com"; cookie.Path = "/"; // Indicates this cookie is for *.facebook.com/*
 
-            if (HTTPClientHandler.CookieContainer == null) HTTPClientHandler.CookieContainer = new CookieContainer();
-            HTTPClientHandler.CookieContainer.Add(cookie); // Add to the Facebook cookies collection
+            if (CommonHTTP.ClientHandler.CookieContainer == null) CommonHTTP.ClientHandler.CookieContainer = new CookieContainer();
+            CommonHTTP.ClientHandler.CookieContainer.Add(cookie); // Add to the Facebook cookies collection
         }
 
         /*
@@ -206,7 +194,7 @@ namespace HRngBackend
          */
         public void ClearCookies()
         {
-            HTTPClientHandler.CookieContainer = new CookieContainer();
+            CommonHTTP.ClientHandler.CookieContainer = new CookieContainer();
         }
 
         
@@ -231,12 +219,20 @@ namespace HRngBackend
             for (int i = 0; i < 3; i++) // retry for 3 times at most
             {
                 /* Send POST request to service */
-                HTTPClient.DefaultRequestHeaders.Add("User-Agent", UserAgent.Next()); // Load fake User-Agent string so Cloudflare won't block us
-
                 string response_data;
                 try
                 {
-                    var response = await HTTPClient.PostAsync(service_url, rq_content); // Perform POST request
+                    HttpRequestMessage request_msg = new HttpRequestMessage // For custom User-Agent
+                    {
+                        Method = HttpMethod.Post,
+                        RequestUri = new Uri(service_url),
+                        Headers =
+                        {
+                            { HttpRequestHeader.UserAgent.ToString(), UserAgent.Next() }
+                        },
+                        Content = rq_content
+                    };
+                    var response = await CommonHTTP.Client.SendAsync(request_msg); // Perform POST request
                     response.EnsureSuccessStatusCode();
                     response_data = await response.Content.ReadAsStringAsync();
                 } catch
@@ -308,7 +304,7 @@ namespace HRngBackend
             string response_data;
             try
             {
-                var response = await HTTPClient.GetAsync($"https://mbasic.facebook.com/{handle}");
+                var response = await CommonHTTP.Client.GetAsync($"https://mbasic.facebook.com/{handle}");
                 response.EnsureSuccessStatusCode();
                 response_data = await response.Content.ReadAsStringAsync();
             }
@@ -327,7 +323,7 @@ namespace HRngBackend
                 uid = Convert.ToInt64(Regex.Replace(e.Attributes["href"].Value, "(^.*\\&rid=)|(\\&.*$)", ""));
                 goto retrieved;
             }
-            if (HTTPClientHandler.CookieContainer.Count == 0) return -3; // No cookies to perform logged-in scraping
+            if (CommonHTTP.ClientHandler.CookieContainer.Count == 0) return -3; // No cookies to perform logged-in scraping
             /* Check if we are still at the login page */
             if (htmldoc.DocumentNode.SelectSingleNode("//a[starts-with(@href, '/recover')]") != null) return -5; // Password recovery link, only present when we're logging in
             /* Check if we have been ratelimited */
