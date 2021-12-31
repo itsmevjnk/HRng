@@ -16,20 +16,20 @@ using System.Threading.Tasks;
 
 namespace HRngBackend
 {
-    public class UID
+    public static class UID
     {
         /*
-         * public IDictionary<string, long> Cache
+         * public static IDictionary<string, long> Cache
          *   User name to UID cache.
          *   While it's possible to read and write directly from this dictionary,
          *   this is not recommended, and improper use may result in undefined
          *   behavior. Use Add() and Get() to insert and retrieve UIDs, and use
          *   ClearCache() to clear the cache.
          */
-        public IDictionary<string, long> Cache = new Dictionary<string, long>();
+        public static IDictionary<string, long> Cache = new Dictionary<string, long>();
 
         /*
-         * public string GetHandle(string link)
+         * public static string GetHandle(string link)
          *   Process a Facebook profile link and retrieve the profile's handle.
          *   A handle is our extension of the Facebook user name, and can be either:
          *    - the user name (if one exists in the link)
@@ -38,14 +38,14 @@ namespace HRngBackend
          *   Input : link: A [string] variable containing the Facebook profile link.
          *   Output: The handle in [string] type, or "" if the passed URL is invalid.
          */
-        public string GetHandle(string link)
+        public static string GetHandle(string link)
         {
             link = Regex.Replace(link, "^.*://", ""); // Remove the schema (aka http(s)://) from the link
 
             if (link == "") return ""; // Totally invalid link
 
             /* Split the link up into elements */
-            string[] link_elements = link.ToLower().Split("/").Where(x => !String.IsNullOrEmpty(x)).ToArray(); // Use LINQ to handle removal of empty elements
+            string[] link_elements = link.ToLower().Split("/").Where(x => !String.IsNullOrEmpty(x) && !x.StartsWith('?')).ToArray(); // Use LINQ to handle removal of empty elements
             if (link_elements.Length == 1)
             {
                 /* We probably get a link in the form of [/]profile.php or [/](UID/user name), i.e. not even a link */
@@ -113,7 +113,7 @@ namespace HRngBackend
         }
 
         /*
-         * public bool Add(string link, long uid)
+         * public static bool Add(string link, long uid)
          *   Processes the link to get the handle, then add an entry to the UID
          *   cache. If the link already has the UID as part of it, this function
          *   will still return [true], but no entries will be added.
@@ -122,7 +122,7 @@ namespace HRngBackend
          *   Output: true  if the entry can be added.
          *           false if the link or UID is invalid.
          */
-        public bool Add(string link, long uid)
+        public static bool Add(string link, long uid)
         {
             if (uid <= 0) return false; // Invalid UID
 
@@ -135,68 +135,27 @@ namespace HRngBackend
         }
 
         /*
-         * private void AddHandle(string handle, long uid)
+         * private static void AddHandle(string handle, long uid)
          *   Adds an entry to the UID cache by handle.
          *   Input : handle: The Facebook profile handle.
          *           uid   : The UID that is associated with it.
          *   Output: none.
          */
-        private void AddHandle(string handle, long uid)
+        private static void AddHandle(string handle, long uid)
         {
             foreach (var item in Cache.Where(kvp => kvp.Value == uid).ToList()) Cache.Remove(item.Key); // Remove all existing cache entries with our UID since each UID can only be associated with an user name
             Cache.Add(handle, uid); // Add to cache
         }
 
         /*
-         * public void ClearCache()
+         * public static void ClearCache()
          *   Clears the UID cache.
          *   Input : none.
          *   Output: none.
          */
-        public void ClearCache()
+        public static void ClearCache()
         {
             Cache.Clear();
-        }
-
-        /*
-         * public void AddCookie(string key, string value)
-         *   Add a cookie for logging into Facebook.
-         *   Input : key, value: The cookie's key and value.
-         *   Output: none.
-         */
-        public void AddCookie(string key, string value)
-        {
-            Cookie cookie = new Cookie(); // The proper cookie object to be added into CookieContainer
-
-            cookie.Name = key; cookie.Value = value; // Insert the key and value, very straightforward part
-            cookie.Domain = ".facebook.com"; cookie.Path = "/"; // Indicates this cookie is for *.facebook.com/*
-
-            if (CommonHTTP.ClientHandler.CookieContainer == null) CommonHTTP.ClientHandler.CookieContainer = new CookieContainer();
-            CommonHTTP.ClientHandler.CookieContainer.Add(cookie); // Add to the Facebook cookies collection
-        }
-
-        /*
-         * public void AddCookies(IDictionary<string, string> cookies)
-         *   Add multiple cookies stored in a <string, string> dictionary to
-         *   the Facebook login cookies.
-         *   Input : cookies: The <string, string> dictionary containg the
-         *                    cookies to be added.
-         *   Output: none.
-         */
-        public void AddCookies(IDictionary<string, string> cookies)
-        {
-            foreach (var cookie in cookies) AddCookie(cookie.Key, cookie.Value);
-        }
-
-        /*
-         * public void ClearCookies()
-         *   Clear the Facebook login cookies.
-         *   Input : none.
-         *   Output: none.
-         */
-        public void ClearCookies()
-        {
-            CommonHTTP.ClientHandler.CookieContainer = new CookieContainer();
         }
 
         /*
@@ -271,7 +230,7 @@ namespace HRngBackend
         }
 
         /*
-         * public async Task<long> Get(string link)
+         * public static async Task<long> Get(string link)
          *   The main function of this library. This function attempts to retrieve
          *   the UID of a Facebook link using these methods:
          *    - Getting UID directly from link
@@ -289,7 +248,7 @@ namespace HRngBackend
          *            -5: Cannot retrieve UID because the provided Facebook cookies
          *                is invalid (i.e. signed out)
          */
-        public async Task<long> Get(string link)
+        public static async Task<long> Get(string link)
         {
             string handle = GetHandle(link); // From now on we will work with this handle
             if (handle == "") return -1; // Invalid link
@@ -320,7 +279,7 @@ namespace HRngBackend
             while (svc_tasks.Count > 0)
             {
                 Task<long> finished_task = await Task.WhenAny(svc_tasks); // Wait until any task finishes
-                if (finished_task.Result >= 0)
+                if (finished_task.Result > 0)
                 {
                     // Task finishes successfully, cancel all the other tasks and return
                     foreach (var cts in svc_cts) cts.Cancel(); // Send cancellation signal to all tasks (including the one that finished, but that's okay)
@@ -333,7 +292,7 @@ namespace HRngBackend
             {
                 // Console.WriteLine(service);
                 uid = await LookupUID(service.url, service.data, service.xpath);
-                if (uid >= 0) goto retrieved;
+                if (uid > 0) goto retrieved;
             }
 
             /* Attempt retrieval by scraping Facebook (if possible) */

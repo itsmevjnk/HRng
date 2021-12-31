@@ -30,7 +30,7 @@ namespace HRngBackend
         {
             kvpstr = kvpstr.Replace(" ", ""); // Remove all whitespaces
             IDictionary<string, string> cookies = new Dictionary<string, string> { };
-            foreach (string kvp in kvpstr.Split(psep))
+            foreach (string kvp in kvpstr.Split(psep, StringSplitOptions.RemoveEmptyEntries))
             {
                 string[] pair = kvp.Split(kvsep);
                 if (pair.Length != 2) return null; // Invalid pair

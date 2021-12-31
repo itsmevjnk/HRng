@@ -5,6 +5,7 @@
  */
 
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -14,6 +15,33 @@ namespace LibTests
 {
     class MainProgram
     {
+        /*
+         * static Stopwatch ProgressStopwatch
+         *   Stopwatch instance for progress indicator.
+         */
+        static Stopwatch stopwatch = new Stopwatch();
+
+        /*
+         * static int ProgressIndicator(int current, int total)
+         *   A simple progress indicator callback function.
+         *   Input : current: Current number of processed items.
+         *           total  : Total number of items to be processed.
+         *   Output: 0.
+         */
+        static int ProgressIndicator(int current, int total)
+        {
+            stopwatch.Stop();
+            Console.WriteLine($"{100 * ((float) current / (float) total)}% ({current}/{total}). Execution time: {stopwatch.ElapsedMilliseconds}ms");
+            stopwatch.Restart(); stopwatch.Start();
+            return 0;
+        }
+
+        /*
+         * static async Task<int> Main()
+         *   The main function.
+         *   Input : none.
+         *   Output: the return value.
+         */
         static async Task<int> Main()
         {
             Console.WriteLine("HRng Libraries Test\n");
@@ -24,8 +52,6 @@ namespace LibTests
             Console.WriteLine();
 
             /* GetUID test */
-            UID uid = new UID();
-
             Console.WriteLine("GetHandle() test:");
             string[] uid_handle_tests =
             {
@@ -39,13 +65,13 @@ namespace LibTests
             };
             foreach(string t in uid_handle_tests)
             {
-                Console.WriteLine(t + " => " + uid.GetHandle(t));
+                Console.WriteLine(t + " => " + UID.GetHandle(t));
             }
             Console.WriteLine();
 
             Console.WriteLine("UID retrieval test:");
             Console.Write("Facebook profile link to retrieve UID: "); string link = Console.ReadLine();
-            Console.Write("UID: "); Console.WriteLine(await uid.Get(link));
+            Console.Write("UID: "); Console.WriteLine(await UID.Get(link));
             Console.WriteLine();
 
             Console.WriteLine($"OS-architecture combo: {OSCombo.Combo}");
@@ -91,12 +117,80 @@ namespace LibTests
             Console.Write("Starting Chrome/Chromium...");
             var driver = chrome.InitializeSelenium(headless: false);
             Console.WriteLine("done.");
-            Console.WriteLine("Press Enter to close browser.");
+
+            Console.Write("Facebook cookies: "); var cookies = Cookies.FromKVPString(Console.ReadLine());
+            CommonHTTP.AddCookies("facebook.com", cookies); Cookies.Se_LoadCookies(driver, cookies, "https://m.facebook.com");
+            FBPost post = new FBPost(driver);
+            Console.Write("Facebook post link: "); string post_url = Console.ReadLine();
+            Console.Write("Initializing..."); Console.WriteLine($"done (returns {await post.Initialize(post_url)}).");
+            Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
+
+            while (true)
+            {
+                Console.WriteLine($"Options for Facebook post {post.PostID}:");
+                Console.WriteLine("1. Get all reactions");
+                Console.WriteLine("2. Get all comments");
+                Console.WriteLine("3. Get all shares");
+                Console.WriteLine("4. Clear UID cache");
+                Console.WriteLine("5. Go to next test");
+                Console.Write("Please select an option: "); int option = Convert.ToInt32(Console.ReadLine());
+
+                if (option == 1)
+                {
+                    Console.WriteLine("Getting all reactions...");
+                    var reactions = await post.GetReactions(ProgressIndicator);
+                    Console.WriteLine("Finished getting reactions.");
+                    foreach (var reaction_kvp in reactions)
+                    {
+                        var reaction = reaction_kvp.Value;
+                        Console.WriteLine($"{reaction.UserID} ({reaction.UserName}): {reaction.Reaction}");
+                    }
+                    Console.WriteLine();
+                }
+
+                if (option == 2)
+                {
+                    Console.WriteLine("Getting all comments...");
+                    var comments = await post.GetComments(ProgressIndicator);
+                    Console.WriteLine("Finished getting comments.");
+                    foreach (var comment_kvp in comments)
+                    {
+                        var comment = comment_kvp.Value;
+                        Console.Write($"Comment ID {comment.ID}:");
+                        if (comment.Parent != -1) Console.WriteLine($" reply of {comment.Parent}"); else Console.WriteLine();
+                        Console.WriteLine($"  Author: {comment.AuthorID} ({comment.AuthorName})");
+                        Console.WriteLine($"  Text (HTML): {comment.CommentText_HTML}");
+                        if (comment.Mentions.Count != 0) Console.WriteLine($"  Mentions: {String.Join(", ", comment.Mentions)}");
+                        if (comment.EmbedURL != "") Console.WriteLine($"  External link: {comment.EmbedURL} ({comment.EmbedTitle})");
+                        if (comment.ImageURL != "") Console.WriteLine($"  Image: {comment.ImageURL}");
+                        if (comment.VideoURL != "") Console.WriteLine($"  Video: {comment.VideoURL}");
+                        if (comment.StickerURL != "") Console.WriteLine($"  Sticker: {comment.StickerURL}");
+                        Console.WriteLine();
+                    }
+                }
+
+                if (option == 3)
+                {
+                    Console.WriteLine("Getting all accounts that shared this post...");
+                    var shares = await post.GetShares(ProgressIndicator);
+                    Console.WriteLine("Finished getting accounts.");
+                    foreach (var share_kvp in shares) Console.WriteLine($"{share_kvp.Key} ({share_kvp.Value})");
+                    Console.WriteLine();
+                }
+
+                if (option == 4)
+                {
+                    UID.ClearCache();
+                    Console.WriteLine("Cleared UID cache");
+                    Console.WriteLine();
+                }
+
+                if (option == 5) break;
+            }
+            
+            Console.WriteLine("Tests completed. Press Enter to stop.");
             Console.ReadLine();
             driver.Quit();
-
-            Console.WriteLine("Tests completed");
-            Console.ReadLine();
             return 0;
         }
     }
