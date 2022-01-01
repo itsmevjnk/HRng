@@ -29,6 +29,15 @@ namespace HRngBackend
         public static IDictionary<string, long> Cache = new Dictionary<string, long>();
 
         /*
+         * public static Mutex CacheMutex
+         *   Mutex object for the user name to UID cache above.
+         *   While it's also possible to use ConcurrentDirectory, it's overly
+         *   complicated for what we're trying to accomplish, which is making
+         *   sure that only one thread may have exclusive access to the cache.
+         */
+        public static Mutex CacheMutex = new Mutex();
+
+        /*
          * public static string GetHandle(string link)
          *   Process a Facebook profile link and retrieve the profile's handle.
          *   A handle is our extension of the Facebook user name, and can be either:
@@ -143,8 +152,10 @@ namespace HRngBackend
          */
         private static void AddHandle(string handle, long uid)
         {
+            CacheMutex.WaitOne(); // Wait until mutex is released
             foreach (var item in Cache.Where(kvp => kvp.Value == uid).ToList()) Cache.Remove(item.Key); // Remove all existing cache entries with our UID since each UID can only be associated with an user name
             Cache.Add(handle, uid); // Add to cache
+            CacheMutex.ReleaseMutex(); // Release mutex after our operation finishes
         }
 
         /*
@@ -155,7 +166,9 @@ namespace HRngBackend
          */
         public static void ClearCache()
         {
+            CacheMutex.WaitOne();
             Cache.Clear();
+            CacheMutex.ReleaseMutex();
         }
 
         /*
