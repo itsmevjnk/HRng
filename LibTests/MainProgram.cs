@@ -49,6 +49,8 @@ namespace LibTests
             /* CSV loading test */
             Console.Write("Input CSV file: "); string infile = Console.ReadLine();
             Spreadsheet sheet = CSV.FromFile(infile);
+            Console.WriteLine("Spreadsheet contents:");
+            foreach (var cell in sheet.Data) Console.WriteLine($"{sheet.Address(cell.Key)}: {cell.Value.Replace(Environment.NewLine, "<NL>")}");
             sheet.Update(sheet.Index("D10"), $"Hello, World!{Environment.NewLine}HRng Libraries Test");
             Console.Write("Output CSV file: "); string outfile = Console.ReadLine();
             CSV.ToFile(sheet, outfile);

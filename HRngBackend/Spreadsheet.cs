@@ -85,11 +85,11 @@ namespace HRngBackend
             string addr = "";
             if (tup.col != -1)
             {
-                while (tup.col > 0)
+                do
                 {
                     addr += $"{(char)((tup.col % 26) + 'A')}";
                     tup.col /= 26;
-                }
+                } while (tup.col > 0);
             }
             if (tup.row != -1) addr += Convert.ToString(tup.row + 1);
             return addr;
