@@ -32,7 +32,7 @@ namespace LibTests
         {
             stopwatch.Stop();
             Console.WriteLine($"{100 * ((float) current / (float) total)}% ({current}/{total}). Execution time: {stopwatch.ElapsedMilliseconds}ms");
-            stopwatch.Restart(); stopwatch.Start();
+            stopwatch.Reset(); stopwatch.Start();
             return 0;
         }
 
@@ -46,15 +46,20 @@ namespace LibTests
         {
             Console.WriteLine("HRng Libraries Test\n");
 
+            Stopwatch watch = new Stopwatch(); // For measuring operation time
+
             /* CSV loading test */
             Console.Write("Input CSV file: "); string infile = Console.ReadLine();
-            Spreadsheet sheet = CSV.FromFile(infile);
-            Console.WriteLine("Spreadsheet contents:");
-            foreach (var cell in sheet.Data) Console.WriteLine($"{sheet.Address(cell.Key)}: {cell.Value.Replace(Environment.NewLine, "<NL>")}");
+            watch.Start(); Spreadsheet sheet = CSV.FromFile(infile); watch.Stop();
+            Console.WriteLine($"Reading took {watch.ElapsedMilliseconds}ms"); watch.Reset();
             sheet.Update(sheet.Index("D10"), $"Hello, World!{Environment.NewLine}HRng Libraries Test");
+            watch.Start(); sheet.Shrink(); watch.Stop();
+            Console.WriteLine($"Spreadsheet shrinking took {watch.ElapsedMilliseconds}ms");
+            watch.Reset();
             Console.Write("Output CSV file: "); string outfile = Console.ReadLine();
-            CSV.ToFile(sheet, outfile);
-            Console.WriteLine($"CSV file rewritten to {outfile}");
+            watch.Start(); CSV.ToFile(sheet, outfile); watch.Stop();
+            Console.WriteLine($"CSV file rewritten to {outfile} (took {watch.ElapsedMilliseconds}ms)");
+            watch.Reset();
 
             /* FakeUA test */
             Console.WriteLine("15 randomly generated User-Agent strings:");
@@ -81,8 +86,9 @@ namespace LibTests
 
             Console.WriteLine("UID retrieval test:");
             Console.Write("Facebook profile link to retrieve UID: "); string link = Console.ReadLine();
-            Console.Write("UID: "); Console.WriteLine(await UID.Get(link));
-            Console.WriteLine();
+            Console.Write("UID: "); watch.Start(); Console.Write(await UID.Get(link)); watch.Stop();
+            Console.WriteLine($" (took {watch.ElapsedMilliseconds}ms)");
+            watch.Reset();
 
             /* OSCombo test */
             Console.WriteLine($"OS-architecture combo: {OSCombo.Combo}");
@@ -151,20 +157,19 @@ namespace LibTests
                 if (option == 1)
                 {
                     Console.WriteLine("Getting all reactions...");
-                    var reactions = await post.GetReactions(ProgressIndicator);
+                    watch.Start(); var reactions = await post.GetReactions(ProgressIndicator); watch.Stop();
                     Console.WriteLine("Finished getting reactions.");
                     foreach (var reaction_kvp in reactions)
                     {
                         var reaction = reaction_kvp.Value;
                         Console.WriteLine($"{reaction.UserID} ({reaction.UserName}): {reaction.Reaction}");
                     }
-                    Console.WriteLine();
                 }
 
                 if (option == 2)
                 {
                     Console.WriteLine("Getting all comments...");
-                    var comments = await post.GetComments(ProgressIndicator);
+                    watch.Start(); var comments = await post.GetComments(ProgressIndicator); watch.Stop();
                     Console.WriteLine("Finished getting comments.");
                     foreach (var comment_kvp in comments)
                     {
@@ -173,7 +178,7 @@ namespace LibTests
                         if (comment.Parent != -1) Console.WriteLine($" reply of {comment.Parent}"); else Console.WriteLine();
                         Console.WriteLine($"  Author: {comment.AuthorID} ({comment.AuthorName})");
                         Console.WriteLine($"  Text (HTML): {comment.CommentText_HTML}");
-                        if (comment.Mentions.Count != 0) Console.WriteLine($"  Mentions: {String.Join(", ", comment.Mentions)}");
+                        if (comment.Mentions_Handle.Count != 0) Console.WriteLine($"  Mentions: {String.Join(", ", comment.Mentions_Handle)}");
                         if (comment.EmbedURL != "") Console.WriteLine($"  External link: {comment.EmbedURL} ({comment.EmbedTitle})");
                         if (comment.ImageURL != "") Console.WriteLine($"  Image: {comment.ImageURL}");
                         if (comment.VideoURL != "") Console.WriteLine($"  Video: {comment.VideoURL}");
@@ -185,18 +190,20 @@ namespace LibTests
                 if (option == 3)
                 {
                     Console.WriteLine("Getting all accounts that shared this post...");
-                    var shares = await post.GetShares(ProgressIndicator);
+                    watch.Start(); var shares = await post.GetShares(ProgressIndicator); watch.Stop();
                     Console.WriteLine("Finished getting accounts.");
                     foreach (var share_kvp in shares) Console.WriteLine($"{share_kvp.Key} ({share_kvp.Value})");
-                    Console.WriteLine();
                 }
 
                 if (option == 4)
                 {
-                    UID.ClearCache();
+                    watch.Start(); UID.ClearCache(); watch.Stop();
                     Console.WriteLine("Cleared UID cache");
-                    Console.WriteLine();
                 }
+
+                Console.WriteLine($"Operation took {watch.ElapsedMilliseconds}ms");
+                Console.WriteLine();
+                watch.Reset();
 
                 if (option == 5) break;
             }

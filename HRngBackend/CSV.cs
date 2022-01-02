@@ -155,21 +155,27 @@ namespace HRngBackend
         {
             sheet_nl = sheet_nl ?? Environment.NewLine;
             bool nl_replace = (sheet_nl != newline); // Set if new line character replacement is needed
-            string output = "";
-            for(int row = 0; row < sheet.Rows; row++)
+            string output = ""; // Output
+            string cell = ""; // Cell value
+
+            /* Preprocessed for optimized memory usage (i.e. less GC) */
+            string escape_str = $"{escape}";
+            string escape_escape_str = $"{escape}{escape}";
+
+            for (int row = 0; row < sheet.Rows; row++)
             {
                 for(int col = 0; col < sheet.Columns; col++)
                 {
-                    string cell = "";
                     if (sheet.Data.ContainsKey((row, col)))
                     {
                         cell = sheet.Data[(row, col)];
                         if (nl_replace) cell = cell.Replace(sheet_nl, newline);
                         if (cell.Contains(escape) || cell.Contains(delimiter) || cell.Contains(newline))
                         {
-                            cell = $"{escape}{cell.Replace($"{escape}", $"{escape}{escape}")}{escape}"; // Escape cell value
+                            cell = escape_str + cell.Replace(escape_str, escape_escape_str) + escape_str; // Escape cell value
                         }
                     }
+                    else cell = "";
                     output += cell;
                     if (col != sheet.Columns - 1) output += $"{delimiter}";
                 }

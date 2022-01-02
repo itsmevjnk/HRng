@@ -52,10 +52,18 @@ namespace HRngBackend
         public string CommentText_HTML = "";
 
         /*
-         * public IList<long> Mentions
-         *   List containing UIDs of accounts mentioned in the comment.
+         * public IList<string> Mentions_Handle
+         *   List containing handles of accounts mentioned in the
+         *   comment.
          */
-        public IList<long> Mentions = new List<long>();
+        public IList<string> Mentions_Handle = new List<string>();
+
+        /*
+         * public IList<long> Mentions_UID
+         *   List containing UIDs of accounts mentioned in the comment
+         *   (optional).
+         */
+        public IList<long> Mentions_UID = new List<long>();
 
         /*
          * public string EmbedTitle

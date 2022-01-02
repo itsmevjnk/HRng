@@ -6,7 +6,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace HRngBackend
 {
@@ -24,7 +24,9 @@ namespace HRngBackend
          *   The number of rows in this spreadsheet.
          *   The spreadsheet is growing only; this means that
          *   the number of rows and columns will always be
-         *   increasing and will never decrease.
+         *   increasing and will never decrease
+         *   (unless Shrink() is called, which can be
+         *   a time-intensive action).
          */
         public int Rows = 0;
 
@@ -119,6 +121,25 @@ namespace HRngBackend
                 /* Cell added, check if we have to update rows/columns count */
                 if (Rows < idx.row + 1) Rows = idx.row + 1;
                 if (Columns < idx.col + 1) Columns = idx.col + 1;
+            }
+        }
+
+        /*
+         * public void Shrink()
+         *   Shrink the spreadsheet to fit the data in it.
+         *   This function can be time-intensive for large
+         *   spreadsheets; therefore, it should be called as
+         *   infrequently as possible (e.g. before writing).
+         *   Input : none.
+         *   Output: none.
+         */
+        public void Shrink()
+        {
+            if (Data.Count == 0) Columns = Rows = 0;
+            else
+            {
+                Rows = Data.Keys.Max(x => x.row) + 1;
+                Columns = Data.Keys.Max(x => x.col) + 1;
             }
         }
     }
