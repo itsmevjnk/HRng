@@ -46,6 +46,14 @@ namespace LibTests
         {
             Console.WriteLine("HRng Libraries Test\n");
 
+            /* CSV loading test */
+            Console.Write("Input CSV file: "); string infile = Console.ReadLine();
+            Spreadsheet sheet = CSV.FromFile(infile);
+            sheet.Update(sheet.Index("D10"), $"Hello, World!{Environment.NewLine}HRng Libraries Test");
+            Console.Write("Output CSV file: "); string outfile = Console.ReadLine();
+            CSV.ToFile(sheet, outfile);
+            Console.WriteLine($"CSV file rewritten to {outfile}");
+
             /* FakeUA test */
             Console.WriteLine("15 randomly generated User-Agent strings:");
             for (int i = 0; i < 15; i++) Console.WriteLine($"{i+1}: " + UserAgent.Next());
@@ -74,9 +82,11 @@ namespace LibTests
             Console.Write("UID: "); Console.WriteLine(await UID.Get(link));
             Console.WriteLine();
 
+            /* OSCombo test */
             Console.WriteLine($"OS-architecture combo: {OSCombo.Combo}");
             Console.WriteLine();
 
+            /* SevenZip test */
             if (SevenZip.Exists()) Console.WriteLine($"7za exists at {SevenZip.BinaryPath}");
             else
             {
@@ -85,6 +95,7 @@ namespace LibTests
                 Console.WriteLine("done.");
             }
 
+            /* ChromeHelper test */
             ChromeHelper chrome = new ChromeHelper();
             Console.WriteLine("ChromeHelper initialized");
             if (chrome.ChromeInst) Console.WriteLine($"Local Chrome/Chromium installation detected at {chrome.ChromePath}, version {chrome.LocalVersion()}");
@@ -118,13 +129,13 @@ namespace LibTests
             var driver = chrome.InitializeSelenium(headless: false);
             Console.WriteLine("done.");
 
+            /* FBPost/Cookies test */
             Console.Write("Facebook cookies: "); var cookies = Cookies.FromKVPString(Console.ReadLine());
             CommonHTTP.AddCookies("facebook.com", cookies); Cookies.Se_LoadCookies(driver, cookies, "https://m.facebook.com");
             FBPost post = new FBPost(driver);
             Console.Write("Facebook post link: "); string post_url = Console.ReadLine();
             Console.Write("Initializing..."); Console.WriteLine($"done (returns {await post.Initialize(post_url)}).");
             Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
-
             while (true)
             {
                 Console.WriteLine($"Options for Facebook post {post.PostID}:");
