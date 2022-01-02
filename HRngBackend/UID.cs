@@ -49,6 +49,8 @@ namespace HRngBackend
          */
         public static string GetHandle(string link)
         {
+            if (link.StartsWith(':') && link.Substring(1).All(char.IsDigit)) return link; // UID handle provided
+
             link = Regex.Replace(link, "^.*://", ""); // Remove the schema (aka http(s)://) from the link
 
             if (link == "") return ""; // Totally invalid link
