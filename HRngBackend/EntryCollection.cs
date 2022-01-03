@@ -181,7 +181,11 @@ namespace HRngBackend
         {
             if (!Headers.Keys.Contains(col)) throw new Exception($"Attempting to remove nonexistant column {col}");
             Headers.Remove(col);
-            foreach (var entry in Entries) entry.Data.Remove(col);
+            foreach (var entry in Entries)
+            {
+                entry.Data.Remove(col);
+                if (entry.IntData.ContainsKey(col)) entry.IntData.Remove(col);
+            }
         }
 
         /*
@@ -231,6 +235,8 @@ namespace HRngBackend
                 {
                     entry.Data.Remove(col); 
                     entry.Data.Add(col, Convert.ToString(entry_reacts.Count));
+                    if (entry.IntData.ContainsKey(col)) entry.IntData.Remove(col);
+                    entry.IntData.Add(col, entry_reacts.Count);
                 }
                 if (col_log != -1)
                 {
@@ -275,6 +281,8 @@ namespace HRngBackend
                 {
                     entry.Data.Remove(col);
                     entry.Data.Add(col, Convert.ToString(entry_shares.Count));
+                    if (entry.IntData.ContainsKey(col)) entry.IntData.Remove(col);
+                    entry.IntData.Add(col, entry_shares.Count);
                 }
                 if (col_log != -1)
                 {
@@ -347,6 +355,8 @@ namespace HRngBackend
                 {
                     entry.Data.Remove(col);
                     entry.Data.Add(col, Convert.ToString(cmt_text.Count));
+                    if (entry.IntData.ContainsKey(col)) entry.IntData.Remove(col);
+                    entry.IntData.Add(col, cmt_text.Count);
                 }
                 if (col_cmts != -1)
                 {
@@ -357,6 +367,8 @@ namespace HRngBackend
                 {
                     entry.Data.Remove(col_ment);
                     entry.Data.Add(col_ment, Convert.ToString(cmt_mentions.Count));
+                    if (entry.IntData.ContainsKey(col_ment)) entry.IntData.Remove(col_ment);
+                    entry.IntData.Add(col_ment, cmt_mentions.Count);
                 }
                 if (col_mdet != -1)
                 {

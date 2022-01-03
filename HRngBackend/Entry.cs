@@ -25,6 +25,13 @@ namespace HRngBackend
          *   from 0 where the data was taken from and will be
          *   written to.
          */
-        public IDictionary<int, string> Data = new Dictionary<int, string>(); 
+        public IDictionary<int, string> Data = new Dictionary<int, string>();
+
+        /*
+         * public IDictionary<int, int> IntData
+         *   Integer copy of data entries above (if available).
+         *   Only used for calculation purposes.
+         */
+        public IDictionary<int, int> IntData = new Dictionary<int, int>();
     }
 }
