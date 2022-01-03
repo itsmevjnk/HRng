@@ -226,7 +226,11 @@ namespace HRngBackend
                 }
                 catch (Exception exc)
                 {
-                    if (ctoken != null && exc.GetType().IsAssignableFrom(typeof(TaskCanceledException)) && ((CancellationToken)ctoken).IsCancellationRequested) return -2; // Task cancelled
+                    if (ctoken != null && exc.GetType().IsAssignableFrom(typeof(TaskCanceledException)))
+                    {
+                        if (((CancellationToken)ctoken).IsCancellationRequested) return -2; // Task canceled
+                        else return -1; // Timeout
+                    }
                     continue;
                 }
 

@@ -37,6 +37,7 @@ namespace HRngBackend
         {
             Client.DefaultRequestHeaders.Add("User-Agent", UserAgent.Next()); // Set up a random User-Agent for Client, so that services like GitHub can work
             if (ClientHandler.CookieContainer == null) ClientHandler.CookieContainer = new CookieContainer(); // Set up CookieContainer
+            Client.Timeout = TimeSpan.FromSeconds(30); // Set timeout to 30 seconds
         }
 
         /*
