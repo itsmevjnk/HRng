@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Text;
 
 using HRngBackend;
 
@@ -45,6 +46,8 @@ namespace LibTests
          */
         static async Task<int> Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             Console.WriteLine("HRng Libraries Test\n");
 
             Stopwatch watch = new Stopwatch(); // For measuring operation time
