@@ -8,6 +8,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
+using System.Linq;
 
 using HRngBackend;
 
@@ -49,6 +50,7 @@ namespace LibTests
             Stopwatch watch = new Stopwatch(); // For measuring operation time
 
             /* CSV loading test */
+            /*
             Console.Write("Input CSV file: "); string infile = Console.ReadLine();
             watch.Start(); Spreadsheet sheet = CSV.FromFile(infile); watch.Stop();
             Console.WriteLine($"Reading took {watch.ElapsedMilliseconds}ms"); watch.Reset();
@@ -60,6 +62,7 @@ namespace LibTests
             watch.Start(); CSV.ToFile(sheet, outfile); watch.Stop();
             Console.WriteLine($"CSV file rewritten to {outfile} (took {watch.ElapsedMilliseconds}ms)");
             watch.Reset();
+            */
 
             /* FakeUA test */
             Console.WriteLine("15 randomly generated User-Agent strings:");
@@ -144,6 +147,22 @@ namespace LibTests
             Console.Write("Facebook post link: "); string post_url = Console.ReadLine();
             Console.Write("Initializing..."); Console.WriteLine($"done (returns {await post.Initialize(post_url)}).");
             Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
+
+            /* CSV -> Spreadsheet -> EntryCollection test */
+            Console.Write("Input CSV file: "); string infile = Console.ReadLine();
+            EntryCollection ec = new EntryCollection();
+            watch.Start(); ec.FromSpreadsheet(CSV.FromFile(infile)); watch.Stop();
+            Console.WriteLine($"Loading took {watch.ElapsedMilliseconds}ms"); watch.Reset();
+            int col_react = ec.AddColumn("Reactions");
+            int col_react_log = ec.AddColumn("Reactions (detailed)");
+            int col_cmt_cnt = ec.AddColumn("Comments");
+            int col_cmt_text = ec.AddColumn("Comment text");
+            int col_ment_cnt = ec.AddColumn("Mentions");
+            int col_ment_uid = ec.AddColumn("Mentioned UID(s)");
+            int col_share = ec.AddColumn("Shares");
+            int col_share_log = ec.AddColumn("Accounts used to share");
+
+            /* FBPost/EntryCollection test */
             while (true)
             {
                 Console.WriteLine($"Options for Facebook post {post.PostID}:");
@@ -151,7 +170,8 @@ namespace LibTests
                 Console.WriteLine("2. Get all comments");
                 Console.WriteLine("3. Get all shares");
                 Console.WriteLine("4. Clear UID cache");
-                Console.WriteLine("5. Go to next test");
+                Console.WriteLine("5. Print EntryCollection");
+                Console.WriteLine("6. Go to next test");
                 Console.Write("Please select an option: "); int option = Convert.ToInt32(Console.ReadLine());
 
                 if (option == 1)
@@ -164,6 +184,10 @@ namespace LibTests
                         var reaction = reaction_kvp.Value;
                         Console.WriteLine($"{reaction.UserID} ({reaction.UserName}): {reaction.Reaction}");
                     }
+
+                    Stopwatch watch2 = new Stopwatch();
+                    watch2.Start(); ec.CountReactions(reactions.Values.ToList(), col_react, col_react_log); watch2.Stop();
+                    Console.WriteLine($"Counting took {watch2.ElapsedMilliseconds}ms");
                 }
 
                 if (option == 2)
@@ -178,13 +202,17 @@ namespace LibTests
                         if (comment.Parent != -1) Console.WriteLine($" reply of {comment.Parent}"); else Console.WriteLine();
                         Console.WriteLine($"  Author: {comment.AuthorID} ({comment.AuthorName})");
                         Console.WriteLine($"  Text (HTML): {comment.CommentText_HTML}");
-                        if (comment.Mentions_Handle.Count != 0) Console.WriteLine($"  Mentions: {String.Join(", ", comment.Mentions_Handle)}");
+                        if (comment.Mentions_UID.Count != 0) Console.WriteLine($"  Mentions: {String.Join(", ", comment.Mentions_UID)}");
                         if (comment.EmbedURL != "") Console.WriteLine($"  External link: {comment.EmbedURL} ({comment.EmbedTitle})");
                         if (comment.ImageURL != "") Console.WriteLine($"  Image: {comment.ImageURL}");
                         if (comment.VideoURL != "") Console.WriteLine($"  Video: {comment.VideoURL}");
                         if (comment.StickerURL != "") Console.WriteLine($"  Sticker: {comment.StickerURL}");
                         Console.WriteLine();
                     }
+
+                    Stopwatch watch2 = new Stopwatch();
+                    watch2.Start(); ec.CountComments(comments.Values.ToList(), col_cmt_cnt, col_cmt_text, col_ment: col_ment_cnt, col_mdet: col_ment_uid); watch2.Stop();
+                    Console.WriteLine($"Counting took {watch2.ElapsedMilliseconds}ms");
                 }
 
                 if (option == 3)
@@ -193,6 +221,10 @@ namespace LibTests
                     watch.Start(); var shares = await post.GetShares(ProgressIndicator); watch.Stop();
                     Console.WriteLine("Finished getting accounts.");
                     foreach (var share_kvp in shares) Console.WriteLine($"{share_kvp.Key} ({share_kvp.Value})");
+
+                    Stopwatch watch2 = new Stopwatch();
+                    watch2.Start(); ec.CountShares(shares.Keys.ToList(), col_share, col_share_log); watch2.Stop();
+                    Console.WriteLine($"Counting took {watch2.ElapsedMilliseconds}ms");
                 }
 
                 if (option == 4)
@@ -201,13 +233,33 @@ namespace LibTests
                     Console.WriteLine("Cleared UID cache");
                 }
 
+                if (option == 5)
+                {
+                    watch.Start();
+                    foreach (var entry in ec.Entries)
+                    {
+                        Console.WriteLine($"UID {String.Join(", ", entry.UID)}:");
+                        foreach (var p in entry.Data)
+                        {
+                            Console.WriteLine($"  Col {p.Key} ({ec.Headers[p.Key]}): {p.Value}");
+                        }
+                        Console.WriteLine();
+                    }
+                    watch.Stop();
+                }
+
+                if (option == 6) break;
+
                 Console.WriteLine($"Operation took {watch.ElapsedMilliseconds}ms");
                 Console.WriteLine();
                 watch.Reset();
-
-                if (option == 5) break;
             }
-            
+
+            /* EntryCollection -> Spreadsheet -> CSV test */
+            Console.Write("Output CSV file: "); string outfile = Console.ReadLine();
+            watch.Start(); CSV.ToFile(ec.ToSpreadsheet(), outfile); watch.Stop();
+            Console.WriteLine($"Saving took {watch.ElapsedMilliseconds}ms"); watch.Reset();
+
             Console.WriteLine("Tests completed. Press Enter to stop.");
             Console.ReadLine();
             driver.Quit();
