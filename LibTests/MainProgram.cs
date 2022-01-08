@@ -55,54 +55,6 @@ namespace LibTests
 
             Stopwatch watch = new Stopwatch(); // For measuring operation time
 
-            /* CSV loading test */
-            /*
-            Console.Write("Input CSV file: "); string infile = Console.ReadLine();
-            watch.Start(); Spreadsheet sheet = CSV.FromFile(infile); watch.Stop();
-            Console.WriteLine($"Reading took {watch.ElapsedMilliseconds}ms"); watch.Reset();
-            sheet.Update(sheet.Index("D10"), $"Hello, World!{Environment.NewLine}HRng Libraries Test");
-            watch.Start(); sheet.Shrink(); watch.Stop();
-            Console.WriteLine($"Spreadsheet shrinking took {watch.ElapsedMilliseconds}ms");
-            watch.Reset();
-            Console.Write("Output CSV file: "); string outfile = Console.ReadLine();
-            watch.Start(); CSV.ToFile(sheet, outfile); watch.Stop();
-            Console.WriteLine($"CSV file rewritten to {outfile} (took {watch.ElapsedMilliseconds}ms)");
-            watch.Reset();
-            */
-
-            /* FakeUA test */
-            Console.WriteLine("15 randomly generated User-Agent strings:");
-            for (int i = 0; i < 15; i++) Console.WriteLine($"{i+1}: " + UserAgent.Next());
-            Console.WriteLine();
-
-            /* GetUID test */
-            Console.WriteLine("GetHandle() test:");
-            string[] uid_handle_tests =
-            {
-                "https://www.facebook.com/asdf",
-                "www.facebook.com/asdf",
-                "m.facebook.com/profile.php?id=1234",
-                "m.me/1234",
-                "messenger.com/t/1234",
-                "m.facebook.com/home.php/asdf",
-                "/profile.php?id=1345&refid=_tn_"
-            };
-            foreach(string t in uid_handle_tests)
-            {
-                Console.WriteLine(t + " => " + UID.GetHandle(t));
-            }
-            Console.WriteLine();
-
-            Console.WriteLine("UID retrieval test:");
-            Console.Write("Facebook profile link to retrieve UID: "); string link = Console.ReadLine();
-            Console.Write("UID: "); watch.Start(); Console.Write(await UID.Get(link)); watch.Stop();
-            Console.WriteLine($" (took {watch.ElapsedMilliseconds}ms)");
-            watch.Reset();
-
-            /* OSCombo test */
-            Console.WriteLine($"OS-architecture combo: {OSCombo.Combo}");
-            Console.WriteLine();
-
             /* SevenZip test */
             if (SevenZip.Exists()) Console.WriteLine($"7za exists at {SevenZip.BinaryPath}");
             else
