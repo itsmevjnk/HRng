@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace HRngBackend
 {
@@ -93,6 +95,59 @@ namespace HRngBackend
         public static void ClearAllCookies()
         {
             ClientHandler.CookieContainer = new CookieContainer();
+        }
+
+        /*
+         * public static async Task<bool> DownloadFile(string url, string output,
+         *                                             [Func<float, bool> cb])
+         *   Downloads a file.
+         *   Input : url   : The URL of the file to be downloaded.
+         *           output: The path to the output file.
+         *           cb    : The callback function to be called every 1/100th of the
+         *                   file has been downloaded, as well as at the beginning and
+         *                   the end (optional).
+         *                   This function takes the current percentage and returns
+         *                   false if the user cancelled the downloading process or
+         *                   true otherwise.
+         *   Output: false if the user cancelled downloading, or true on success.
+         */
+        public static async Task<bool> DownloadFile(string url, string output, Func<float, bool>? cb = null)
+        {
+            var resp = await Client.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
+            resp.EnsureSuccessStatusCode();
+
+            var total_bytes = resp.Content.Headers.ContentLength; // TODO: Does total_bytes=null mean that the server doesn't provide the file size?
+            if (cb != null && cb((total_bytes == null) ? float.NaN : 0) == false) return false;
+
+            long read_bytes = 0; // Number of bytes read
+            var buffer = new byte[8192]; // Buffer to store downloaded data
+
+            long read_bytes_perc = 0; // Number of bytes read before next percent callback
+            using (var outstream = new FileStream(output, FileMode.Create, FileAccess.Write, FileShare.None, buffer.Length, true))
+            {
+                using (var instream = await resp.Content.ReadAsStreamAsync())
+                {
+                    while (true)
+                    {
+                        var n = await instream.ReadAsync(buffer, 0, buffer.Length);
+                        if (n == 0) break;
+                        await outstream.WriteAsync(buffer, 0, n);
+
+                        if (cb != null && total_bytes != null)
+                        {
+                            read_bytes_perc += n; read_bytes += n;
+                            if (read_bytes_perc >= (total_bytes / 100))
+                            {
+                                read_bytes_perc = 0;
+                                if (cb(100 * ((float)read_bytes / (float)total_bytes)) == false) return false;
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (cb != null) cb(100); // At this point it's already too late to return
+            return true;
         }
     }
 }

@@ -18,24 +18,27 @@ namespace LibTests
     class MainProgram
     {
         /*
-         * static Stopwatch ProgressStopwatch
-         *   Stopwatch instance for progress indicator.
+         * static bool ProgressIndicator(float perc)
+         *   A simple progress indicator callback function.
+         *   Input : perc: The current percentage.
+         *   Output: true.
          */
-        static Stopwatch stopwatch = new Stopwatch();
+        static bool ProgressIndicator(float perc)
+        {
+            Console.SetCursorPosition(0, Console.CursorTop); Console.WriteLine($"{perc}%");
+            return true;
+        }
 
         /*
-         * static int ProgressIndicator(int current, int total)
-         *   A simple progress indicator callback function.
-         *   Input : current: Current number of processed items.
-         *           total  : Total number of items to be processed.
-         *   Output: 0.
+         * static string CleanPath(string path)
+         *   Remove the quote characters surrounding the path.
+         *   Input : path: The path to be processed.
+         *   Output: The processed path.
          */
-        static int ProgressIndicator(int current, int total)
+        static string CleanPath(string path)
         {
-            stopwatch.Stop();
-            Console.WriteLine($"{100 * ((float) current / (float) total)}% ({current}/{total}). Execution time: {stopwatch.ElapsedMilliseconds}ms");
-            stopwatch.Reset(); stopwatch.Start();
-            return 0;
+            if (path[0] == '"' && path[path.Length - 1] == '"') path = path.Substring(1, path.Length - 2);
+            return path;
         }
 
         /*
@@ -136,9 +139,9 @@ namespace LibTests
             crdriver = await latest_driver_task;
             if (crdriver != null) Console.WriteLine($"Latest ChromeDriver version for Chrome/Chromium {chrome_ver}: {crdriver.Version}, download URL: {crdriver.DownloadURL}, updatable: {crdriver.Update}");
             else Console.WriteLine($"Cannot get latest ChromeDriver version for Chrome/Chromium {chrome_ver}");
-            Console.Write("Updating Chromium and/or ChromeDriver...");
-            if (await chrome.Update() != 0) Console.WriteLine("failed.");
-            else Console.WriteLine("done.");
+            Console.WriteLine("Updating Chromium and/or ChromeDriver...");
+            if (await chrome.Update(cb: ProgressIndicator) != 0) Console.WriteLine("Updating failed.");
+            else Console.WriteLine("Updating completed.");
             Console.Write("Starting Chrome/Chromium...");
             var driver = chrome.InitializeSelenium(headless: false);
             Console.WriteLine("done.");
@@ -152,7 +155,7 @@ namespace LibTests
             Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
 
             /* CSV -> Spreadsheet -> EntryCollection test */
-            Console.Write("Input CSV file: "); string infile = Console.ReadLine();
+            Console.Write("Input CSV file: "); string infile = CleanPath(Console.ReadLine());
             EntryCollection ec = new EntryCollection();
             watch.Start(); ec.FromSpreadsheet(CSV.FromFile(infile)); watch.Stop();
             Console.WriteLine($"Loading took {watch.ElapsedMilliseconds}ms"); watch.Reset();
@@ -259,7 +262,7 @@ namespace LibTests
             }
 
             /* EntryCollection -> Spreadsheet -> CSV test */
-            Console.Write("Output CSV file: "); string outfile = Console.ReadLine();
+            Console.Write("Output CSV file: "); string outfile = CleanPath(Console.ReadLine());
             watch.Start(); CSV.ToFile(ec.ToSpreadsheet(), outfile); watch.Stop();
             Console.WriteLine($"Saving took {watch.ElapsedMilliseconds}ms"); watch.Reset();
 
