@@ -167,7 +167,7 @@ namespace HRngBackend
         public static Spreadsheet FromFile(string fname, Encoding encoding = null, bool bom = true, char delimiter = ',', char escape = '"', string newline = "")
         {
             encoding = encoding ?? Encoding.UTF8;
-            using (FileStream stream = File.Open(fname, FileMode.Open, FileAccess.Read))
+            using (FileStream stream = File.Open(fname, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
                 return FromStream(stream, encoding, bom, delimiter, escape, newline);
             }
