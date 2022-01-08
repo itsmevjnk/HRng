@@ -96,7 +96,7 @@ namespace HRngBackend
                 /* UID cell */
                 if (sheet.Data.ContainsKey((i, UIDColumn)))
                 {
-                    foreach (string uid in sheet.Data[(i, UIDColumn)].Split(uid_delim))
+                    foreach (string uid in sheet.Data[(i, UIDColumn)].Split(uid_delim, StringSplitOptions.RemoveEmptyEntries))
                     {
                         entry.UID.Add(Convert.ToInt64(uid));
                         UID.Add(Convert.ToInt64(uid));
