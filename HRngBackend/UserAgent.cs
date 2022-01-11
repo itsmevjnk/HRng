@@ -31,15 +31,12 @@ namespace HRngBackend
             int idx = rand.Next(versions.Length); // Generate random version index
 
             /* Select random architecture */
-            if (rand.Next(2) > 0)
+            switch (rand.Next(3))
             {
-                /* 64-bit */
-                return $"Windows NT {versions[idx]}; Win64; x64";
-            }
-            else
-            {
-                /* 32-bit */
-                return $"Windows NT {versions[idx]}; Win32; x86";
+                case 0: return $"Windows NT {versions[idx]}; Win32; x86";
+                case 1: return $"Windows NT {versions[idx]}; Win64; x64";
+                case 2: return $"Windows NT {versions[idx]}; WOW64"; // 32-bit browser binary running on 64-bit OS installation
+                default: return ""; // Not going to happen (unless rand.Next() is broken)
             }
         }
 
