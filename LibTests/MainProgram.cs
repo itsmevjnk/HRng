@@ -65,7 +65,9 @@ namespace LibTests
             }
 
             /* ChromeHelper test */
-            ChromeHelper chrome = new ChromeHelper();
+            Console.Write("Attempt to detect existing Chrome installations? (y*/n) ");
+            string detect = Console.ReadLine().ToLower();
+            ChromeHelper chrome = new ChromeHelper((detect == "" || detect == "y"));
             Console.WriteLine("ChromeHelper initialized");
             if (chrome.ChromeInst) Console.WriteLine($"Local Chrome/Chromium installation detected at {chrome.ChromePath}, version {chrome.LocalVersion()}");
             else if (File.Exists(chrome.ChromePath)) Console.WriteLine($"Self-downloaded Chromium installation detected at {chrome.ChromePath}, version {chrome.LocalVersion()}");
