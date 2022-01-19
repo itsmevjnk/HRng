@@ -15,10 +15,10 @@ namespace HRngBackend
     public class EntryCollection
     {
         /*
-         * public IList<Entry> Entries
+         * public List<Entry> Entries
          *   List of Entry objects.
          */
-        public IList<Entry> Entries = new List<Entry>();
+        public List<Entry> Entries = new List<Entry>();
 
         /*
          * public HashSet<long> UID
@@ -27,11 +27,11 @@ namespace HRngBackend
         public HashSet<long> UID = new HashSet<long>();
 
         /*
-         * public IDictionary<int, string> Headers
+         * public Dictionary<int, string> Headers
          *   List of header names of each column in the
          *   input/output spreadsheet.
          */
-        public IDictionary<int, string> Headers = new Dictionary<int, string>();
+        public Dictionary<int, string> Headers = new Dictionary<int, string>();
 
         /*
          * public int UIDColumn
@@ -223,7 +223,7 @@ namespace HRngBackend
             log_delim = log_delim ?? Environment.NewLine;
             foreach (var entry in Entries)
             {
-                IDictionary<long, ReactionEnum> entry_reacts = new Dictionary<long, ReactionEnum>();
+                Dictionary<long, ReactionEnum> entry_reacts = new Dictionary<long, ReactionEnum>();
                 foreach (var react in reactions)
                 {
                     if (entry.UID.Contains(react.UserID) &&
@@ -241,7 +241,7 @@ namespace HRngBackend
                 if (col_log != -1)
                 {
                     entry.Data.Remove(col_log);
-                    IList<string> logs = new List<string>();
+                    List<string> logs = new List<string>();
                     foreach (var p in entry_reacts) logs.Add($"{p.Key}{log_sep}{Convert.ToString(p.Value)}");
                     entry.Data.Add(col_log, String.Join(log_delim, logs));
                 }
@@ -272,7 +272,7 @@ namespace HRngBackend
             log_delim = log_delim ?? Environment.NewLine;
             foreach (var entry in Entries)
             {
-                IList<long> entry_shares = new List<long>();
+                List<long> entry_shares = new List<long>();
                 foreach (var uid in entry.UID)
                 {
                     if (shares.Contains(uid)) entry_shares.Add(uid);

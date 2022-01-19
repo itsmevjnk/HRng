@@ -19,14 +19,14 @@ namespace HRngBackend
     public static class UID
     {
         /*
-         * public static IDictionary<string, long> Cache
+         * public static Dictionary<string, long> Cache
          *   User name to UID cache.
          *   While it's possible to read and write directly from this dictionary,
          *   this is not recommended, and improper use may result in undefined
          *   behavior. Use Add() and Get() to insert and retrieve UIDs, and use
          *   ClearCache() to clear the cache.
          */
-        public static IDictionary<string, long> Cache = new Dictionary<string, long>();
+        public static Dictionary<string, long> Cache = new Dictionary<string, long>();
 
         /*
          * public static Mutex CacheMutex
@@ -281,15 +281,15 @@ namespace HRngBackend
 
             /* Attempt retrieval using lookup services */
             link = $"https://www.facebook.com/{handle}";
-            (string url, IDictionary<string, string> data, string xpath)[] services =
+            (string url, Dictionary<string, string> data, string xpath)[] services =
             {
                 ("https://id.atpsoftware.vn/", new Dictionary<string, string>{ { "linkCheckUid", link } }, "//div[@id='menu1']/textarea"),
                 ("https://findidfb.com/#", new Dictionary<string, string>{ { "url", link } }, "//div[@class='alert alert-success alert-dismissable']/b"),
                 ("https://lookup-id.com/#", new Dictionary<string, string>{ { "fburl", link }, { "check", "Lookup" } }, "//span[@id='code']")
                 /* TODO: Add more services. The more services we have in here, the more chance we have at getting UIDs without ratelimiting the user. */
             };
-            IList<Task<long>> svc_tasks = new List<Task<long>> { }; // Lookup task pool
-            IList<CancellationTokenSource> svc_cts = new List<CancellationTokenSource> { }; // List of cancellation token sources corresponding to the lookup tasks
+            List<Task<long>> svc_tasks = new List<Task<long>> { }; // Lookup task pool
+            List<CancellationTokenSource> svc_cts = new List<CancellationTokenSource> { }; // List of cancellation token sources corresponding to the lookup tasks
             foreach (var service in services)
             {
                 svc_cts.Add(new CancellationTokenSource()); // Create cancellation token sources

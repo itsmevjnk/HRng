@@ -15,7 +15,7 @@ namespace HRngBackend
     public static class Cookies
     {
         /*
-         * public static IDictionary<string, string>? FromKVPString(string kvpstr, [char kvsep], [char psep])
+         * public static Dictionary<string, string>? FromKVPString(string kvpstr, [char kvsep], [char psep])
          *   Parse a key-value pair string of <key>=<value>; form into a
          *   string => string dictionary.
          *   Input : kvpstr: Key-value pair string.
@@ -26,10 +26,10 @@ namespace HRngBackend
          *   Output: A string => string dictionary containing the parsed
          *           cookies, or null if parsing fails.
          */
-        public static IDictionary<string, string>? FromKVPString(string kvpstr, char kvsep = '=', char psep = ';')
+        public static Dictionary<string, string>? FromKVPString(string kvpstr, char kvsep = '=', char psep = ';')
         {
             kvpstr = kvpstr.Replace(" ", ""); // Remove all whitespaces
-            IDictionary<string, string> cookies = new Dictionary<string, string> { };
+            Dictionary<string, string> cookies = new Dictionary<string, string> { };
             foreach (string kvp in kvpstr.Split(psep, StringSplitOptions.RemoveEmptyEntries))
             {
                 string[] pair = kvp.Split(kvsep);
@@ -40,7 +40,7 @@ namespace HRngBackend
         }
 
         /*
-         * public static IDictionary<string, string>? FromTxt_String(string txtstr)
+         * public static Dictionary<string, string>? FromTxt_String(string txtstr)
          *   Parse a string containing Netscape formatted cookies
          *   (also known as cookies.txt) into a string => string
          *   dictionary.
@@ -49,9 +49,9 @@ namespace HRngBackend
          *   Output: A string => string dictionary containing the parsed
          *           cookies, or null if parsing fails.
          */
-        public static IDictionary<string, string>? FromTxt_String(string txtstr)
+        public static Dictionary<string, string>? FromTxt_String(string txtstr)
         {
-            IDictionary<string, string> cookies = new Dictionary<string, string> { };
+            Dictionary<string, string> cookies = new Dictionary<string, string> { };
             foreach (string line in txtstr.Split(new string[] { "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries)) // We don't need \r\n and \n\r since those will be split into an empty string, and deleted by the RemoveEmptyEntries option
             {
                 if (line.StartsWith('#')) continue; // Skip comment lines
@@ -63,14 +63,14 @@ namespace HRngBackend
         }
 
         /*
-         * public static IDictionary<string, string>? FromTxt_File(string path)
+         * public static Dictionary<string, string>? FromTxt_File(string path)
          *   Parse a Netscape formatted cookies file (aka cookies.txt)
          *   into a string => string dictionary.
          *   Input : path: Path to the cookies.txt-formatted file.
          *   Output: A string => string dictionary containing the parsed
          *           cookies, or null if parsing fails.
          */
-        public static IDictionary<string, string>? FromTxt_File(string path)
+        public static Dictionary<string, string>? FromTxt_File(string path)
         {
             return FromTxt_String(File.ReadAllText(path));
         }

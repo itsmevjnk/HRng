@@ -13,11 +13,11 @@ namespace HRngBackend
     public class Spreadsheet
     {
         /*
-         * public IDictionary<(int row, int col), string> Data
+         * public Dictionary<(int row, int col), string> Data
          *   A dictionary of cells stored as strings. The key
          *   is a row-column index tuple starting from 0.
          */
-        public IDictionary<(int row, int col), string> Data = new Dictionary<(int row, int col), string>();
+        public Dictionary<(int row, int col), string> Data = new Dictionary<(int row, int col), string>();
 
         /*
          * public int Rows

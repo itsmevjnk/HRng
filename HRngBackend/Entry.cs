@@ -13,25 +13,25 @@ namespace HRngBackend
     public class Entry
     {
         /*
-         * public IList<long> UID
+         * public List<long> UID
          *   List of UIDs associated with the entry.
          */
-        public IList<long> UID = new List<long>();
+        public List<long> UID = new List<long>();
 
         /*
-         * public IDictionary<int, string> Data
+         * public Dictionary<int, string> Data
          *   Other data (other than the UIDs) associated with
          *   the entry. The key is the column number starting
          *   from 0 where the data was taken from and will be
          *   written to.
          */
-        public IDictionary<int, string> Data = new Dictionary<int, string>();
+        public Dictionary<int, string> Data = new Dictionary<int, string>();
 
         /*
-         * public IDictionary<int, int> IntData
+         * public Dictionary<int, int> IntData
          *   Integer copy of data entries above (if available).
          *   Only used for calculation purposes.
          */
-        public IDictionary<int, int> IntData = new Dictionary<int, int>();
+        public Dictionary<int, int> IntData = new Dictionary<int, int>();
     }
 }
