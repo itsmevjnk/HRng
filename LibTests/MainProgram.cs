@@ -10,6 +10,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Text;
+using System.Collections.Generic;
 
 using HRngBackend;
 
@@ -113,9 +114,69 @@ namespace LibTests
             var driver = browser.InitializeSelenium(headless: false);
             Console.WriteLine("done.");
 
-            /* FBPost/Cookies test */
-            Console.Write("Facebook cookies: "); var cookies = Cookies.FromKVPString(Console.ReadLine());
-            CommonHTTP.AddCookies("facebook.com", cookies); Cookies.Se_LoadCookies(driver, cookies, "https://m.facebook.com");
+            /* Cookies/FBLogin test */
+            while (true)
+            {
+                Console.Write("Log in using cookies? (y*/n) ");
+                string opt = Console.ReadLine().ToLower();
+                var cookies = new Dictionary<string, string>();
+                if (opt == "y" || opt == "")
+                {
+                    Console.Write("Facebook cookies: "); cookies = Cookies.FromKVPString(Console.ReadLine());
+                    CommonHTTP.AddCookies("facebook.com", cookies); Cookies.Se_LoadCookies(driver, cookies, "https://m.facebook.com");
+                }
+                else
+                {
+                    Console.Write("Email or phone number: "); var email = Console.ReadLine();
+                    Console.Write("Password: "); var password = Console.ReadLine(); // We might need password masking here
+                    Console.Write("Logging in..."); int ret = FBLogin.Login(driver, email, password, cookies);
+                    if (ret == 0) Console.WriteLine("done.");
+                    else if (ret == -3)
+                    {
+                        Console.WriteLine("two-factor authentication required.");
+                        while (true)
+                        {
+                            Console.Write("Approve login from another device? (y*/n) ");
+                            opt = Console.ReadLine().ToLower();
+                            if (opt == "y" || opt == "")
+                            {
+                                Console.Write("Please approve the login in 30 seconds...");
+                                ret = FBLogin.LoginOTP(driver, cookies: cookies, timeout: 30);
+                                if (ret == 0 || ret == -1) Console.WriteLine("done.");
+                                else if (ret == -3)
+                                {
+                                    Console.WriteLine("timed out.");
+                                    continue;
+                                }
+                                else Console.WriteLine($"LoginOTP() failed (return code {ret})");
+                                break;
+                            }
+                            else
+                            {
+                                Console.Write("Enter the OTP: "); string otp = Console.ReadLine();
+                                Console.Write("Submitting the OTP...");
+                                ret = FBLogin.LoginOTP(driver, otp, cookies);
+                                if (ret == 0 || ret == -1) Console.WriteLine("done.");
+                                else if (ret == -4) Console.WriteLine("incorrect OTP.");
+                                else Console.WriteLine($"LoginOTP() failed (return code {ret})");
+                                break;
+                            }
+                        }
+                    }
+                    else Console.WriteLine($"Login() failed (return code {ret})");
+                }
+
+                CommonHTTP.ClearCookies("facebook.com"); CommonHTTP.AddCookies("facebook.com", cookies);
+                driver.Manage().Cookies.DeleteAllCookies(); Cookies.Se_LoadCookies(driver, cookies, "https://m.facebook.com");
+                if (FBLogin.VerifyLogin(driver))
+                {
+                    Console.WriteLine("Account logged in");
+                    break;
+                }
+                else Console.WriteLine("Account login failed");
+            }
+            
+            /* FBPost test */
             FBPost post = new FBPost(driver);
             Console.Write("Facebook post link: "); string post_url = Console.ReadLine();
             Console.Write("Initializing..."); Console.WriteLine($"done (returns {await post.Initialize(post_url)}).");
