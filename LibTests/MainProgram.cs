@@ -64,40 +64,53 @@ namespace LibTests
                 Console.WriteLine("done.");
             }
 
-            /* ChromeHelper test */
-            Console.Write("Attempt to detect existing Chrome installations? (y*/n) ");
-            string detect = Console.ReadLine().ToLower();
-            ChromeHelper chrome = new ChromeHelper((detect == "" || detect == "y"));
-            Console.WriteLine("ChromeHelper initialized");
-            if (chrome.ChromeInst) Console.WriteLine($"Local Chrome/Chromium installation detected at {chrome.ChromePath}, version {chrome.LocalVersion()}");
-            else if (File.Exists(chrome.ChromePath)) Console.WriteLine($"Self-downloaded Chromium installation detected at {chrome.ChromePath}, version {chrome.LocalVersion()}");
-            else Console.WriteLine("Cannot detect Chrome/Chromium installations");
-            if (File.Exists(chrome.ChromeDriverPath)) Console.WriteLine($"Self-downloaded ChromeDriver detected at {chrome.ChromeDriverPath}, version {chrome.LocalDriverVersion()}");
-            else Console.WriteLine("Cannot detect ChromeDriver");
-            string chrome_ver = (File.Exists(chrome.ChromePath)) ? chrome.LocalVersion() : "";
-            Task<Release> latest_browser_task = null, latest_driver_task;
-            Release crbrowser = null, crdriver;
-            if (chrome_ver != "")
+            /* IBrowserHelper test */
+            Console.Write("Attempt to detect existing browser installations? (y*/n) ");
+            string browser_detect_str = Console.ReadLine().ToLower();
+            bool browser_detect = (browser_detect_str == "") || (browser_detect_str == "y");
+            IBrowserHelper browser = null;
+            while (browser == null)
             {
-                latest_driver_task = chrome.LatestDriverRelease(chrome_ver);
-                latest_browser_task = chrome.LatestRelease();
+                Console.Write("Which browser do you want to use, (C)hrome or (F)irefox? (c/f) ");
+                string browser_str = Console.ReadLine().ToLower();
+                switch (browser_str)
+                {
+                    case "c": browser = new ChromeHelper(browser_detect); break;
+                    case "f": browser = new FirefoxHelper(browser_detect); break;
+                }
+            }
+            Console.WriteLine("Browser initialized");
+            if (browser_detect)
+            {
+                if (File.Exists(browser.BrowserPath)) Console.WriteLine($"Detected browser at {browser.BrowserPath}, version {browser.LocalVersion()} ({((browser.BrowserInst) ? "installed" : "downloaded by HRng")})");
+                else Console.WriteLine("Cannot detect browser");
+            }
+            if (File.Exists(browser.DriverPath)) Console.WriteLine($"Detected browser driver at {browser.DriverPath}, version {browser.LocalDriverVersion()}");
+            else Console.WriteLine("Cannot detect browser driver");
+            string browser_ver = (File.Exists(browser.BrowserPath)) ? browser.LocalVersion() : "";
+            Task<Release> latest_browser_task = null, latest_driver_task;
+            Release r_browser = null, r_driver;
+            if (browser_ver != "")
+            {
+                latest_driver_task = browser.LatestDriverRelease(browser_ver);
+                latest_browser_task = browser.LatestRelease();
             } else
             {
-                crbrowser = await chrome.LatestRelease();
-                chrome_ver = crbrowser.Version;
-                latest_driver_task = chrome.LatestDriverRelease(chrome_ver);
+                r_browser = await browser.LatestRelease();
+                browser_ver = r_browser.Version;
+                latest_driver_task = browser.LatestDriverRelease(browser_ver);
             }
-            if (latest_browser_task != null) crbrowser = await latest_browser_task;
-            if (crbrowser != null) Console.WriteLine($"Latest Chromium version: {crbrowser.Version}, download URL: {crbrowser.DownloadURL}, updatable: {crbrowser.Update}");
+            if (latest_browser_task != null) r_browser = await latest_browser_task;
+            if (r_browser != null) Console.WriteLine($"Latest browser version: {r_browser.Version}, download URL: {r_browser.DownloadURL}, updatable: {r_browser.Update}");
             else Console.WriteLine("Cannot get latest Chromium version");
-            crdriver = await latest_driver_task;
-            if (crdriver != null) Console.WriteLine($"Latest ChromeDriver version for Chrome/Chromium {chrome_ver}: {crdriver.Version}, download URL: {crdriver.DownloadURL}, updatable: {crdriver.Update}");
-            else Console.WriteLine($"Cannot get latest ChromeDriver version for Chrome/Chromium {chrome_ver}");
-            Console.WriteLine("Updating Chromium and/or ChromeDriver...");
-            if (await chrome.Update(cb: ProgressIndicator) != 0) Console.WriteLine("Updating failed.");
+            r_driver = await latest_driver_task;
+            if (r_driver != null) Console.WriteLine($"Latest driver version for browser version {browser_ver}: {r_driver.Version}, download URL: {r_driver.DownloadURL}, updatable: {r_driver.Update}");
+            else Console.WriteLine($"Cannot get latest driver version for browser version {browser_ver}");
+            Console.WriteLine("Updating browser and driver...");
+            if (await browser.Update(cb: ProgressIndicator) != 0) Console.WriteLine("Updating failed.");
             else Console.WriteLine("Updating completed.");
-            Console.Write("Starting Chrome/Chromium...");
-            var driver = chrome.InitializeSelenium(headless: false);
+            Console.Write("Starting browser...");
+            var driver = browser.InitializeSelenium(headless: false);
             Console.WriteLine("done.");
 
             /* FBPost/Cookies test */
