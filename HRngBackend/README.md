@@ -17,6 +17,7 @@ As of now, the HRng backend contains resources for:
 * Operating system - architecture combo string generation (`OSCombo.cs`)
 * Version string parsing (`Versioning.cs`)
 * Browser/driver release storage class (`Release.cs`)
+* Interface for browser initialization (`IBrowserHelper.cs`)
 
 **Frontend-facing features:**
 * Parsing and loading cookies to HTTP client and Selenium (`Cookies.cs`)
@@ -24,9 +25,11 @@ As of now, the HRng backend contains resources for:
 * Spreadsheet manipulation (`Spreadsheet.cs`)
 * Facebook user ID retrieval (`UID.cs`)
 * Facebook post scraping (`FBComment.cs`, `FBPost.cs`, `FBReact.cs`)
+* Facebook credentials-based login (`FBLogin.cs`)
 * 7-Zip binary serving (`SevenZip.cs`)
 * Input/output person entry manipulation (`Entry.cs`, `EntryCollection.cs`)
 * Google Chrome/Chromium initialization (`ChromeHelper.cs`)
+* Mozilla Firefox initialization (`FirefoxHelper.cs`)
 
 These feature(s) are planned to be added:
 * Facebook post poll scraping
