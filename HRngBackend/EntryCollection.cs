@@ -218,8 +218,8 @@ namespace HRngBackend
         public void CountReactions(List<FBReact> reactions, int col = -1, int col_log = -1, string log_sep = ": ", string log_delim = null, ReactionEnum[] include = null, ReactionEnum[] exclude = null)
         {
             if (col == -1 && col_log == -1) return; // Nothing to do
-            if (!Headers.Keys.Contains(col)) throw new Exception($"Invalid column number {col}");
-            if (!Headers.Keys.Contains(col_log)) throw new Exception($"Invalid column number {col_log}");
+            if (col != -1 && !Headers.Keys.Contains(col)) throw new Exception($"Invalid column number {col}");
+            if (col_log != -1 && !Headers.Keys.Contains(col_log)) throw new Exception($"Invalid column number {col_log}");
             log_delim = log_delim ?? Environment.NewLine;
             foreach (var entry in Entries)
             {
@@ -267,8 +267,8 @@ namespace HRngBackend
         public void CountShares(List<long> shares, int col = -1, int col_log = -1, string log_delim = null)
         {
             if (col == -1 && col_log == -1) return; // Nothing to do
-            if (!Headers.Keys.Contains(col)) throw new Exception($"Invalid column number {col}");
-            if (!Headers.Keys.Contains(col_log)) throw new Exception($"Invalid column number {col_log}");
+            if (col != -1 && !Headers.Keys.Contains(col)) throw new Exception($"Invalid column number {col}");
+            if (col_log != -1 && !Headers.Keys.Contains(col_log)) throw new Exception($"Invalid column number {col_log}");
             log_delim = log_delim ?? Environment.NewLine;
             foreach (var entry in Entries)
             {
@@ -327,10 +327,10 @@ namespace HRngBackend
         public void CountComments(List<FBComment> comments, int col = -1, int col_cmts = -1, string cmts_sep = ": ", string cmts_delim = null, int col_ment = -1, int col_mdet = -1, string mdet_sep = ", ", bool replies = false, bool ment_exc = true)
         {
             if (col == -1 && col_cmts == -1 && col_ment == -1 && col_mdet == -1) return; // Nothing to do
-            if (!Headers.Keys.Contains(col)) throw new Exception($"Invalid column number {col}");
-            if (!Headers.Keys.Contains(col_cmts)) throw new Exception($"Invalid column number {col_cmts}");
-            if (!Headers.Keys.Contains(col_ment)) throw new Exception($"Invalid column number {col_ment}");
-            if (!Headers.Keys.Contains(col_mdet)) throw new Exception($"Invalid column number {col_mdet}");
+            if (col != -1 && !Headers.Keys.Contains(col)) throw new Exception($"Invalid column number {col}");
+            if (col_cmts != -1 && !Headers.Keys.Contains(col_cmts)) throw new Exception($"Invalid column number {col_cmts}");
+            if (col_ment != -1 && !Headers.Keys.Contains(col_ment)) throw new Exception($"Invalid column number {col_ment}");
+            if (col_mdet != -1 && !Headers.Keys.Contains(col_mdet)) throw new Exception($"Invalid column number {col_mdet}");
             cmts_delim = cmts_delim ?? Environment.NewLine;
             foreach (var entry in Entries)
             {
