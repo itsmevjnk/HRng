@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Order.example.xml - A simple order file template for FrontendRef.
+	Created on: 13:00 24-01-2022
+	Author    : itsmevjnk
+-->
+
+<order>
+	<input path="input.csv" uid="UID" />
+
+	<login type="cookies-kvp" cookies="key1=value1;key2=value2;key3=value3;" />
+	<!-- <login type="cookies-txt" path="cookies.txt" /> -->
+	<!-- <login type="credentials" email="email@example.com" password="P@55w0rD!" /> -->
+
+	<post url="https://www.facebook.com/azureamsprogramming/posts/130803066008284" />
+
+	<actions>
+		<action type="react" count="Reactions" details="Reaction details" min="1" />
+		<action type="comment" count="Comments" ctext="Comment text" min="1" replies="false" mcount="Mentions" muid="Mentioned UID(s)" mmin="1" mexclude="true" />
+		<action type="share" count="Shares" details="Share details" min="1" />
+		<action type="summary" col="Summary" done="Completed" partial="Partially completed" notdone="Not completed" />
+	</actions>
+	
+	<output path="output.csv" />
+</order>

@@ -1,6 +1,7 @@
 ﻿# LibTests
 An example implementation of HRngBackend's functions.
-Originally made for testing the backend, now it serves as a frontend-like project as a real frontend is being developed.
+This is only for testing functions.
+For a reference implementation of the frontend, refer to the FrontendRef project.
 
 ## Installation
 Build this project using Visual Studio or `dotnet` (refer to the solution's `README.md`).

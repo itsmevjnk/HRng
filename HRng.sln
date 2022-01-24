@@ -9,8 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRngBackend", "HRngBackend\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C6203D11-B7B0-433D-802E-87DC4617A2D0}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontendRef", "FrontendRef\FrontendRef.csproj", "{648B164E-BE8C-4EB4-984D-85B09D0A4887}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +29,10 @@ Global
 		{A3BF944C-FD91-452D-993F-72901A258CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3BF944C-FD91-452D-993F-72901A258CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3BF944C-FD91-452D-993F-72901A258CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{648B164E-BE8C-4EB4-984D-85B09D0A4887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{648B164E-BE8C-4EB4-984D-85B09D0A4887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{648B164E-BE8C-4EB4-984D-85B09D0A4887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{648B164E-BE8C-4EB4-984D-85B09D0A4887}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
