@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>itsmevjnk</Authors>
+    <Product>HRng</Product>
+    <Description>The backend portion of HRng.</Description>
+    <Company />
   </PropertyGroup>
 
   <ItemGroup>
