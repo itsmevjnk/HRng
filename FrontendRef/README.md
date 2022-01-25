@@ -6,7 +6,7 @@ This supersedes LibTests as the reference implementation for HRng's frontend, ev
 Build this project using Visual Studio or `dotnet` (refer to the solution's `README.md`).
 
 ## Usage
-After building, execute the `FrontendRef` executable (`FrontendRef.exe` on Windows) in the `bin/Debug/netcoreapp3.1/` directory.
+After building, execute the `FrontendRef` executable (`FrontendRef.exe` on Windows) in the `bin/Debug/net6.0/` directory.
 The usage of the executable is as follows:
 ```
 FrontendRef --chrome/--firefox [--headless] (list of paths to order files)

@@ -2,7 +2,7 @@
 HRng is a collection of Facebook scraping tools, designed with human resources and content seeding operations in community projects and organizations in mind.
 
 ## Installation
-HRng is a Visual Studio .NET solution, therefore, Visual Studio or `dotnet` (Linux/macOS only) is required, along with the .NET Core 3.1 SDK and runtime.
+HRng is a Visual Studio .NET solution, therefore, Visual Studio or `dotnet` (Linux/macOS only) is required, along with the .NET 6.0 SDK and runtime.
 
 To get started with HRng, simply open and build the solution in Visual Studio, or `cd` into the solution directory and run `dotnet build` if you're using `dotnet`.
 
