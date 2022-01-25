@@ -262,7 +262,7 @@ namespace FrontendRef
                     Console.WriteLine($"Post loading failed (returned {ret}), skipping");
                     goto next;
                 }
-                Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}, actor {post.UserID}");
+                Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
 
                 /* Execute action(s) */
                 var actlist = actions.SelectNodes("./action");

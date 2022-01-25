@@ -181,7 +181,6 @@ namespace LibTests
             Console.Write("Facebook post link: "); string post_url = Console.ReadLine();
             Console.Write("Initializing..."); Console.WriteLine($"done (returns {await post.Initialize(post_url)}).");
             Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
-            Console.WriteLine($"This post is being checked with account {post.UserID}");
 
             /* CSV/ExcelWorkbook -> Spreadsheet -> EntryCollection test */
             bool? input_type = null; // true for CSV, false for XLS*
