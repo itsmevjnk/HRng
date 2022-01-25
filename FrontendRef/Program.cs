@@ -157,7 +157,7 @@ namespace FrontendRef
                     goto next;
                 }
 
-                /* Load input CSV file */
+                /* Load input CSV/XLS/XLSX file */
                 if (!File.Exists(input.Attributes["path"].Value))
                 {
                     Console.WriteLine("Input file does not exist, skipping");
@@ -167,7 +167,43 @@ namespace FrontendRef
                 string input_fname = input.Attributes["path"].Value;
                 string col_uid = "UID";
                 if (input.Attributes["uid"] != null) col_uid = input.Attributes["uid"].Value;
-                ec.FromSpreadsheet(CSV.FromFile(input_fname), uid_name: col_uid);
+                Spreadsheet sheet = null;
+                if (Path.GetExtension(input_fname).ToLower().StartsWith(".xls"))
+                {
+                    int snum = -1;
+                    string? sname = null;
+                    if (input.Attributes["snum"] != null) snum = Convert.ToInt32(input.Attributes["snum"].Value);
+                    if (input.Attributes["sname"] != null) sname = input.Attributes["sname"].Value;
+                    var sheets = ExcelWorkbook.FromFile(input_fname);
+                    if (snum != -1)
+                    {
+                        if (snum < 0 || snum >= sheets.Count)
+                        {
+                            Console.WriteLine($"Invalid sheet number {snum}, will load first sheet instead.");
+                            snum = 0;
+                        }
+                        sheet = sheets[snum].Value;
+                    }
+                    else if (sname != null)
+                    {
+                        foreach (var kvp in sheets)
+                        {
+                            if (kvp.Key == sname)
+                            {
+                                sheet = kvp.Value;
+                                break;
+                            }
+                        }
+                        if (sheet == null)
+                        {
+                            Console.WriteLine($"Workbook does not contain sheet {sname}, will load first sheet instead.");
+                            sheet = sheets[0].Value;
+                        }
+                    }
+                    else sheet = sheets[0].Value;
+                }
+                else sheet = CSV.FromFile(input_fname);
+                ec.FromSpreadsheet(sheet, uid_name: col_uid);
                 Console.WriteLine($"Loaded input from {input_fname} (UID column name: {col_uid})");
 
                 /* Process login */

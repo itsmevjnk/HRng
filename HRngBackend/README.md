@@ -22,6 +22,7 @@ As of now, the HRng backend contains resources for:
 **Frontend-facing features:**
 * Parsing and loading cookies to HTTP client and Selenium (`Cookies.cs`)
 * Reading and writing CSV files (`CSV.cs`)
+* Reading Excel workbooks (`ExcelWorkbook.cs`)
 * Spreadsheet manipulation (`Spreadsheet.cs`)
 * Facebook user ID retrieval (`UID.cs`)
 * Facebook post scraping (`FBComment.cs`, `FBPost.cs`, `FBReact.cs`)

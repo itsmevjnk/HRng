@@ -8,6 +8,8 @@
 
 <order>
 	<input path="input.csv" uid="UID" />
+	<!-- <input path="input.xlsx" uid="UID" snum="0" /> -->
+	<!-- <input path="input.xls" uid="UID" sname="Sheet1" /> -->
 
 	<login type="cookies-kvp" cookies="key1=value1;key2=value2;key3=value3;" />
 	<!-- <login type="cookies-txt" path="cookies.txt" /> -->

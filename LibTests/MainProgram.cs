@@ -183,10 +183,34 @@ namespace LibTests
             Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
             Console.WriteLine($"This post is being checked with account {post.UserID}");
 
-            /* CSV -> Spreadsheet -> EntryCollection test */
-            Console.Write("Input CSV file: "); string infile = CleanPath(Console.ReadLine());
+            /* CSV/ExcelWorkbook -> Spreadsheet -> EntryCollection test */
+            bool? input_type = null; // true for CSV, false for XLS*
+            while (input_type == null)
+            {
+                Console.Write("Which type of input file do you want to use, (C)SV or E(x)cel (XLS/XLSX/XLSB)? (c/x) ");
+                string input_str = Console.ReadLine().ToLower();
+                switch (input_str)
+                {
+                    case "c": input_type = true; break;
+                    case "x": input_type = false; break;
+                }
+            }
+            Console.Write($"Input {((input_type == true) ? "CSV" : "XLS*")} file: "); string infile = CleanPath(Console.ReadLine());
             EntryCollection ec = new EntryCollection();
-            watch.Start(); ec.FromSpreadsheet(CSV.FromFile(infile)); watch.Stop();
+            watch.Start();
+            if (input_type == true) ec.FromSpreadsheet(CSV.FromFile(infile));
+            else
+            {
+                var sheets = ExcelWorkbook.FromFile(infile);
+                watch.Stop();
+                Console.WriteLine("List of sheets in the workbook:");
+                for (int i = 0; i < sheets.Count; i++) Console.WriteLine($"{i}: {sheets[i].Key}");
+                Console.Write("Enter the sheet that you want to load (default: 0): ");
+                string sheet_str = Console.ReadLine();
+                watch.Start();
+                ec.FromSpreadsheet(sheets[(sheet_str == "") ? 0 : Convert.ToInt32(sheet_str)].Value);
+            }
+            watch.Stop();
             Console.WriteLine($"Loading took {watch.ElapsedMilliseconds}ms"); watch.Reset();
             int col_react = ec.AddColumn("Reactions");
             int col_react_log = ec.AddColumn("Reactions (detailed)");
