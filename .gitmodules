@@ -1,0 +1,3 @@
+[submodule "HRngBackend"]
+	path = HRngBackend
+	url = https://github.com/itsmevjnk/HRngBackend.git
