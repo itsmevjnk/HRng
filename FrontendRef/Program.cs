@@ -363,7 +363,7 @@ namespace FrontendRef
 
                                 bool p1 = true, p2 = false;
                                 if (action.Attributes["p1"] != null && action.Attributes["p1"].Value.ToLower() == "false") p1 = false;
-                                if (action.Attributes["p2"] != null && action.Attributes["p2"].Value.ToLower() == "true") p1 = true;
+                                if (action.Attributes["p2"] != null && action.Attributes["p2"].Value.ToLower() == "true") p2 = true;
                                 Console.WriteLine($" Pass(es): {((p1) ? "1 " : "")}{((p2) ? "2 " : "")}");
 
                                 Console.Write($" Running action... ");

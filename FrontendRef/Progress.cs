@@ -114,7 +114,7 @@ namespace FrontendRef
         public void Dispose()
         {
             Console.SetCursorPosition(StartX, Console.CursorTop);
-            Console.Write(new String(' ', Size + 8));
+            Console.Write(new String(' ', Size + 9));
             Console.SetCursorPosition(StartX, Console.CursorTop);
         }
     }
