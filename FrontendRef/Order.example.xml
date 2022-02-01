@@ -19,7 +19,7 @@
 
 	<actions>
 		<action type="react" count="Reactions" details="Reaction details" min="1" />
-		<action type="comment" count="Comments" ctext="Comment text" min="1" replies="false" mcount="Mentions" muid="Mentioned UID(s)" mmin="1" mexclude="true" />
+		<action type="comment" count="Comments" ctext="Comment text" min="1" replies="false" mcount="Mentions" muid="Mentioned UID(s)" mmin="1" mexclude="true" p1="true" p2="false" />
 		<action type="share" count="Shares" details="Share details" min="1" />
 		<action type="summary" col="Summary" done="Completed" partial="Partially completed" notdone="Not completed" />
 	</actions>

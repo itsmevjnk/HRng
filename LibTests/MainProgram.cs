@@ -250,9 +250,13 @@ namespace LibTests
 
                 if (option == 2)
                 {
+                    Console.Write("Perform Pass 1? (y*/n) "); string pass = Console.ReadLine().ToLower();
+                    bool p1 = (pass != "n");
+                    Console.Write("Perform Pass 2? (y*/n) "); pass = Console.ReadLine().ToLower();
+                    bool p2 = (pass != "n");
                     Console.WriteLine("Getting all comments...");
-                    watch.Start(); var comments = await post.GetComments(ProgressIndicator); watch.Stop();
-                    Console.WriteLine("Finished getting comments.");
+                    watch.Start(); var comments = await post.GetComments(ProgressIndicator, p1: p1, p2: p2); watch.Stop();
+                    Console.WriteLine($"Finished getting {comments.Count} comment(s).");
                     foreach (var comment_kvp in comments)
                     {
                         var comment = comment_kvp.Value;

@@ -361,10 +361,15 @@ namespace FrontendRef
                                     Console.WriteLine($" Exclude existing UIDs in the input list from mentions: {m_exclude}");
                                 }
 
+                                bool p1 = true, p2 = false;
+                                if (action.Attributes["p1"] != null && action.Attributes["p1"].Value.ToLower() == "false") p1 = false;
+                                if (action.Attributes["p2"] != null && action.Attributes["p2"].Value.ToLower() == "true") p1 = true;
+                                Console.WriteLine($" Pass(es): {((p1) ? "1 " : "")}{((p2) ? "2 " : "")}");
+
                                 Console.Write($" Running action... ");
                                 using (var progress = new Progress())
                                 {
-                                    ec.CountComments((await post.GetComments(progress.Update)).Values.ToList(), col, col_ctext, col_ment: col_mcount, col_mdet: col_muid, ment_exc: m_exclude, replies: replies);
+                                    ec.CountComments((await post.GetComments(progress.Update, p1: p1, p2: p2)).Values.ToList(), col, col_ctext, col_ment: col_mcount, col_mdet: col_muid, ment_exc: m_exclude, replies: replies);
                                 }
                                 Console.WriteLine("done.");
                             }
