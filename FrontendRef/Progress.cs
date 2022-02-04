@@ -12,49 +12,35 @@ namespace FrontendRef
 {
     public class Progress: IDisposable
     {
-        /*
-         * public int Size
-         *   The progress bar's total length.
-         */
+        /// <summary>
+        ///  The progress bar's total length.
+        /// </summary>
         public int Size { get; }
 
-        /*
-         * private int LastLength
-         *   The length of the bar's elapsed portion.
-         */
+        /// <summary>
+        ///  The length of the bar's elapsed portion.
+        /// </summary>
         private int LastLength = 0;
 
-        /*
-         * private int LastPercent
-         *   The percentage shown next to the progress bar.
-         */
+        /// <summary>
+        ///  The percentage shown next to the progress bar.
+        /// </summary>
         private int LastPercent = 0;
 
-        /*
-         * private int StartX
-         *   The X coordinate where the progress bar is drawn. The X coordinates
-         *   for each element in the progress bar can be derived from this:
-         *     Progress bar start      : StartX + 1                = StartX        + 1
-         *     Progress bar end        : StartX + 1 + Size         = StartX + Size + 1
-         *     Percentage portion start: StartX + 1 + Size + 2     = StartX + Size + 3
-         *     Update indicator        : StartX + 1 + Size + 2 + 5 = StartX + Size + 8
-         */
+        /// <summary>
+        ///  The X coordinate where the progress bar is drawn. The X coordinates for each element in the progress bar can be derived from this: Progress bar start      : StartX + 1                = StartX        + 1 Progress bar end        : StartX + 1 + Size         = StartX + Size + 1 Percentage portion start: StartX + 1 + Size + 2     = StartX + Size + 3 Update indicator        : StartX + 1 + Size + 2 + 5 = StartX + Size + 8
+        /// </summary>
         private int StartX;
 
-        /*
-         * private int UpdateIndicator
-         *   Indicates which character from the 4 characters |/-\ to be drawn
-         *   for indicating progress update.
-         */
+        /// <summary>
+        ///  Indicates which character from the 4 characters |/-\ to be drawn for indicating progress update.
+        /// </summary>
         private int UpdateIndicator = 0;
 
-        /*
-         * public Progress([int size])
-         *   Class constructor. Draws the frame for the progress bar.
-         *   Input : size: The progress bar's length in characters (optional).
-         *                 Defaults to 20.
-         *   Output: none.
-         */
+        /// <summary>
+        ///  Class constructor. Draws the frame for the progress bar.
+        /// </summary>
+        /// <param name="size">The progress bar's length in characters (optional). Defaults to 20.</param>
         public Progress(int size = 20)
         {
             Size = size; StartX = Console.CursorLeft;
@@ -63,12 +49,11 @@ namespace FrontendRef
             Console.Write("]    %"); // Closing bracket for indication bar and percentage placeholder
         }
 
-        /*
-         * public bool Update(float percent)
-         *   Updates the progress bar.
-         *   Input : percent: The current percentage.
-         *   Output: true.
-         */
+        /// <summary>
+        ///  Updates the progress bar.
+        /// </summary>
+        /// <param name="percent">The current percentage.</param>
+        /// <returns>true.</returns>
         public bool Update(float percent)
         {
             /* Update progress indicator */
@@ -107,10 +92,9 @@ namespace FrontendRef
             return true;
         }
 
-        /*
-         * public void Dispose()
-         *   Clear out the progress bar.
-         */
+        /// <summary>
+        ///  Clear out the progress bar.
+        /// </summary>
         public void Dispose()
         {
             Console.SetCursorPosition(StartX, Console.CursorTop);

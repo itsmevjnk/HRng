@@ -18,36 +18,32 @@ namespace LibTests
 {
     class MainProgram
     {
-        /*
-         * static bool ProgressIndicator(float perc)
-         *   A simple progress indicator callback function.
-         *   Input : perc: The current percentage.
-         *   Output: true.
-         */
+        /// <summary>
+        ///  A simple progress indicator callback function.
+        /// </summary>
+        /// <param name="perc">The current percentage.</param>
+        /// <returns>true.</returns>
         static bool ProgressIndicator(float perc)
         {
             Console.SetCursorPosition(0, Console.CursorTop); Console.WriteLine($"{perc}%");
             return true;
         }
 
-        /*
-         * static string CleanPath(string path)
-         *   Remove the quote characters surrounding the path.
-         *   Input : path: The path to be processed.
-         *   Output: The processed path.
-         */
+        /// <summary>
+        ///  Remove the quote characters surrounding the path.
+        /// </summary>
+        /// <param name="path">The path to be processed.</param>
+        /// <returns>The processed path.</returns>
         static string CleanPath(string path)
         {
             if (path[0] == '"' && path[path.Length - 1] == '"') path = path.Substring(1, path.Length - 2);
             return path;
         }
 
-        /*
-         * static async Task<int> Main()
-         *   The main function.
-         *   Input : none.
-         *   Output: the return value.
-         */
+        /// <summary>
+        ///  The main function.
+        /// </summary>
+        /// <returns>the return value.</returns>
         static async Task<int> Main()
         {
             Console.OutputEncoding = Encoding.UTF8;
