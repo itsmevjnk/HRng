@@ -173,7 +173,7 @@ namespace LibTests
             }
             
             /* FBPost test */
-            FBPost post = new FBPost(driver);
+            IFBPost post = new FBPost(driver);
             Console.Write("Facebook post link: "); string post_url = Console.ReadLine();
             Console.Write("Initializing..."); Console.WriteLine($"done (returns {await post.Initialize(post_url)}).");
             Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
