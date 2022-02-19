@@ -37,6 +37,7 @@ namespace LibTests
         static string CleanPath(string path)
         {
             if (path[0] == '"' && path[path.Length - 1] == '"') path = path.Substring(1, path.Length - 2);
+            else if (path[0] == '\'' && path[path.Length - 1] == '\'') path = path.Substring(1, path.Length - 2);
             return path;
         }
 
