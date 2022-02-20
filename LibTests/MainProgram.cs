@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Text;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 using HRngBackend;
 
@@ -69,44 +70,59 @@ namespace LibTests
             IBrowserHelper browser = null;
             while (browser == null)
             {
-                Console.Write("Which browser do you want to use, (C)hrome or (F)irefox? (c/f) ");
+                Console.Write("Which browser do you want to use, ");
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX) && browser_detect) Console.Write("(C)hrome, (F)irefox, or (S)afari? (c/f/s) ");
+                else Console.Write("(C)hrome or (F)irefox? (c/f) ");
                 string browser_str = Console.ReadLine().ToLower();
                 switch (browser_str)
                 {
                     case "c": browser = new ChromeHelper(browser_detect); break;
                     case "f": browser = new FirefoxHelper(browser_detect); break;
+                    case "s": browser = new SafariHelper(); break;
                 }
             }
             Console.WriteLine("Browser initialized");
-            if (browser_detect)
+            if(browser is SafariHelper)
             {
-                if (File.Exists(browser.BrowserPath)) Console.WriteLine($"Detected browser at {browser.BrowserPath}, version {browser.LocalVersion()} ({((browser.BrowserInst) ? "installed" : "downloaded by HRng")})");
-                else Console.WriteLine("Cannot detect browser");
+                Console.WriteLine("!!! WARNING !!!");
+                Console.WriteLine("You have selected to use Safari. Please make sure that remote automation is enabled.");
+                Console.WriteLine("For more information, refer to this link:");
+                Console.WriteLine("  https://developer.apple.com/documentation/webkit/testing_with_webdriver_in_safari");
+                Console.Write("Press RETURN to continue...");
+                Console.ReadLine();
             }
-            if (File.Exists(browser.DriverPath)) Console.WriteLine($"Detected browser driver at {browser.DriverPath}, version {browser.LocalDriverVersion()}");
-            else Console.WriteLine("Cannot detect browser driver");
-            string browser_ver = (File.Exists(browser.BrowserPath)) ? browser.LocalVersion() : "";
-            Task<Release> latest_browser_task = null, latest_driver_task;
-            Release r_browser = null, r_driver;
-            if (browser_ver != "")
+            else
             {
-                latest_driver_task = browser.LatestDriverRelease(browser_ver);
-                latest_browser_task = browser.LatestRelease();
-            } else
-            {
-                r_browser = await browser.LatestRelease();
-                browser_ver = r_browser.Version;
-                latest_driver_task = browser.LatestDriverRelease(browser_ver);
+                if (browser_detect)
+                {
+                    if (File.Exists(browser.BrowserPath)) Console.WriteLine($"Detected browser at {browser.BrowserPath}, version {browser.LocalVersion()} ({((browser.BrowserInst) ? "installed" : "downloaded by HRng")})");
+                    else Console.WriteLine("Cannot detect browser");
+                }
+                if (File.Exists(browser.DriverPath)) Console.WriteLine($"Detected browser driver at {browser.DriverPath}, version {browser.LocalDriverVersion()}");
+                else Console.WriteLine("Cannot detect browser driver");
+                string browser_ver = (File.Exists(browser.BrowserPath)) ? browser.LocalVersion() : "";
+                Task<Release> latest_browser_task = null, latest_driver_task;
+                Release r_browser = null, r_driver;
+                if (browser_ver != "")
+                {
+                    latest_driver_task = browser.LatestDriverRelease(browser_ver);
+                    latest_browser_task = browser.LatestRelease();
+                } else
+                {
+                    r_browser = await browser.LatestRelease();
+                    browser_ver = r_browser.Version;
+                    latest_driver_task = browser.LatestDriverRelease(browser_ver);
+                }
+                if (latest_browser_task != null) r_browser = await latest_browser_task;
+                if (r_browser != null) Console.WriteLine($"Latest browser version: {r_browser.Version}, download URL: {r_browser.DownloadURL}, updatable: {r_browser.Update}");
+                else Console.WriteLine("Cannot get latest Chromium version");
+                r_driver = await latest_driver_task;
+                if (r_driver != null) Console.WriteLine($"Latest driver version for browser version {browser_ver}: {r_driver.Version}, download URL: {r_driver.DownloadURL}, updatable: {r_driver.Update}");
+                else Console.WriteLine($"Cannot get latest driver version for browser version {browser_ver}");
+                Console.WriteLine("Updating browser and driver...");
+                if (await browser.Update(cb: ProgressIndicator) != 0) Console.WriteLine("Updating failed.");
+                else Console.WriteLine("Updating completed.");
             }
-            if (latest_browser_task != null) r_browser = await latest_browser_task;
-            if (r_browser != null) Console.WriteLine($"Latest browser version: {r_browser.Version}, download URL: {r_browser.DownloadURL}, updatable: {r_browser.Update}");
-            else Console.WriteLine("Cannot get latest Chromium version");
-            r_driver = await latest_driver_task;
-            if (r_driver != null) Console.WriteLine($"Latest driver version for browser version {browser_ver}: {r_driver.Version}, download URL: {r_driver.DownloadURL}, updatable: {r_driver.Update}");
-            else Console.WriteLine($"Cannot get latest driver version for browser version {browser_ver}");
-            Console.WriteLine("Updating browser and driver...");
-            if (await browser.Update(cb: ProgressIndicator) != 0) Console.WriteLine("Updating failed.");
-            else Console.WriteLine("Updating completed.");
             Console.Write("Starting browser...");
             var driver = browser.InitializeSelenium(headless: false);
             Console.WriteLine("done.");
