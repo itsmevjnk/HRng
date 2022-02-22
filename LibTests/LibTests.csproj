@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HRngBackend\HRngBackend.csproj" />
+    <ProjectReference Include="..\HRngSelenium\HRngSelenium.csproj" />
   </ItemGroup>
 
 </Project>

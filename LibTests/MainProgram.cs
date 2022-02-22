@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 using HRngBackend;
+using HRngSelenium;
 
 namespace LibTests
 {
@@ -136,7 +137,7 @@ namespace LibTests
                 if (opt == "y" || opt == "")
                 {
                     Console.Write("Facebook cookies: "); cookies = Cookies.FromKVPString(Console.ReadLine());
-                    CommonHTTP.AddCookies("facebook.com", cookies); Cookies.Se_LoadCookies(driver, cookies, "https://m.facebook.com");
+                    CommonHTTP.AddCookies("facebook.com", cookies); SeCookies.LoadCookies(driver, cookies, "https://m.facebook.com");
                 }
                 else
                 {
@@ -180,7 +181,7 @@ namespace LibTests
                 }
 
                 CommonHTTP.ClearCookies("facebook.com"); CommonHTTP.AddCookies("facebook.com", cookies);
-                driver.Manage().Cookies.DeleteAllCookies(); Cookies.Se_LoadCookies(driver, cookies, "https://m.facebook.com");
+                driver.Manage().Cookies.DeleteAllCookies(); SeCookies.LoadCookies(driver, cookies, "https://m.facebook.com");
                 if (FBLogin.VerifyLogin(driver))
                 {
                     Console.WriteLine("Account logged in");

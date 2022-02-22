@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 
 using HRngBackend;
+using HRngSelenium;
 
 namespace FrontendRef
 {
@@ -246,7 +247,7 @@ namespace FrontendRef
                 CommonHTTP.ClearCookies("facebook.com"); CommonHTTP.AddCookies("facebook.com", cookies);
                 if (login.Attributes["type"].Value != "credentials")
                 {
-                    Cookies.Se_LoadCookies(driver, cookies, "https://m.facebook.com");
+                    SeCookies.LoadCookies(driver, cookies, "https://m.facebook.com");
                     if (!FBLogin.VerifyLogin(driver))
                     {
                         Console.WriteLine("Account login failed, skipping");
