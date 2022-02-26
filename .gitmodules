@@ -4,3 +4,6 @@
 [submodule "HRngSelenium"]
 	path = HRngSelenium
 	url = https://github.com/itsmevjnk/HRngSelenium.git
+[submodule "HRngLite"]
+	path = HRngLite
+	url = https://github.com/itsmevjnk/HRngLite.git
