@@ -11,9 +11,11 @@ HRng comes with an example implementation for the backend called **LibTests**.
 Build the project, then run the `LibTests(.exe)` file in the build output (`bin/`) to check it out.
 
 ## Structure
-HRng is divided into 2 main components: the **backend** and the **frontend**.
+HRng is divided into 2 main components: the **backend** (along with its operations module(s)) and the **frontend**.
 
 The backend's source can be found in the **HRngBackend** directory/project.
+As of now, **HRngSelenium** is the only operations module that exists; development of alternatives is underway.
+
 Currently, there's no frontend implementation yet, but an example of how to use the backend can be found in the **LibTests** directory/project.
 
 ## Contributing
