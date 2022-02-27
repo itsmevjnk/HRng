@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontendRef", "FrontendRef\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRngSelenium", "HRngSelenium\HRngSelenium.csproj", "{84212EBF-6F96-40E2-BA18-F1F7E7C57845}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRngLite", "HRngLite\HRngLite.csproj", "{87A17FB4-DA24-4E9B-8562-58EF6B4D41A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{84212EBF-6F96-40E2-BA18-F1F7E7C57845}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84212EBF-6F96-40E2-BA18-F1F7E7C57845}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84212EBF-6F96-40E2-BA18-F1F7E7C57845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A17FB4-DA24-4E9B-8562-58EF6B4D41A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A17FB4-DA24-4E9B-8562-58EF6B4D41A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A17FB4-DA24-4E9B-8562-58EF6B4D41A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A17FB4-DA24-4E9B-8562-58EF6B4D41A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
