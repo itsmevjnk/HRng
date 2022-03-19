@@ -1,0 +1,78 @@
+name: 'Build and publish LibTests'
+on:
+  create:
+    branches:
+      - release/**
+  push:
+    branches:
+      - main
+    path:
+      - .github/workflows/**
+      - LibTests/**
+      - HRngBackend/**
+      - HRngSelenium/**
+
+jobs:
+  build:
+    name: 'Build LibTests'
+    runs-on: windows-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+        with:
+          # For submodules
+          fetch-depth: 0
+          submodules: 'recursive'
+
+      - name: 'Install .NET SDK'
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: 'Set up MSBuild'
+        uses: microsoft/setup-msbuild@v1.0.2
+
+      - name: 'Publish .NET (with DLL files and whatnot)'
+        run: dotnet publish LibTests/LibTests.csproj -c Release
+
+      - name: 'Upload .NET'
+        uses: actions/upload-artifact@v2
+        with:
+          name: LibTests
+          path: LibTests/bin/Release/net6.0/publish/**
+      
+      - name: 'Publish standalone .NET (x86)'
+        run: dotnet publish LibTests/LibTests.csproj -c Release -p:PublishSingleFile=true -r win-x86 --self-contained false
+
+      - name: 'Upload standalone .NET (x86)'
+        uses: actions/upload-artifact@v2
+        with:
+          name: LibTests.Windows.X86
+          path: LibTests/bin/Release/net6.0/win-x86/publish/LibTests.exe
+      
+      - name: 'Publish standalone .NET (x64)'
+        run: dotnet publish LibTests/LibTests.csproj -c Release -p:PublishSingleFile=true -r win-x64 --self-contained false
+
+      - name: 'Upload standalone .NET (x64)'
+        uses: actions/upload-artifact@v2
+        with:
+          name: LibTests.Windows.X64
+          path: LibTests/bin/Release/net6.0/win-x64/publish/LibTests.exe
+      
+      - name: 'Publish self-contained .NET (x86)'
+        run: dotnet publish LibTests/LibTests.csproj -c Release -p:PublishSingleFile=true -r win-x86
+
+      - name: 'Upload self-contained .NET (x86)'
+        uses: actions/upload-artifact@v2
+        with:
+          name: LibTests.Windows.X86.SelfContained
+          path: LibTests/bin/Release/net6.0/win-x86/publish/LibTests.exe
+      
+      - name: 'Publish self-contained .NET (x64)'
+        run: dotnet publish LibTests/LibTests.csproj -c Release -p:PublishSingleFile=true -r win-x64
+
+      - name: 'Upload self-contained .NET (x64)'
+        uses: actions/upload-artifact@v2
+        with:
+          name: LibTests.Windows.X64.SelfContained
+          path: LibTests/bin/Release/net6.0/win-x64/publish/LibTests.exe
