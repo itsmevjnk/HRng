@@ -26,6 +26,9 @@ namespace FrontendRef
             Console.InputEncoding = Console.OutputEncoding = Encoding.UTF8;
 
             Console.WriteLine($"HRng FrontendRef {Assembly.GetExecutingAssembly().GetName().Version}");
+            Console.WriteLine("Base directory location:");
+            Console.WriteLine($"  Common  : {BaseDir.CommonBase}");
+            Console.WriteLine($"  Platform: {BaseDir.PlatformBase}");
             Console.WriteLine();
 
             /* Custom lightweight command argument parser */
