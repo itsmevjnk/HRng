@@ -2,10 +2,11 @@ name: 'Build and publish FrontendRef'
 on:
   create:
     branches:
-      - release/**
+      - rel/**
   push:
     branches:
       - main
+      - dev/**
     path:
       - .github/workflows/**
       - FrontendRef/**
@@ -60,7 +61,7 @@ jobs:
           path: FrontendRef/bin/Release/net6.0/win-x64/publish/FrontendRef.exe
       
       - name: 'Publish self-contained .NET (x86)'
-        run: dotnet publish FrontendRef/FrontendRef.csproj -c Release -p:PublishSingleFile=true -r win-x86
+        run: dotnet publish FrontendRef/FrontendRef.csproj -c Release -p:PublishSingleFile=true -r win-x86 --self-contained true
 
       - name: 'Upload self-contained .NET (x86)'
         uses: actions/upload-artifact@v2
@@ -69,7 +70,7 @@ jobs:
           path: FrontendRef/bin/Release/net6.0/win-x86/publish/FrontendRef.exe
       
       - name: 'Publish self-contained .NET (x64)'
-        run: dotnet publish FrontendRef/FrontendRef.csproj -c Release -p:PublishSingleFile=true -r win-x64
+        run: dotnet publish FrontendRef/FrontendRef.csproj -c Release -p:PublishSingleFile=true -r win-x64 --self-contained true
 
       - name: 'Upload self-contained .NET (x64)'
         uses: actions/upload-artifact@v2
