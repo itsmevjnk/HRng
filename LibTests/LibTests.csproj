@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\HRngBackend\HRngBackend.csproj" />
     <ProjectReference Include="..\HRngSelenium\HRngSelenium.csproj" />
+    <ProjectReference Include="..\HRngLite\HRngLite.csproj" />
   </ItemGroup>
 
 </Project>

@@ -15,6 +15,7 @@ using System.Runtime.InteropServices;
 
 using HRngBackend;
 using HRngSelenium;
+using HRngLite;
 
 namespace LibTests
 {
@@ -55,143 +56,199 @@ namespace LibTests
 
             Stopwatch watch = new Stopwatch(); // For measuring operation time
 
-            /* SevenZip test */
-            if (SevenZip.Exists()) Console.WriteLine($"7za exists at {SevenZip.BinaryPath}");
-            else
-            {
-                Console.Write("Initializing 7za...");
-                await SevenZip.Initialize();
-                Console.WriteLine("done.");
-            }
+            Console.Write("Use HRngLite instead of HRngSelenium? (y/n*) ");
+            bool use_lite = (Console.ReadLine().ToLower() == "y");
 
-            /* IBrowserHelper test */
-            Console.Write("Attempt to detect existing browser installations? (y*/n) ");
-            string browser_detect_str = Console.ReadLine().ToLower();
-            bool browser_detect = (browser_detect_str == "") || (browser_detect_str == "y");
-            IBrowserHelper browser = null;
-            while (browser == null)
-            {
-                Console.Write("Which browser do you want to use, ");
-                if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX) && browser_detect) Console.Write("(C)hrome, (F)irefox, or (S)afari? (c/f/s) ");
-                else Console.Write("(C)hrome or (F)irefox? (c/f) ");
-                string browser_str = Console.ReadLine().ToLower();
-                switch (browser_str)
-                {
-                    case "c": browser = new ChromeHelper(browser_detect); break;
-                    case "f": browser = new FirefoxHelper(browser_detect); break;
-                    case "s": browser = new SafariHelper(); break;
-                }
-            }
-            Console.WriteLine("Browser initialized");
-            if(browser is SafariHelper)
-            {
-                Console.WriteLine("!!! WARNING !!!");
-                Console.WriteLine("You have selected to use Safari. Please make sure that remote automation is enabled.");
-                Console.WriteLine("For more information, refer to this link:");
-                Console.WriteLine("  https://developer.apple.com/documentation/webkit/testing_with_webdriver_in_safari");
-                Console.Write("Press RETURN to continue...");
-                Console.ReadLine();
-            }
-            else
-            {
-                if (browser_detect)
-                {
-                    if (File.Exists(browser.BrowserPath)) Console.WriteLine($"Detected browser at {browser.BrowserPath}, version {browser.LocalVersion()} ({((browser.BrowserInst) ? "installed" : "downloaded by HRng")})");
-                    else Console.WriteLine("Cannot detect browser");
-                }
-                if (File.Exists(browser.DriverPath)) Console.WriteLine($"Detected browser driver at {browser.DriverPath}, version {browser.LocalDriverVersion()}");
-                else Console.WriteLine("Cannot detect browser driver");
-                string browser_ver = (File.Exists(browser.BrowserPath)) ? browser.LocalVersion() : "";
-                Task<Release> latest_browser_task = null, latest_driver_task;
-                Release r_browser = null, r_driver;
-                if (browser_ver != "")
-                {
-                    latest_driver_task = browser.LatestDriverRelease(browser_ver);
-                    latest_browser_task = browser.LatestRelease();
-                } else
-                {
-                    r_browser = await browser.LatestRelease();
-                    browser_ver = r_browser.Version;
-                    latest_driver_task = browser.LatestDriverRelease(browser_ver);
-                }
-                if (latest_browser_task != null) r_browser = await latest_browser_task;
-                if (r_browser != null) Console.WriteLine($"Latest browser version: {r_browser.Version}, download URL: {r_browser.DownloadURL}, updatable: {r_browser.Update}");
-                else Console.WriteLine("Cannot get latest Chromium version");
-                r_driver = await latest_driver_task;
-                if (r_driver != null) Console.WriteLine($"Latest driver version for browser version {browser_ver}: {r_driver.Version}, download URL: {r_driver.DownloadURL}, updatable: {r_driver.Update}");
-                else Console.WriteLine($"Cannot get latest driver version for browser version {browser_ver}");
-                Console.WriteLine("Updating browser and driver...");
-                if (await browser.Update(cb: ProgressIndicator) != 0) Console.WriteLine("Updating failed.");
-                else Console.WriteLine("Updating completed.");
-            }
-            Console.Write("Starting browser...");
-            var driver = browser.InitializeSelenium(headless: false);
-            Console.WriteLine("done.");
+            IFBPost post; // For FBPost test
 
-            /* Cookies/FBLogin test */
-            while (true)
+            if (!use_lite)
             {
-                Console.Write("Log in using cookies? (y*/n) ");
-                string opt = Console.ReadLine().ToLower();
-                var cookies = new Dictionary<string, string>();
-                if (opt == "y" || opt == "")
+                /* SevenZip test */
+                if (SevenZip.Exists()) Console.WriteLine($"7za exists at {SevenZip.BinaryPath}");
+                else
                 {
-                    Console.Write("Facebook cookies: "); cookies = Cookies.FromKVPString(Console.ReadLine());
-                    CommonHTTP.AddCookies("facebook.com", cookies); SeCookies.LoadCookies(driver, cookies, "https://m.facebook.com");
+                    Console.Write("Initializing 7za...");
+                    await SevenZip.Initialize();
+                    Console.WriteLine("done.");
+                }
+
+                /* IBrowserHelper test */
+                Console.Write("Attempt to detect existing browser installations? (y*/n) ");
+                string browser_detect_str = Console.ReadLine().ToLower();
+                bool browser_detect = (browser_detect_str == "") || (browser_detect_str == "y");
+                IBrowserHelper browser = null;
+                while (browser == null)
+                {
+                    Console.Write("Which browser do you want to use, ");
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX) && browser_detect) Console.Write("(C)hrome, (F)irefox, or (S)afari? (c/f/s) ");
+                    else Console.Write("(C)hrome or (F)irefox? (c/f) ");
+                    string browser_str = Console.ReadLine().ToLower();
+                    switch (browser_str)
+                    {
+                        case "c": browser = new ChromeHelper(browser_detect); break;
+                        case "f": browser = new FirefoxHelper(browser_detect); break;
+                        case "s": browser = new SafariHelper(); break;
+                    }
+                }
+                Console.WriteLine("Browser initialized");
+                if(browser is SafariHelper)
+                {
+                    Console.WriteLine("!!! WARNING !!!");
+                    Console.WriteLine("You have selected to use Safari. Please make sure that remote automation is enabled.");
+                    Console.WriteLine("For more information, refer to this link:");
+                    Console.WriteLine("  https://developer.apple.com/documentation/webkit/testing_with_webdriver_in_safari");
+                    Console.Write("Press RETURN to continue...");
+                    Console.ReadLine();
                 }
                 else
                 {
-                    Console.Write("Email or phone number: "); var email = Console.ReadLine();
-                    Console.Write("Password: "); var password = Console.ReadLine(); // We might need password masking here
-                    Console.Write("Logging in..."); int ret = FBLogin.Login(driver, email, password, cookies);
-                    if (ret == 0) Console.WriteLine("done.");
-                    else if (ret == -3)
+                    if (browser_detect)
                     {
-                        Console.WriteLine("two-factor authentication required.");
-                        while (true)
+                        if (File.Exists(browser.BrowserPath)) Console.WriteLine($"Detected browser at {browser.BrowserPath}, version {browser.LocalVersion()} ({((browser.BrowserInst) ? "installed" : "downloaded by HRng")})");
+                        else Console.WriteLine("Cannot detect browser");
+                    }
+                    if (File.Exists(browser.DriverPath)) Console.WriteLine($"Detected browser driver at {browser.DriverPath}, version {browser.LocalDriverVersion()}");
+                    else Console.WriteLine("Cannot detect browser driver");
+                    string browser_ver = (File.Exists(browser.BrowserPath)) ? browser.LocalVersion() : "";
+                    Task<Release> latest_browser_task = null, latest_driver_task;
+                    Release r_browser = null, r_driver;
+                    if (browser_ver != "")
+                    {
+                        latest_driver_task = browser.LatestDriverRelease(browser_ver);
+                        latest_browser_task = browser.LatestRelease();
+                    } else
+                    {
+                        r_browser = await browser.LatestRelease();
+                        browser_ver = r_browser.Version;
+                        latest_driver_task = browser.LatestDriverRelease(browser_ver);
+                    }
+                    if (latest_browser_task != null) r_browser = await latest_browser_task;
+                    if (r_browser != null) Console.WriteLine($"Latest browser version: {r_browser.Version}, download URL: {r_browser.DownloadURL}, updatable: {r_browser.Update}");
+                    else Console.WriteLine("Cannot get latest Chromium version");
+                    r_driver = await latest_driver_task;
+                    if (r_driver != null) Console.WriteLine($"Latest driver version for browser version {browser_ver}: {r_driver.Version}, download URL: {r_driver.DownloadURL}, updatable: {r_driver.Update}");
+                    else Console.WriteLine($"Cannot get latest driver version for browser version {browser_ver}");
+                    Console.WriteLine("Updating browser and driver...");
+                    if (await browser.Update(cb: ProgressIndicator) != 0) Console.WriteLine("Updating failed.");
+                    else Console.WriteLine("Updating completed.");
+                }
+                Console.Write("Starting browser...");
+                var driver = browser.InitializeSelenium(headless: false);
+                Console.WriteLine("done.");
+
+                /* Cookies/FBLogin test */
+                while (true)
+                {
+                    Console.Write("Log in using cookies? (y*/n) ");
+                    string opt = Console.ReadLine().ToLower();
+                    var cookies = new Dictionary<string, string>();
+                    if (opt == "y" || opt == "")
+                    {
+                        Console.Write("Facebook cookies: "); cookies = Cookies.FromKVPString(Console.ReadLine());
+                        CommonHTTP.AddCookies("facebook.com", cookies); SeCookies.LoadCookies(driver, cookies, "https://m.facebook.com");
+                    }
+                    else
+                    {
+                        Console.Write("Email or phone number: "); var email = Console.ReadLine();
+                        Console.Write("Password: "); var password = Console.ReadLine(); // We might need password masking here
+                        Console.Write("Logging in..."); int ret = HRngSelenium.FBLogin.Login(driver, email, password, cookies);
+                        if (ret == 0) Console.WriteLine("done.");
+                        else if (ret == -3)
                         {
-                            Console.Write("Approve login from another device? (y*/n) ");
-                            opt = Console.ReadLine().ToLower();
-                            if (opt == "y" || opt == "")
+                            Console.WriteLine("two-factor authentication required.");
+                            while (true)
                             {
-                                Console.Write("Please approve the login in 30 seconds...");
-                                ret = FBLogin.LoginOTP(driver, cookies: cookies, timeout: 30);
-                                if (ret == 0 || ret == -1) Console.WriteLine("done.");
-                                else if (ret == -3)
+                                Console.Write("Approve login from another device? (y*/n) ");
+                                opt = Console.ReadLine().ToLower();
+                                if (opt == "y" || opt == "")
                                 {
-                                    Console.WriteLine("timed out.");
-                                    continue;
+                                    Console.Write("Please approve the login in 30 seconds...");
+                                    ret = HRngSelenium.FBLogin.LoginOTP(driver, cookies: cookies, timeout: 30);
+                                    if (ret == 0 || ret == -1) Console.WriteLine("done.");
+                                    else if (ret == -3)
+                                    {
+                                        Console.WriteLine("timed out.");
+                                        continue;
+                                    }
+                                    else Console.WriteLine($"LoginOTP() failed (return code {ret})");
+                                    break;
                                 }
-                                else Console.WriteLine($"LoginOTP() failed (return code {ret})");
-                                break;
+                                else
+                                {
+                                    Console.Write("Enter the OTP: "); string otp = Console.ReadLine();
+                                    Console.Write("Submitting the OTP...");
+                                    ret = HRngSelenium.FBLogin.LoginOTP(driver, otp, cookies);
+                                    if (ret == 0 || ret == -1) Console.WriteLine("done.");
+                                    else if (ret == -4) Console.WriteLine("incorrect OTP.");
+                                    else Console.WriteLine($"LoginOTP() failed (return code {ret})");
+                                    break;
+                                }
                             }
-                            else
+                        }
+                        else Console.WriteLine($"Login() failed (return code {ret})");
+                    }
+
+                    CommonHTTP.ClearCookies("facebook.com"); CommonHTTP.AddCookies("facebook.com", cookies);
+                    driver.Manage().Cookies.DeleteAllCookies(); SeCookies.LoadCookies(driver, cookies, "https://m.facebook.com");
+                    if (HRngSelenium.FBLogin.VerifyLogin(driver))
+                    {
+                        Console.WriteLine("Account logged in");
+                        break;
+                    }
+                    else Console.WriteLine("Account login failed");
+                }
+
+                post = new HRngSelenium.FBPost(driver);
+            }
+            else
+            {
+                /* Cookies/FBLogin test */
+                while (true)
+                {
+                    Console.Write("Log in using cookies? (y*/n) ");
+                    string opt = Console.ReadLine().ToLower();
+                    var cookies = new Dictionary<string, string>();
+                    if (opt == "y" || opt == "")
+                    {
+                        Console.Write("Facebook cookies: "); cookies = Cookies.FromKVPString(Console.ReadLine());
+                        CommonHTTP.AddCookies("facebook.com", cookies);
+                    }
+                    else
+                    {
+                        Console.Write("Email or phone number: "); var email = Console.ReadLine();
+                        Console.Write("Password: "); var password = Console.ReadLine(); // We might need password masking here
+                        Console.Write("Logging in..."); int ret = await HRngLite.FBLogin.Login(email, password, cookies);
+                        if (ret == 0) Console.WriteLine("done.");
+                        else if (ret == -3)
+                        {
+                            Console.WriteLine("two-factor authentication required.");
+                            while (true)
                             {
                                 Console.Write("Enter the OTP: "); string otp = Console.ReadLine();
                                 Console.Write("Submitting the OTP...");
-                                ret = FBLogin.LoginOTP(driver, otp, cookies);
+                                ret = await HRngLite.FBLogin.LoginOTP(otp, cookies);
                                 if (ret == 0 || ret == -1) Console.WriteLine("done.");
                                 else if (ret == -4) Console.WriteLine("incorrect OTP.");
                                 else Console.WriteLine($"LoginOTP() failed (return code {ret})");
                                 break;
                             }
                         }
+                        else Console.WriteLine($"Login() failed (return code {ret})");
                     }
-                    else Console.WriteLine($"Login() failed (return code {ret})");
+
+                    CommonHTTP.ClearCookies("facebook.com"); CommonHTTP.AddCookies("facebook.com", cookies);
+                    if (await HRngLite.FBLogin.VerifyLogin())
+                    {
+                        Console.WriteLine("Account logged in");
+                        break;
+                    }
+                    else Console.WriteLine("Account login failed");
                 }
 
-                CommonHTTP.ClearCookies("facebook.com"); CommonHTTP.AddCookies("facebook.com", cookies);
-                driver.Manage().Cookies.DeleteAllCookies(); SeCookies.LoadCookies(driver, cookies, "https://m.facebook.com");
-                if (FBLogin.VerifyLogin(driver))
-                {
-                    Console.WriteLine("Account logged in");
-                    break;
-                }
-                else Console.WriteLine("Account login failed");
+                post = new HRngLite.FBPost();
             }
             
             /* FBPost test */
-            IFBPost post = new FBPost(driver);
             Console.Write("Facebook post link: "); string post_url = Console.ReadLine();
             Console.Write("Initializing..."); Console.WriteLine($"done (returns {await post.Initialize(post_url)}).");
             Console.WriteLine($"Author ID: {post.AuthorID}, post ID: {post.PostID}, is group post: {post.IsGroupPost}");
@@ -338,7 +395,6 @@ namespace LibTests
 
             Console.WriteLine("Tests completed. Press Enter to stop.");
             Console.ReadLine();
-            driver.Quit();
             return 0;
         }
     }
