@@ -236,7 +236,6 @@ namespace LibTests
                         else Console.WriteLine($"Login() failed (return code {ret})");
                     }
 
-                    CommonHTTP.ClearCookies("facebook.com"); CommonHTTP.AddCookies("facebook.com", cookies);
                     if (await HRngLite.FBLogin.VerifyLogin())
                     {
                         Console.WriteLine("Account logged in");
