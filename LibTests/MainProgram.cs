@@ -188,8 +188,6 @@ namespace LibTests
                         else Console.WriteLine($"Login() failed (return code {ret})");
                     }
 
-                    CommonHTTP.ClearCookies("facebook.com"); CommonHTTP.AddCookies("facebook.com", cookies);
-                    driver.Manage().Cookies.DeleteAllCookies(); SeCookies.LoadCookies(driver, cookies, "https://m.facebook.com");
                     if (HRngSelenium.FBLogin.VerifyLogin(driver))
                     {
                         Console.WriteLine("Account logged in");
