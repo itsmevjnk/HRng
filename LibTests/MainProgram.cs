@@ -61,6 +61,11 @@ namespace LibTests
 
             IFBPost post; // For FBPost test
 
+            /* Initialize FB reaction type lookup table */
+            Console.Write("Retrieving reaction type LUT...");
+            await FBReactUtil.GetLut();
+            Console.WriteLine("done.");
+
             if (!use_lite)
             {
                 /* SevenZip test */

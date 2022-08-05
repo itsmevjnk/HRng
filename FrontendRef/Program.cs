@@ -88,6 +88,11 @@ namespace FrontendRef
                 return 1;
             }
 
+            /* Initialize FB reaction type lookup table */
+            Console.Write("Retrieving reaction type LUT...");
+            await FBReactUtil.GetLut();
+            Console.WriteLine("done.");
+
             /* Initialize 7-Zip */
             if (SevenZip.Exists()) Console.WriteLine($"7za exists at {SevenZip.BinaryPath}");
             else
