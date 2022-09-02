@@ -1,0 +1,79 @@
+name: 'Build and publish WinFormsFrontend'
+on:
+  create:
+    branches:
+      - rel/**
+  push:
+    branches:
+      - main
+      - dev/**
+    path:
+      - .github/workflows/**
+      - WinFormsFrontend/**
+      - HRngBackend/**
+      - HRngSelenium/**
+
+jobs:
+  build:
+    name: 'Build WinFormsFrontend'
+    runs-on: windows-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+        with:
+          # For submodules
+          fetch-depth: 0
+          submodules: 'recursive'
+
+      - name: 'Install .NET SDK'
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: 'Set up MSBuild'
+        uses: microsoft/setup-msbuild@v1.0.2
+
+      - name: 'Publish .NET (with DLL files and whatnot)'
+        run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release
+
+      - name: 'Upload .NET'
+        uses: actions/upload-artifact@v2
+        with:
+          name: WinFormsFrontend
+          path: WinFormsFrontend/bin/Release/net6.0/publish/**
+      
+      - name: 'Publish standalone .NET (x86)'
+        run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release -p:PublishSingleFile=true -r win-x86 --self-contained false
+
+      - name: 'Upload standalone .NET (x86)'
+        uses: actions/upload-artifact@v2
+        with:
+          name: WinFormsFrontend.Windows.X86
+          path: WinFormsFrontend/bin/Release/net6.0/win-x86/publish/WinFormsFrontend.exe
+      
+      - name: 'Publish standalone .NET (x64)'
+        run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release -p:PublishSingleFile=true -r win-x64 --self-contained false
+
+      - name: 'Upload standalone .NET (x64)'
+        uses: actions/upload-artifact@v2
+        with:
+          name: WinFormsFrontend.Windows.X64
+          path: WinFormsFrontend/bin/Release/net6.0/win-x64/publish/WinFormsFrontend.exe
+      
+      - name: 'Publish self-contained .NET (x86)'
+        run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release -p:PublishSingleFile=true -r win-x86 --self-contained true
+
+      - name: 'Upload self-contained .NET (x86)'
+        uses: actions/upload-artifact@v2
+        with:
+          name: WinFormsFrontend.Windows.X86.SelfContained
+          path: WinFormsFrontend/bin/Release/net6.0/win-x86/publish/WinFormsFrontend.exe
+      
+      - name: 'Publish self-contained .NET (x64)'
+        run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release -p:PublishSingleFile=true -r win-x64 --self-contained true
+
+      - name: 'Upload self-contained .NET (x64)'
+        uses: actions/upload-artifact@v2
+        with:
+          name: WinFormsFrontend.Windows.X64.SelfContained
+          path: WinFormsFrontend/bin/Release/net6.0/win-x64/publish/WinFormsFrontend.exe
