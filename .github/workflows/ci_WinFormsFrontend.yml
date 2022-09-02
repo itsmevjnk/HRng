@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: WinFormsFrontend
-          path: WinFormsFrontend/bin/Release/net6.0/publish/**
+          path: WinFormsFrontend/bin/Release/net6.0-windows/publish/**
       
       - name: 'Publish standalone .NET (x86)'
         run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release -p:PublishSingleFile=true -r win-x86 --self-contained false
@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: WinFormsFrontend.Windows.X86
-          path: WinFormsFrontend/bin/Release/net6.0/win-x86/publish/WinFormsFrontend.exe
+          path: WinFormsFrontend/bin/Release/net6.0-windows/win-x86/publish/WinFormsFrontend.exe
       
       - name: 'Publish standalone .NET (x64)'
         run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release -p:PublishSingleFile=true -r win-x64 --self-contained false
@@ -58,7 +58,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: WinFormsFrontend.Windows.X64
-          path: WinFormsFrontend/bin/Release/net6.0/win-x64/publish/WinFormsFrontend.exe
+          path: WinFormsFrontend/bin/Release/net6.0-windows/win-x64/publish/WinFormsFrontend.exe
       
       - name: 'Publish self-contained .NET (x86)'
         run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release -p:PublishSingleFile=true -r win-x86 --self-contained true
@@ -67,7 +67,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: WinFormsFrontend.Windows.X86.SelfContained
-          path: WinFormsFrontend/bin/Release/net6.0/win-x86/publish/WinFormsFrontend.exe
+          path: WinFormsFrontend/bin/Release/net6.0-windows/win-x86/publish/WinFormsFrontend.exe
       
       - name: 'Publish self-contained .NET (x64)'
         run: dotnet publish WinFormsFrontend/WinFormsFrontend.csproj -c Release -p:PublishSingleFile=true -r win-x64 --self-contained true
@@ -76,4 +76,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: WinFormsFrontend.Windows.X64.SelfContained
-          path: WinFormsFrontend/bin/Release/net6.0/win-x64/publish/WinFormsFrontend.exe
+          path: WinFormsFrontend/bin/Release/net6.0-windows/win-x64/publish/WinFormsFrontend.exe
