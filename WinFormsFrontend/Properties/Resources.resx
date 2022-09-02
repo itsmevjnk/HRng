@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DlgOpenCookiesTxt" xml:space="preserve">
+    <value>Open cookies.txt</value>
+  </data>
+  <data name="DlgOpenEC" xml:space="preserve">
+    <value>Open EntryCollection sheet</value>
+  </data>
+  <data name="DlgSaveEC" xml:space="preserve">
+    <value>Save EntryCollection sheet</value>
+  </data>
+  <data name="MsgActionsCancelled_Body" xml:space="preserve">
+    <value>Actions have been cancelled.</value>
+  </data>
+  <data name="MsgActionsCancelled_Title" xml:space="preserve">
+    <value>HRng WinForms Frontend</value>
+  </data>
+  <data name="MsgActionsECExportSuccess_Body" xml:space="preserve">
+    <value>EntryCollection export is successful.</value>
+  </data>
+  <data name="MsgActionsECExportSuccess_Title" xml:space="preserve">
+    <value>EntryCollection export</value>
+  </data>
+  <data name="MsgActionsECImportSuccess_Body" xml:space="preserve">
+    <value>EntryCollection import is successful.</value>
+  </data>
+  <data name="MsgActionsECImportSuccess_Title" xml:space="preserve">
+    <value>EntryCollection import</value>
+  </data>
+  <data name="MsgActionsSuccess_Body" xml:space="preserve">
+    <value>Actions have completed successfully. Do you want to save EntryCollection now?</value>
+  </data>
+  <data name="MsgActionsSuccess_Title" xml:space="preserve">
+    <value>HRng WinForms Frontend</value>
+  </data>
+  <data name="MsgInitUpdateFail_Body" xml:space="preserve">
+    <value>Browser/driver updating failed (error code {0}).</value>
+  </data>
+  <data name="MsgInitUpdateFail_Title" xml:space="preserve">
+    <value>Browser/driver update</value>
+  </data>
+  <data name="MsgInitUpdate_Body" xml:space="preserve">
+    <value>Do you want to update the browser/driver to the latest version ({0}, {1})?</value>
+  </data>
+  <data name="MsgInitUpdate_Title" xml:space="preserve">
+    <value>Browser/driver update</value>
+  </data>
+  <data name="MsgLoginFail_Body" xml:space="preserve">
+    <value>Account logged in failed ({0}).</value>
+  </data>
+  <data name="MsgLoginFail_Title" xml:space="preserve">
+    <value>Facebook login</value>
+  </data>
+  <data name="MsgLoginSuccess_Body" xml:space="preserve">
+    <value>Account logged in successfully.</value>
+  </data>
+  <data name="MsgLoginSuccess_Title" xml:space="preserve">
+    <value>Facebook login</value>
+  </data>
+  <data name="MsgLoginWrongOTP_Body" xml:space="preserve">
+    <value>Incorrect verification code entered, please try again.</value>
+  </data>
+  <data name="MsgLoginWrongOTP_Title" xml:space="preserve">
+    <value>Facebook two-factor authentication</value>
+  </data>
+  <data name="StaActionsAddECColumns" xml:space="preserve">
+    <value>Adding columns to EntryCollection.</value>
+  </data>
+  <data name="StaActionsGetComments" xml:space="preserve">
+    <value>Getting comments.</value>
+  </data>
+  <data name="StaActionsGetCommentsMentions" xml:space="preserve">
+    <value>Getting comments and mentions.</value>
+  </data>
+  <data name="StaActionsGetLut" xml:space="preserve">
+    <value>Getting reactions lookup table.</value>
+  </data>
+  <data name="StaActionsGetReactions" xml:space="preserve">
+    <value>Getting reactions.</value>
+  </data>
+  <data name="StaActionsGetShares" xml:space="preserve">
+    <value>Getting shares.</value>
+  </data>
+  <data name="StaActionsLoadPost" xml:space="preserve">
+    <value>Loading Facebook post.</value>
+  </data>
+  <data name="StaActionsReady" xml:space="preserve">
+    <value>Press Start to begin...</value>
+  </data>
+  <data name="StaActionsSummarize" xml:space="preserve">
+    <value>Summarizing checking data.</value>
+  </data>
+  <data name="StaInit7zDownload" xml:space="preserve">
+    <value>Downloading 7-Zip.</value>
+  </data>
+  <data name="StaInit7zFound" xml:space="preserve">
+    <value>7-Zip executable found.</value>
+  </data>
+  <data name="StaInitBrowserFetchVer" xml:space="preserve">
+    <value>Fetching latest browser and driver version.</value>
+  </data>
+  <data name="StaInitBrowserFound" xml:space="preserve">
+    <value>Found local browser installation.</value>
+  </data>
+  <data name="StaInitBrowserNotFound" xml:space="preserve">
+    <value>Cannot find local browser installation, will download now.</value>
+  </data>
+  <data name="StaInitBrowserStart" xml:space="preserve">
+    <value>Starting browser.</value>
+  </data>
+  <data name="StaInitBrowserUpdate" xml:space="preserve">
+    <value>Updating/Downloading browser and driver.</value>
+  </data>
+  <data name="StaInitBrowserUpdated" xml:space="preserve">
+    <value>Browser and driver have been updated to the latest version.</value>
+  </data>
+  <data name="StaInitDriverFound" xml:space="preserve">
+    <value>Found local browser driver.</value>
+  </data>
+  <data name="StaInitDriverNotFound" xml:space="preserve">
+    <value>Cannot find local browser driver, will download now.</value>
+  </data>
+  <data name="StrAllFiles" xml:space="preserve">
+    <value>All files (*.*)</value>
+  </data>
+  <data name="StrCSVSpreadsheet" xml:space="preserve">
+    <value>CSV spreadsheets (*.csv)</value>
+  </data>
+  <data name="StrExcelWorkbook" xml:space="preserve">
+    <value>Microsoft Excel workbooks (*.xlsx,*.xls)</value>
+  </data>
+  <data name="StrFuncReturnVal" xml:space="preserve">
+    <value>{0} returned {1}</value>
+  </data>
+  <data name="StrLoggedInUID" xml:space="preserve">
+    <value>Logged in (UID: {0})</value>
+  </data>
+  <data name="StrNotLoggedIn" xml:space="preserve">
+    <value>Not logged in</value>
+  </data>
+  <data name="StrOTPRefused" xml:space="preserve">
+    <value>OTP entry refused by user</value>
+  </data>
+  <data name="StrTextFiles" xml:space="preserve">
+    <value>Text files (*.txt)</value>
+  </data>
+  <data name="StrUnknown" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+</root>
