@@ -1,0 +1,409 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="tabLogin.Text" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="tabActions.Text" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="btnLoginCookiesCopy.Text" xml:space="preserve">
+    <value>Sao chép</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblLoginCookiesOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 15</value>
+  </data>
+  <data name="lblLoginCookiesOutput.Text" xml:space="preserve">
+    <value>Cookies hiện tại:</value>
+  </data>
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="lblLoginPassword.Text" xml:space="preserve">
+    <value>Mật khẩu:</value>
+  </data>
+  <data name="lblLoginEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 15</value>
+  </data>
+  <data name="lblLoginEmail.Text" xml:space="preserve">
+    <value>Địa chỉ email/số điện thoại:</value>
+  </data>
+  <data name="rbtLoginCreds.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 19</value>
+  </data>
+  <data name="rbtLoginCreds.Text" xml:space="preserve">
+    <value>Thông tin đăng nhập</value>
+  </data>
+  <data name="btnLoginLoadCookiesTxt.Text" xml:space="preserve">
+    <value>Nạp file cookies.txt...</value>
+  </data>
+  <data name="rbtLoginCookies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 19</value>
+  </data>
+  <data name="rbtLoginCookies.Text" xml:space="preserve">
+    <value>Cookies (khuyên dùng)</value>
+  </data>
+  <data name="lblLoginMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 15</value>
+  </data>
+  <data name="lblLoginMethod.Text" xml:space="preserve">
+    <value>Phương pháp đăng nhập:</value>
+  </data>
+  <data name="lblLoginStatusTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 15</value>
+  </data>
+  <data name="lblLoginStatusTitle.Text" xml:space="preserve">
+    <value>Trạng thái đăng nhập:</value>
+  </data>
+  <data name="gbxActionsSummary.Text" xml:space="preserve">
+    <value>Tổng kết</value>
+  </data>
+  <data name="lblActionsSummaryTextNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 106</value>
+  </data>
+  <data name="lblActionsSummaryTextNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 15</value>
+  </data>
+  <data name="lblActionsSummaryTextNo.Text" xml:space="preserve">
+    <value>Chưa hoàn thành:</value>
+  </data>
+  <data name="tbxActionsSummaryTextNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 103</value>
+  </data>
+  <data name="tbxActionsSummaryTextNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 23</value>
+  </data>
+  <data name="tbxActionsSummaryTextNo.Text" xml:space="preserve">
+    <value>Không hoàn thành</value>
+  </data>
+  <data name="tbxActionsSummaryTextPartial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 74</value>
+  </data>
+  <data name="tbxActionsSummaryTextPartial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 23</value>
+  </data>
+  <data name="tbxActionsSummaryTextPartial.Text" xml:space="preserve">
+    <value>Chưa hoàn thành đủ</value>
+  </data>
+  <data name="lblActionsSummaryTextPartial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 77</value>
+  </data>
+  <data name="lblActionsSummaryTextPartial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 15</value>
+  </data>
+  <data name="lblActionsSummaryTextPartial.Text" xml:space="preserve">
+    <value>Hoàn thành một phần:</value>
+  </data>
+  <data name="tbxActionsSummaryTextFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 47</value>
+  </data>
+  <data name="tbxActionsSummaryTextFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 23</value>
+  </data>
+  <data name="tbxActionsSummaryTextFull.Text" xml:space="preserve">
+    <value>Đã hoàn thành</value>
+  </data>
+  <data name="lblActionsSummaryTextFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 50</value>
+  </data>
+  <data name="lblActionsSummaryTextFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 15</value>
+  </data>
+  <data name="lblActionsSummaryTextFull.Text" xml:space="preserve">
+    <value>Hoàn thành đầy đủ:</value>
+  </data>
+  <data name="lblActionsSummaryText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 15</value>
+  </data>
+  <data name="lblActionsSummaryText.Text" xml:space="preserve">
+    <value>Nội dung:</value>
+  </data>
+  <data name="tbxActionsSummaryCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 20</value>
+  </data>
+  <data name="tbxActionsSummaryCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 23</value>
+  </data>
+  <data name="tbxActionsSummaryCol.Text" xml:space="preserve">
+    <value>Tổng kết</value>
+  </data>
+  <data name="cbxActionsSummary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 19</value>
+  </data>
+  <data name="cbxActionsSummary.Text" xml:space="preserve">
+    <value>Tổng kết kết quả check và lưu vào cột:</value>
+  </data>
+  <data name="gbxActionsEC.Text" xml:space="preserve">
+    <value>Danh sách check (EntryCollection)</value>
+  </data>
+  <data name="btnActionsECShow.Text" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="btnActionsECSave.Text" xml:space="preserve">
+    <value>Xuất</value>
+  </data>
+  <data name="btnActionsECLoad.Text" xml:space="preserve">
+    <value>Nhập</value>
+  </data>
+  <data name="btnActionsStart.Text" xml:space="preserve">
+    <value>Bắt đầu</value>
+  </data>
+  <data name="gbxActionsShares.Text" xml:space="preserve">
+    <value>Chia sẻ</value>
+  </data>
+  <data name="tbxActionsSharesDetailsCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 70</value>
+  </data>
+  <data name="tbxActionsSharesDetailsCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>356, 23</value>
+  </data>
+  <data name="tbxActionsSharesDetailsCol.Text" xml:space="preserve">
+    <value>Thông tin share chi tiết</value>
+  </data>
+  <data name="cbxActionsShareDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 19</value>
+  </data>
+  <data name="cbxActionsShareDetails.Text" xml:space="preserve">
+    <value>Lưu thông tin chi tiết vào cột:</value>
+  </data>
+  <data name="numActionsMinShares.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 46</value>
+  </data>
+  <data name="cbxActionsCheckShares.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 19</value>
+  </data>
+  <data name="cbxActionsCheckShares.Text" xml:space="preserve">
+    <value>Check share: Số lượt share tối thiểu của mỗi người:</value>
+  </data>
+  <data name="tbxActionsSharesCountCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 20</value>
+  </data>
+  <data name="tbxActionsSharesCountCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 23</value>
+  </data>
+  <data name="tbxActionsSharesCountCol.Text" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="cbxActionsGetShares.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 19</value>
+  </data>
+  <data name="cbxActionsGetShares.Text" xml:space="preserve">
+    <value>Lấy các lượt chia sẻ và lưu chúng vào cột:</value>
+  </data>
+  <data name="gbxActionsMentions.Text" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="tbxActionsMentionedUIDCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 70</value>
+  </data>
+  <data name="tbxActionsMentionedUIDCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 23</value>
+  </data>
+  <data name="cbxActionsMentionsExclude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 19</value>
+  </data>
+  <data name="cbxActionsMentionsExclude.Text" xml:space="preserve">
+    <value>Không tính các tài khoản trong danh sách</value>
+  </data>
+  <data name="cbxActionsMentionsDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 19</value>
+  </data>
+  <data name="cbxActionsMentionsDetails.Text" xml:space="preserve">
+    <value>Lưu các UID được tag vào cột:</value>
+  </data>
+  <data name="numActionsMinMentions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 46</value>
+  </data>
+  <data name="cbxActionsCheckMentions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 19</value>
+  </data>
+  <data name="cbxActionsCheckMentions.Text" xml:space="preserve">
+    <value>Check tag: Số lượt tag tối thiểu của mỗi người:</value>
+  </data>
+  <data name="tbxActionsMentionsCountCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 18</value>
+  </data>
+  <data name="tbxActionsMentionsCountCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 23</value>
+  </data>
+  <data name="tbxActionsMentionsCountCol.Text" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="cbxActionsGetMentions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 19</value>
+  </data>
+  <data name="cbxActionsGetMentions.Text" xml:space="preserve">
+    <value>Lấy các lượt tag và lưu chúng vào cột:</value>
+  </data>
+  <data name="gbxActionsComments.Text" xml:space="preserve">
+    <value>Bình luận</value>
+  </data>
+  <data name="tbxActionsCommentTxtCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 70</value>
+  </data>
+  <data name="tbxActionsCommentTxtCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 23</value>
+  </data>
+  <data name="tbxActionsCommentTxtCol.Text" xml:space="preserve">
+    <value>Nội dung comment</value>
+  </data>
+  <data name="numActionsMinComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 46</value>
+  </data>
+  <data name="tbxActionsCommentsCountCol.Text" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="rbtActionsCommentsBothPasses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 19</value>
+  </data>
+  <data name="rbtActionsCommentsBothPasses.Text" xml:space="preserve">
+    <value>Theo cả 2 cách trên (khuyên dùng)</value>
+  </data>
+  <data name="rbtActionsCommentsP2Only.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 118</value>
+  </data>
+  <data name="rbtActionsCommentsP2Only.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 19</value>
+  </data>
+  <data name="rbtActionsCommentsP2Only.Text" xml:space="preserve">
+    <value>Chỉ theo cách 2 (không đăng nhập tài khoản)</value>
+  </data>
+  <data name="rbtActionsCommentsP1Only.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 99</value>
+  </data>
+  <data name="rbtActionsCommentsP1Only.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 19</value>
+  </data>
+  <data name="rbtActionsCommentsP1Only.Text" xml:space="preserve">
+    <value>Chỉ theo cách 1 (dùng tài khoản đăng nhập)</value>
+  </data>
+  <data name="lblActionsCommentsPasses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 15</value>
+  </data>
+  <data name="lblActionsCommentsPasses.Text" xml:space="preserve">
+    <value>Phương pháp lấy bình luận:</value>
+  </data>
+  <data name="cbxActionsGetReplies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 19</value>
+  </data>
+  <data name="cbxActionsGetReplies.Text" xml:space="preserve">
+    <value>Lấy trả lời bình luận</value>
+  </data>
+  <data name="cbxActionsCommentsDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 19</value>
+  </data>
+  <data name="cbxActionsCommentsDetails.Text" xml:space="preserve">
+    <value>Lưu nội dung comment vào cột:</value>
+  </data>
+  <data name="cbxActionsCheckComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 19</value>
+  </data>
+  <data name="cbxActionsCheckComments.Text" xml:space="preserve">
+    <value>Check comment: Số comment tối thiểu của mỗi người:</value>
+  </data>
+  <data name="cbxActionsGetComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 19</value>
+  </data>
+  <data name="cbxActionsGetComments.Text" xml:space="preserve">
+    <value>Lấy các bình luận và lưu số bình luận vào cột:</value>
+  </data>
+  <data name="gbxActionsReactions.Text" xml:space="preserve">
+    <value>React</value>
+  </data>
+  <data name="tbxActionsReactionsDetailsCol.Text" xml:space="preserve">
+    <value>Thông tin react chi tiết</value>
+  </data>
+  <data name="cbxActionsReactionsDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 19</value>
+  </data>
+  <data name="cbxActionsReactionsDetails.Text" xml:space="preserve">
+    <value>Lưu thông tin chi tiết vào cột:</value>
+  </data>
+  <data name="tbxActionsReactionsCountCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 20</value>
+  </data>
+  <data name="tbxActionsReactionsCountCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 23</value>
+  </data>
+  <data name="tbxActionsReactionsCountCol.Text" xml:space="preserve">
+    <value>React</value>
+  </data>
+  <data name="numActionsMinReactions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 46</value>
+  </data>
+  <data name="cbxActionsCheckReactions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 19</value>
+  </data>
+  <data name="cbxActionsCheckReactions.Text" xml:space="preserve">
+    <value>Check react: Số lượt react tối thiểu của mỗi người:</value>
+  </data>
+  <data name="cbxActionsGetReactions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 19</value>
+  </data>
+  <data name="cbxActionsGetReactions.Text" xml:space="preserve">
+    <value>Lấy các lượt react và lưu chúng vào cột:</value>
+  </data>
+  <data name="lblActionsFBLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 15</value>
+  </data>
+  <data name="lblActionsFBLink.Text" xml:space="preserve">
+    <value>Link bài đăng:</value>
+  </data>
+</root>

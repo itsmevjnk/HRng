@@ -57,4 +57,1858 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;tbxActionsMentionsCountCol.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnLoginCookiesCopy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>495, 311</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsP1Only.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsMentions.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="gbxActionsMentions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 123</value>
+  </data>
+  <data name="btnActionsECSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 13</value>
+  </data>
+  <data name="&gt;&gt;lblActionsCommentsPasses.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginCookiesOutput.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cbxActionsCheckMentions.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLoginEmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinMentions.Parent" xml:space="preserve">
+    <value>gbxActionsMentions</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginPassword.Name" xml:space="preserve">
+    <value>tbxLoginPassword</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckShares.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbxActionsGetShares.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbxActionsCheckMentions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 19</value>
+  </data>
+  <data name="cbxActionsMentionsExclude.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbxActionsGetComments.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLoginStatus.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnActionsECLoad.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsCommentTxtCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbxActionsGetComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 19</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckReactions.Name" xml:space="preserve">
+    <value>cbxActionsCheckReactions</value>
+  </data>
+  <data name="&gt;&gt;lblLoginCookiesOutput.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbxActionsCheckReactions.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsMentions.Name" xml:space="preserve">
+    <value>gbxActionsMentions</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECShow.Parent" xml:space="preserve">
+    <value>gbxActionsEC</value>
+  </data>
+  <data name="&gt;&gt;rbtLoginCookies.Name" xml:space="preserve">
+    <value>rbtLoginCookies</value>
+  </data>
+  <data name="tbxActionsSummaryTextNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>377, 23</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsMentionsDetails.Name" xml:space="preserve">
+    <value>cbxActionsMentionsDetails</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsEC.Name" xml:space="preserve">
+    <value>gbxActionsEC</value>
+  </data>
+  <data name="cbxActionsGetShares.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetComments.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="tbxActionsCommentsCountCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 18</value>
+  </data>
+  <data name="cbxActionsGetShares.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 19</value>
+  </data>
+  <data name="lblLoginStatusTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckMentions.Name" xml:space="preserve">
+    <value>cbxActionsCheckMentions</value>
+  </data>
+  <data name="lblLoginPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 15</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginPassword.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="btnActionsECLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="lblLoginMethod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 39</value>
+  </data>
+  <data name="btnLoginCookiesCopy.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnActionsECShow.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblActionsFBLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblLoginCookiesOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 315</value>
+  </data>
+  <data name="tbxActionsSummaryCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 23</value>
+  </data>
+  <data name="&gt;&gt;pbrActions.Name" xml:space="preserve">
+    <value>pbrActions</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbxActionsReactions.Text" xml:space="preserve">
+    <value>Reactions</value>
+  </data>
+  <data name="tbxActionsCommentsCountCol.Text" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="&gt;&gt;lblActionsFBLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsP1Only.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="lblActionsStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 762</value>
+  </data>
+  <data name="rbtLoginCookies.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblActionsStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxActionsCheckComments.Text" xml:space="preserve">
+    <value>Check comments count: Minimum number of comments for each entry:</value>
+  </data>
+  <data name="lblActionsSummaryTextFull.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsMentionedUIDCol.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rbtActionsCommentsP1Only.Text" xml:space="preserve">
+    <value>Pass 1 (logged in) only</value>
+  </data>
+  <data name="&gt;&gt;pbrActions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="lblLoginMethod.Text" xml:space="preserve">
+    <value>Login method:</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextFull.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblLoginCookiesOutput.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabLogin.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="tabActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 786</value>
+  </data>
+  <data name="cbxActionsCommentsDetails.Text" xml:space="preserve">
+    <value>List comments in column:</value>
+  </data>
+  <data name="lblLoginMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 15</value>
+  </data>
+  <data name="&gt;&gt;lblLoginStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsReactionsCountCol.Name" xml:space="preserve">
+    <value>tbxActionsReactionsCountCol</value>
+  </data>
+  <data name="lblActionsFBLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 15</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinReactions.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnActionsECSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnLogin.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pbrActions.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="tbxActionsCommentTxtCol.Text" xml:space="preserve">
+    <value>Comment text</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsReactionsCountCol.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnActionsStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 23</value>
+  </data>
+  <data name="lblActionsSummaryTextNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 106</value>
+  </data>
+  <data name="gbxActionsMentions.Text" xml:space="preserve">
+    <value>Mentions</value>
+  </data>
+  <data name="&gt;&gt;lblActionsCommentsPasses.Name" xml:space="preserve">
+    <value>lblActionsCommentsPasses</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsShares.Name" xml:space="preserve">
+    <value>gbxActionsShares</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinReactions.Parent" xml:space="preserve">
+    <value>gbxActionsReactions</value>
+  </data>
+  <data name="cbxActionsGetReplies.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetReactions.Parent" xml:space="preserve">
+    <value>gbxActionsReactions</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECSave.Parent" xml:space="preserve">
+    <value>gbxActionsEC</value>
+  </data>
+  <data name="cbxActionsCheckShares.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="tbxActionsSharesCountCol.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsP1Only.Name" xml:space="preserve">
+    <value>rbtActionsCommentsP1Only</value>
+  </data>
+  <data name="lblActionsSummaryTextFull.Text" xml:space="preserve">
+    <value>Full completion:</value>
+  </data>
+  <data name="btnActionsECShow.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbxActionsCheckComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="&gt;&gt;lblActionsStatus.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextPartial.Name" xml:space="preserve">
+    <value>lblActionsSummaryTextPartial</value>
+  </data>
+  <data name="tbxActionsMentionsCountCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 23</value>
+  </data>
+  <data name="btnActionsStart.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetReplies.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsMentionsDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsBothPasses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="numActionsMinComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 46</value>
+  </data>
+  <data name="lblLoginPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 209</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsCommentTxtCol.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblActionsStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 15</value>
+  </data>
+  <data name="pbrActions.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextPartial.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="lblActionsFBLink.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckShares.Name" xml:space="preserve">
+    <value>cbxActionsCheckShares</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinShares.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsComments.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="&gt;&gt;btnLoginLoadCookiesTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbxActionsSummary.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbxActionsComments.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gbxActionsComments.Text" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="lblActionsSummaryTextNo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinComments.Name" xml:space="preserve">
+    <value>numActionsMinComments</value>
+  </data>
+  <data name="cbxActionsShareDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gbxActionsShares.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 487</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsP2Only.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="&gt;&gt;tabLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtLoginCreds.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="gbxActionsReactions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 103</value>
+  </data>
+  <data name="gbxActionsReactions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 81</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryCol.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="tbxActionsSummaryTextFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 47</value>
+  </data>
+  <data name="cbxActionsShareDetails.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckReactions.Parent" xml:space="preserve">
+    <value>gbxActionsReactions</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetComments.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnActionsStart.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsReactionsDetails.Parent" xml:space="preserve">
+    <value>gbxActionsReactions</value>
+  </data>
+  <data name="&gt;&gt;rbtLoginCookies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetMentions.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbxActionsSummary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 19</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsP2Only.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxActionsReactionsCountCol.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="cbxActionsGetMentions.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLoginStatus.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lblActionsStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsShares.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCommentsDetails.Name" xml:space="preserve">
+    <value>cbxActionsCommentsDetails</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextPartial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxActionsCommentTxtCol.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblActionsCommentsPasses.Text" xml:space="preserve">
+    <value>Comment retrieval method:</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinMentions.Name" xml:space="preserve">
+    <value>numActionsMinMentions</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsP2Only.Name" xml:space="preserve">
+    <value>rbtActionsCommentsP2Only</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetReplies.Name" xml:space="preserve">
+    <value>cbxActionsGetReplies</value>
+  </data>
+  <data name="&gt;&gt;btnLoginCookiesCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbxActionsGetReactions.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryCol.Name" xml:space="preserve">
+    <value>tbxActionsSummaryCol</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="cbxActionsMentionsDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="cbxActionsGetShares.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginCookiesInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtLoginCookies.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="cbxActionsGetReactions.Text" xml:space="preserve">
+    <value>Get reactions and list the count in column:</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsReactionsDetails.Name" xml:space="preserve">
+    <value>cbxActionsReactionsDetails</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetReplies.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsCommentTxtCol.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsMentions.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tbxActionsCommentTxtCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 23</value>
+  </data>
+  <data name="&gt;&gt;lblLoginPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbxActionsSummary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 137</value>
+  </data>
+  <data name="gbxActionsEC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 41</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinMentions.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="numActionsMinMentions.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsComments.Name" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="tbxLoginEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 23</value>
+  </data>
+  <data name="lblLoginStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 15</value>
+  </data>
+  <data name="rbtActionsCommentsP2Only.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryText.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsSummary.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="&gt;&gt;btnActionsStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblActionsSummaryTextFull.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cbxActionsGetComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="cbxActionsCommentsDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblLoginCookiesOutput.Name" xml:space="preserve">
+    <value>lblLoginCookiesOutput</value>
+  </data>
+  <data name="tbxActionsReactionsDetailsCol.Text" xml:space="preserve">
+    <value>Reaction details</value>
+  </data>
+  <data name="tctMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 814</value>
+  </data>
+  <data name="rbtActionsCommentsP2Only.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 19</value>
+  </data>
+  <data name="tbxActionsReactionsDetailsCol.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cbxActionsCommentsDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 19</value>
+  </data>
+  <data name="lblLoginStatusTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbxActionsCheckReactions.Text" xml:space="preserve">
+    <value>Check reactions count: Minimum number of reactions for each entry:</value>
+  </data>
+  <data name="cbxActionsReactionsDetails.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxActionsMentionsExclude.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="tbxActionsSharesCountCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 23</value>
+  </data>
+  <data name="tbxActionsCommentTxtCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 70</value>
+  </data>
+  <data name="rbtActionsCommentsP1Only.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbtLoginCookies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 57</value>
+  </data>
+  <data name="tbxLoginPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 227</value>
+  </data>
+  <data name="rbtLoginCookies.Text" xml:space="preserve">
+    <value>Cookies (recommended)</value>
+  </data>
+  <data name="tabActions.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cbxActionsShareDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 72</value>
+  </data>
+  <data name="tbxActionsMentionedUIDCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 70</value>
+  </data>
+  <data name="cbxActionsGetShares.Text" xml:space="preserve">
+    <value>Get shares and list the count in column:</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>HRng WinForms Frontend</value>
+  </data>
+  <data name="&gt;&gt;lblLoginStatusTitle.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;btnActionsStart.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="lblActionsSummaryTextNo.Text" xml:space="preserve">
+    <value>No completion:</value>
+  </data>
+  <data name="cbxActionsSummary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsReactions.Name" xml:space="preserve">
+    <value>gbxActionsReactions</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Name" xml:space="preserve">
+    <value>btnLogin</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginCookiesOutput.Name" xml:space="preserve">
+    <value>tbxLoginCookiesOutput</value>
+  </data>
+  <data name="cbxActionsGetReactions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="btnActionsECShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 13</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryText.Name" xml:space="preserve">
+    <value>lblActionsSummaryText</value>
+  </data>
+  <data name="btnActionsECSave.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="rbtActionsCommentsP2Only.Location" type="System.Drawing.Point, System.Drawing">
+    <value>313, 118</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextPartial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxLoginCookiesInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 82</value>
+  </data>
+  <data name="cbxActionsSummary.Text" xml:space="preserve">
+    <value>Summarize checking data and write to column:</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsShareDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsFBLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLoginStatusTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsMentionsExclude.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblActionsCommentsPasses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 120</value>
+  </data>
+  <data name="tctMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="cbxActionsShareDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 19</value>
+  </data>
+  <data name="tbxLoginPassword.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextNo.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckShares.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblLoginStatusTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 15</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsMentions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsEC.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextNo.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="lblActionsSummaryTextPartial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 77</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCommentsDetails.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinShares.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbxLoginCookiesOutput.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsReactionsCountCol.Parent" xml:space="preserve">
+    <value>gbxActionsReactions</value>
+  </data>
+  <data name="rbtActionsCommentsBothPasses.Text" xml:space="preserve">
+    <value>Both passes (recommended)</value>
+  </data>
+  <data name="btnActionsECLoad.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECShow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsMentionsExclude.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsComments.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblActionsFBLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="btnActionsStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 736</value>
+  </data>
+  <data name="tbxLoginCookiesInput.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinReactions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbxActionsCheckReactions.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblLoginCookiesOutput.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbxActionsSharesDetailsCol.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="tbxActionsSharesDetailsCol.Text" xml:space="preserve">
+    <value>Share details</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextFull.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbrActions.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="rbtActionsCommentsP1Only.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tbxLoginEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 227</value>
+  </data>
+  <data name="gbxActionsEC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 42</value>
+  </data>
+  <data name="rbtActionsCommentsBothPasses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 19</value>
+  </data>
+  <data name="btnLoginLoadCookiesTxt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 23</value>
+  </data>
+  <data name="tbxActionsSummaryTextNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 103</value>
+  </data>
+  <data name="numActionsMinShares.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblActionsSummaryText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 50</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinReactions.Name" xml:space="preserve">
+    <value>numActionsMinReactions</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckMentions.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnLoginLoadCookiesTxt.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tabActions.Text" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsReactionsDetailsCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxActionsSummaryTextPartial.Text" xml:space="preserve">
+    <value>Partially completed</value>
+  </data>
+  <data name="cbxActionsMentionsExclude.Text" xml:space="preserve">
+    <value>Exclude accounts in the EntryCollection</value>
+  </data>
+  <data name="numActionsMinShares.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 46</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsMentionsCountCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECLoad.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tctMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numActionsMinReactions.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;rbtLoginCreds.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="gbxActionsSummary.Text" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="lblLoginPassword.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="lblActionsStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsCommentsCountCol.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rbtActionsCommentsBothPasses.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbxActionsMentionedUIDCol.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckReactions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblLoginStatusTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbtLoginCreds.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 19</value>
+  </data>
+  <data name="tbxActionsMentionsCountCol.Text" xml:space="preserve">
+    <value>Mentions</value>
+  </data>
+  <data name="tbxActionsFBLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 23</value>
+  </data>
+  <data name="cbxActionsCheckComments.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsBothPasses.Name" xml:space="preserve">
+    <value>rbtActionsCommentsBothPasses</value>
+  </data>
+  <data name="tabLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 786</value>
+  </data>
+  <data name="cbxActionsShareDetails.Text" xml:space="preserve">
+    <value>List share details in column:</value>
+  </data>
+  <data name="numActionsMinMentions.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckComments.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbxActionsMentionsDetails.Text" xml:space="preserve">
+    <value>List mentioned UIDs in column:</value>
+  </data>
+  <data name="tbxActionsSummaryTextNo.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cbxActionsCheckShares.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSharesCountCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxActionsMentionedUIDCol.Text" xml:space="preserve">
+    <value>Mentioned UID(s)</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetReactions.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblLoginEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsBothPasses.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="btnLoginLoadCookiesTxt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>429, 53</value>
+  </data>
+  <data name="lblActionsSummaryTextPartial.Text" xml:space="preserve">
+    <value>Partial completion:</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetMentions.Name" xml:space="preserve">
+    <value>cbxActionsGetMentions</value>
+  </data>
+  <data name="lblActionsSummaryTextPartial.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsSummary.Name" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="gbxActionsComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 190</value>
+  </data>
+  <data name="cbxActionsMentionsDetails.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tbxActionsReactionsCountCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 20</value>
+  </data>
+  <data name="&gt;&gt;lblLoginPassword.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblLoginMethod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxActionsSummaryTextFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>377, 23</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSharesCountCol.Parent" xml:space="preserve">
+    <value>gbxActionsShares</value>
+  </data>
+  <data name="&gt;&gt;lblLoginPassword.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetReplies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbxActionsMentions.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tctMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblActionsSummaryTextFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 50</value>
+  </data>
+  <data name="&gt;&gt;lblActionsFBLink.Name" xml:space="preserve">
+    <value>lblActionsFBLink</value>
+  </data>
+  <data name="tbxActionsMentionedUIDCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>346, 23</value>
+  </data>
+  <data name="&gt;&gt;lblLoginEmail.Name" xml:space="preserve">
+    <value>lblLoginEmail</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginEmail.Name" xml:space="preserve">
+    <value>tbxLoginEmail</value>
+  </data>
+  <data name="tbxActionsSharesCountCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 20</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsBothPasses.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbxActionsGetMentions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="tbxActionsSummaryTextNo.Text" xml:space="preserve">
+    <value>Not completed</value>
+  </data>
+  <data name="rbtActionsCommentsBothPasses.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblLoginCookiesOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxLoginCookiesOutput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 9pt</value>
+  </data>
+  <data name="tbxLoginCookiesOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 99</value>
+  </data>
+  <data name="btnLoginCookiesCopy.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblActionsCommentsPasses.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsShareDetails.Name" xml:space="preserve">
+    <value>cbxActionsShareDetails</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextPartial.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckComments.Name" xml:space="preserve">
+    <value>cbxActionsCheckComments</value>
+  </data>
+  <data name="lblActionsSummaryTextPartial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 15</value>
+  </data>
+  <data name="tbxActionsMentionsCountCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 18</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsSummary.Name" xml:space="preserve">
+    <value>cbxActionsSummary</value>
+  </data>
+  <data name="tbxActionsSummaryTextPartial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 74</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginCookiesInput.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cbxActionsCheckMentions.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsMentionedUIDCol.Parent" xml:space="preserve">
+    <value>gbxActionsMentions</value>
+  </data>
+  <data name="cbxActionsMentionsDetails.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbxLoginCookiesOutput.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetShares.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxLoginEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsFBLink.Name" xml:space="preserve">
+    <value>tbxActionsFBLink</value>
+  </data>
+  <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 256</value>
+  </data>
+  <data name="&gt;&gt;btnLoginLoadCookiesTxt.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECShow.Name" xml:space="preserve">
+    <value>btnActionsECShow</value>
+  </data>
+  <data name="tbxActionsSummaryTextFull.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsMentionsExclude.Name" xml:space="preserve">
+    <value>cbxActionsMentionsExclude</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextFull.Name" xml:space="preserve">
+    <value>lblActionsSummaryTextFull</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckMentions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbxActionsCheckShares.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 19</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSharesCountCol.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbxActionsGetMentions.Text" xml:space="preserve">
+    <value>Get mentions and list the count in column:</value>
+  </data>
+  <data name="cbxActionsMentionsExclude.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabLogin.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="btnActionsECSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbxActionsShares.Text" xml:space="preserve">
+    <value>Shares</value>
+  </data>
+  <data name="btnLoginLoadCookiesTxt.Text" xml:space="preserve">
+    <value>Load cookies.txt...</value>
+  </data>
+  <data name="gbxActionsMentions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 361</value>
+  </data>
+  <data name="btnActionsECShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetReactions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblActionsStatus.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextFull.Name" xml:space="preserve">
+    <value>tbxActionsSummaryTextFull</value>
+  </data>
+  <data name="&gt;&gt;tabActions.Parent" xml:space="preserve">
+    <value>tctMain</value>
+  </data>
+  <data name="tbxLoginPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 23</value>
+  </data>
+  <data name="cbxActionsCheckShares.Text" xml:space="preserve">
+    <value>Check shares count: Minimum number of shares for each entry:</value>
+  </data>
+  <data name="pbrActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>478, 23</value>
+  </data>
+  <data name="&gt;&gt;btnActionsStart.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbxActionsReactionsDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tbxActionsSummaryTextPartial.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinShares.Name" xml:space="preserve">
+    <value>numActionsMinShares</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetShares.Parent" xml:space="preserve">
+    <value>gbxActionsShares</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsSummary.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rbtLoginCookies.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECSave.Name" xml:space="preserve">
+    <value>btnActionsECSave</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetMentions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxActionsReactionsCountCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 23</value>
+  </data>
+  <data name="lblLoginMethod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetReactions.Name" xml:space="preserve">
+    <value>cbxActionsGetReactions</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginCookiesInput.Name" xml:space="preserve">
+    <value>tbxLoginCookiesInput</value>
+  </data>
+  <data name="&gt;&gt;tctMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cbxActionsGetReplies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 97</value>
+  </data>
+  <data name="tbxActionsSharesCountCol.Text" xml:space="preserve">
+    <value>Shares</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsMentionsDetails.Parent" xml:space="preserve">
+    <value>gbxActionsMentions</value>
+  </data>
+  <data name="lblLoginEmail.Text" xml:space="preserve">
+    <value>Email address or phone number:</value>
+  </data>
+  <data name="&gt;&gt;lblLoginMethod.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCommentsDetails.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsP1Only.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rbtActionsCommentsP2Only.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tctMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsSummary.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tbxLoginPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="cbxActionsGetReplies.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbxActionsSummaryTextPartial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>377, 23</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSharesCountCol.Name" xml:space="preserve">
+    <value>tbxActionsSharesCountCol</value>
+  </data>
+  <data name="lblLoginStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>608, 831</value>
+  </data>
+  <data name="btnActionsECLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 13</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsEC.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsReactionsDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblLoginEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 209</value>
+  </data>
+  <data name="tbxActionsSharesDetailsCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 70</value>
+  </data>
+  <data name="gbxActionsSummary.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lblLoginStatus.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="tbxActionsSummaryCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 20</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetShares.Name" xml:space="preserve">
+    <value>cbxActionsGetShares</value>
+  </data>
+  <data name="cbxActionsGetReplies.Text" xml:space="preserve">
+    <value>Get replies to comments</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsCommentsCountCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblActionsCommentsPasses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsMentionsCountCol.Parent" xml:space="preserve">
+    <value>gbxActionsMentions</value>
+  </data>
+  <data name="tbxActionsReactionsDetailsCol.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numActionsMinComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 23</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECLoad.Name" xml:space="preserve">
+    <value>btnActionsECLoad</value>
+  </data>
+  <data name="lblActionsSummaryText.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cbxActionsMentionsDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 72</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbxActionsReactionsDetails.Text" xml:space="preserve">
+    <value>List reaction details in column:</value>
+  </data>
+  <data name="cbxActionsReactionsDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 19</value>
+  </data>
+  <data name="lblLoginStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="tbxActionsFBLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 12</value>
+  </data>
+  <data name="lblLoginEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 15</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSharesDetailsCol.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbxActionsSummaryTextFull.Text" xml:space="preserve">
+    <value>Fully completed</value>
+  </data>
+  <data name="cbxActionsMentionsExclude.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 97</value>
+  </data>
+  <data name="lblLoginMethod.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tbxActionsSummaryCol.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblActionsSummaryTextFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 15</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsShares.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnActionsECSave.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSharesDetailsCol.Parent" xml:space="preserve">
+    <value>gbxActionsShares</value>
+  </data>
+  <data name="cbxActionsReactionsDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 72</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsReactions.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="numActionsMinMentions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 23</value>
+  </data>
+  <data name="&gt;&gt;lblActionsCommentsPasses.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="gbxActionsShares.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextPartial.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbxActionsFBLink.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="rbtLoginCreds.Text" xml:space="preserve">
+    <value>Credentials</value>
+  </data>
+  <data name="&gt;&gt;tabActions.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsReactionsDetailsCol.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbxLoginCookiesInput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 9pt</value>
+  </data>
+  <data name="gbxActionsComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 165</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextFull.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tbxActionsReactionsCountCol.Text" xml:space="preserve">
+    <value>Reactions</value>
+  </data>
+  <data name="lblActionsSummaryText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblLoginStatusTitle.Name" xml:space="preserve">
+    <value>lblLoginStatusTitle</value>
+  </data>
+  <data name="lblActionsSummaryTextNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 15</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECLoad.Parent" xml:space="preserve">
+    <value>gbxActionsEC</value>
+  </data>
+  <data name="tbxLoginCookiesInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 99</value>
+  </data>
+  <data name="tbxActionsMentionsCountCol.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rbtLoginCreds.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextNo.Name" xml:space="preserve">
+    <value>tbxActionsSummaryTextNo</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsSummary.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="&gt;&gt;lblLoginStatus.Name" xml:space="preserve">
+    <value>lblLoginStatus</value>
+  </data>
+  <data name="cbxActionsCheckShares.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckComments.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsMentionedUIDCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnActionsECShow.Text" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="tbxLoginCookiesOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 340</value>
+  </data>
+  <data name="&gt;&gt;tctMain.Name" xml:space="preserve">
+    <value>tctMain</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbxActionsCheckComments.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetComments.Name" xml:space="preserve">
+    <value>cbxActionsGetComments</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsSummary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxActionsMentionedUIDCol.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;btnActionsStart.Name" xml:space="preserve">
+    <value>btnActionsStart</value>
+  </data>
+  <data name="&gt;&gt;rbtActionsCommentsP2Only.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginCookiesOutput.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="lblLoginEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="rbtLoginCreds.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 187</value>
+  </data>
+  <data name="&gt;&gt;btnActionsECShow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryText.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;rbtLoginCreds.Name" xml:space="preserve">
+    <value>rbtLoginCreds</value>
+  </data>
+  <data name="lblActionsFBLink.Text" xml:space="preserve">
+    <value>Facebook post link:</value>
+  </data>
+  <data name="btnActionsStart.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="cbxActionsCheckMentions.Text" xml:space="preserve">
+    <value>Check mentions count: Minimum number of mentions for each entry:</value>
+  </data>
+  <data name="cbxActionsMentionsExclude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 19</value>
+  </data>
+  <data name="&gt;&gt;tabActions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbxActionsSummary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 593</value>
+  </data>
+  <data name="numActionsMinReactions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>404, 46</value>
+  </data>
+  <data name="numActionsMinMentions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 46</value>
+  </data>
+  <data name="&gt;&gt;tabActions.Name" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="cbxActionsCheckMentions.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblLoginEmail.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginCookiesOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoginCookiesCopy.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="&gt;&gt;lblActionsFBLink.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsReactionsDetailsCol.Parent" xml:space="preserve">
+    <value>gbxActionsReactions</value>
+  </data>
+  <data name="&gt;&gt;tabLogin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbxActionsEC.Text" xml:space="preserve">
+    <value>EntryCollection</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckShares.Parent" xml:space="preserve">
+    <value>gbxActionsShares</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsReactionsDetailsCol.Name" xml:space="preserve">
+    <value>tbxActionsReactionsDetailsCol</value>
+  </data>
+  <data name="numActionsMinComments.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cbxActionsCheckMentions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="&gt;&gt;lblLoginMethod.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="gbxActionsEC.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="rbtActionsCommentsP1Only.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 19</value>
+  </data>
+  <data name="cbxActionsCheckComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 19</value>
+  </data>
+  <data name="tbxActionsSummaryCol.Text" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsReactionsCountCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblLoginPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinShares.Parent" xml:space="preserve">
+    <value>gbxActionsShares</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsCommentsCountCol.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinMentions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rbtLoginCreds.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxActionsSummary.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxActionsCheckReactions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="tbxActionsCommentsCountCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 23</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginEmail.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="pbrActions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 736</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsReactionsDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxActionsReactionsDetailsCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 23</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsMentionedUIDCol.Name" xml:space="preserve">
+    <value>tbxActionsMentionedUIDCol</value>
+  </data>
+  <data name="rbtActionsCommentsP2Only.Text" xml:space="preserve">
+    <value>Pass 2 (not logged in) only</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextNo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblActionsFBLink.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsEC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbxActionsCheckReactions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 19</value>
+  </data>
+  <data name="tbxActionsCommentsCountCol.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="tabLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tbxLoginCookiesInput.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryCol.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;rbtLoginCreds.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsFBLink.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="&gt;&gt;lblLoginMethod.Name" xml:space="preserve">
+    <value>lblLoginMethod</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoginCookiesCopy.Name" xml:space="preserve">
+    <value>btnLoginCookiesCopy</value>
+  </data>
+  <data name="lblLoginCookiesOutput.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lblActionsStatus.Name" xml:space="preserve">
+    <value>lblActionsStatus</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSharesDetailsCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblLoginPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsReactions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSharesDetailsCol.Name" xml:space="preserve">
+    <value>tbxActionsSharesDetailsCol</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextNo.Name" xml:space="preserve">
+    <value>lblActionsSummaryTextNo</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginCookiesInput.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextPartial.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblActionsStatus.Text" xml:space="preserve">
+    <value>lblActionsStatus</value>
+  </data>
+  <data name="rbtLoginCookies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 19</value>
+  </data>
+  <data name="gbxActionsShares.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 100</value>
+  </data>
+  <data name="&gt;&gt;rbtLoginCookies.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tbxActionsSharesDetailsCol.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numActionsMinReactions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 23</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsMentionsDetails.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetShares.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tbxActionsSharesDetailsCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 23</value>
+  </data>
+  <data name="lblLoginCookiesOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 15</value>
+  </data>
+  <data name="lblActionsSummaryTextNo.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lblLoginPassword.Name" xml:space="preserve">
+    <value>lblLoginPassword</value>
+  </data>
+  <data name="&gt;&gt;lblLoginEmail.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="cbxActionsGetMentions.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblLoginCookiesOutput.Text" xml:space="preserve">
+    <value>Current cookies:</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinComments.Parent" xml:space="preserve">
+    <value>gbxActionsComments</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsCommentTxtCol.Name" xml:space="preserve">
+    <value>tbxActionsCommentTxtCol</value>
+  </data>
+  <data name="rbtActionsCommentsP1Only.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 118</value>
+  </data>
+  <data name="numActionsMinShares.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 23</value>
+  </data>
+  <data name="btnLoginLoadCookiesTxt.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="cbxActionsGetReactions.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLoginStatusTitle.Text" xml:space="preserve">
+    <value>Facebook login status:</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsReactions.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsSummaryTextPartial.Name" xml:space="preserve">
+    <value>tbxActionsSummaryTextPartial</value>
+  </data>
+  <data name="cbxActionsGetMentions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 19</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckMentions.Parent" xml:space="preserve">
+    <value>gbxActionsMentions</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginEmail.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsShareDetails.Parent" xml:space="preserve">
+    <value>gbxActionsShares</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsMentionsCountCol.Name" xml:space="preserve">
+    <value>tbxActionsMentionsCountCol</value>
+  </data>
+  <data name="cbxActionsMentionsDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 19</value>
+  </data>
+  <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 23</value>
+  </data>
+  <data name="&gt;&gt;lblLoginStatusTitle.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="tbxLoginEmail.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnLoginCookiesCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;numActionsMinComments.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblActionsCommentsPasses.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabLogin.Name" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="tabActions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="rbtActionsCommentsBothPasses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 140</value>
+  </data>
+  <data name="cbxActionsGetReplies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 19</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsSummary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsFBLink.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbxActionsCommentsDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 72</value>
+  </data>
+  <data name="lblActionsSummaryText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 15</value>
+  </data>
+  <data name="cbxActionsCommentsDetails.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLoginStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 15</value>
+  </data>
+  <data name="&gt;&gt;btnLoginLoadCookiesTxt.Name" xml:space="preserve">
+    <value>btnLoginLoadCookiesTxt</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsGetMentions.Parent" xml:space="preserve">
+    <value>gbxActionsMentions</value>
+  </data>
+  <data name="lblActionsCommentsPasses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 15</value>
+  </data>
+  <data name="tbxActionsCommentTxtCol.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gbxActionsReactions.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsShareDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbxActionsMentionsCountCol.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabLogin.Parent" xml:space="preserve">
+    <value>tctMain</value>
+  </data>
+  <data name="btnLoginCookiesCopy.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="&gt;&gt;gbxActionsShares.Parent" xml:space="preserve">
+    <value>tabActions</value>
+  </data>
+  <data name="cbxActionsGetComments.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbxActionsGetReactions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 19</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextFull.Parent" xml:space="preserve">
+    <value>gbxActionsSummary</value>
+  </data>
+  <data name="lblActionsSummaryTextPartial.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tbxActionsCommentsCountCol.Name" xml:space="preserve">
+    <value>tbxActionsCommentsCountCol</value>
+  </data>
+  <data name="tbxActionsReactionsDetailsCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 70</value>
+  </data>
+  <data name="&gt;&gt;btnLoginCookiesCopy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblActionsSummaryText.Text" xml:space="preserve">
+    <value>Text for:</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginPassword.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCommentsDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsCheckReactions.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbxActionsGetComments.Text" xml:space="preserve">
+    <value>Get comments and list the count in column:</value>
+  </data>
+  <data name="&gt;&gt;lblActionsSummaryTextNo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbxActionsMentionsExclude.Parent" xml:space="preserve">
+    <value>gbxActionsMentions</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

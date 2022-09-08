@@ -57,4 +57,423 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;pnlECUIDDelim.Name" xml:space="preserve">
+    <value>pnlECUIDDelim</value>
+  </data>
+  <data name="rbtECUIDColName.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDColName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rbtECUIDDelimNL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numECUIDCol.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDDelimNL.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblECUIDDelim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="&gt;&gt;numECUIDCol.Parent" xml:space="preserve">
+    <value>pnlECUIDCol</value>
+  </data>
+  <data name="&gt;&gt;lblECConfig.Name" xml:space="preserve">
+    <value>lblECConfig</value>
+  </data>
+  <data name="rbtECUIDColName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 1</value>
+  </data>
+  <data name="lblECConfig.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 15</value>
+  </data>
+  <data name="&gt;&gt;pnlECUIDDelim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblECStartRow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDColNum.Name" xml:space="preserve">
+    <value>rbtECUIDColNum</value>
+  </data>
+  <data name="tbxECUIDDelim.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDColName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblECUIDCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 15</value>
+  </data>
+  <data name="rbtECUIDDelimNL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="lblECConfig.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="rbtECUIDColName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>302, 201</value>
+  </data>
+  <data name="lblECUIDCol.Text" xml:space="preserve">
+    <value>UID column:</value>
+  </data>
+  <data name="numECUIDCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 23</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDColName.Name" xml:space="preserve">
+    <value>rbtECUIDColName</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDDelimNL.Parent" xml:space="preserve">
+    <value>pnlECUIDDelim</value>
+  </data>
+  <data name="lblECConfig.Text" xml:space="preserve">
+    <value>Please set the spreadsheet's settings for importing.</value>
+  </data>
+  <data name="btnECOK.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblECUIDCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 64</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>EntryCollection import</value>
+  </data>
+  <data name="tbxECUIDCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 0</value>
+  </data>
+  <data name="&gt;&gt;btnECCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="numECStartRow.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tbxECUIDDelim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;lblECUIDDelim.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="rbtECUIDColNum.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="rbtECUIDColNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 26</value>
+  </data>
+  <data name="btnECCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 170</value>
+  </data>
+  <data name="rbtECUIDDelimNL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 1</value>
+  </data>
+  <data name="rbtECUIDColName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblECUIDCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblECStartRow.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbxECUIDDelim.Name" xml:space="preserve">
+    <value>tbxECUIDDelim</value>
+  </data>
+  <data name="&gt;&gt;pnlECUIDCol.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbxECUIDDelim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxECUIDCol.Name" xml:space="preserve">
+    <value>tbxECUIDCol</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDColNum.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblECUIDDelim.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnlECUIDDelim.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbxECUIDDelim.Parent" xml:space="preserve">
+    <value>pnlECUIDDelim</value>
+  </data>
+  <data name="&gt;&gt;numECStartRow.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDDelimCustom.Name" xml:space="preserve">
+    <value>rbtECUIDDelimCustom</value>
+  </data>
+  <data name="pnlECUIDDelim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 51</value>
+  </data>
+  <data name="&gt;&gt;lblECStartRow.Name" xml:space="preserve">
+    <value>lblECStartRow</value>
+  </data>
+  <data name="lblECUIDDelim.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="tbxECUIDDelim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 24</value>
+  </data>
+  <data name="rbtECUIDColNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 19</value>
+  </data>
+  <data name="numECStartRow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 23</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ECImportForm</value>
+  </data>
+  <data name="&gt;&gt;numECUIDCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnlECUIDCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 62</value>
+  </data>
+  <data name="lblECStartRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 35</value>
+  </data>
+  <data name="pnlECUIDDelim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 113</value>
+  </data>
+  <data name="&gt;&gt;tbxECUIDDelim.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblECUIDDelim.Name" xml:space="preserve">
+    <value>lblECUIDDelim</value>
+  </data>
+  <data name="rbtECUIDColNum.Text" xml:space="preserve">
+    <value>Number:</value>
+  </data>
+  <data name="&gt;&gt;lblECUIDCol.Name" xml:space="preserve">
+    <value>lblECUIDCol</value>
+  </data>
+  <data name="&gt;&gt;btnECOK.Name" xml:space="preserve">
+    <value>btnECOK</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDColNum.Parent" xml:space="preserve">
+    <value>pnlECUIDCol</value>
+  </data>
+  <data name="&gt;&gt;btnECCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblECStartRow.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbxECUIDDelim.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="pnlECUIDDelim.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;numECStartRow.Name" xml:space="preserve">
+    <value>numECStartRow</value>
+  </data>
+  <data name="numECStartRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 33</value>
+  </data>
+  <data name="lblECUIDDelim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 114</value>
+  </data>
+  <data name="&gt;&gt;pnlECUIDDelim.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblECStartRow.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDDelimCustom.Parent" xml:space="preserve">
+    <value>pnlECUIDDelim</value>
+  </data>
+  <data name="rbtECUIDDelimCustom.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="rbtECUIDDelimNL.Text" xml:space="preserve">
+    <value>Newline</value>
+  </data>
+  <data name="&gt;&gt;numECUIDCol.Name" xml:space="preserve">
+    <value>numECUIDCol</value>
+  </data>
+  <data name="&gt;&gt;lblECUIDCol.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDDelimCustom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numECUIDCol.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDDelimCustom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnECCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="rbtECUIDDelimNL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlECUIDCol.Name" xml:space="preserve">
+    <value>pnlECUIDCol</value>
+  </data>
+  <data name="numECUIDCol.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblECUIDCol.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblECUIDDelim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbxECUIDCol.Text" xml:space="preserve">
+    <value>UID</value>
+  </data>
+  <data name="&gt;&gt;tbxECUIDCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="lblECUIDCol.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblECStartRow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 15</value>
+  </data>
+  <data name="btnECOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="btnECOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="pnlECUIDCol.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="rbtECUIDColNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnECOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rbtECUIDColName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 19</value>
+  </data>
+  <data name="&gt;&gt;pnlECUIDCol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblECConfig.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblECConfig.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlECUIDCol.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnECOK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblECConfig.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDColNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnECCancel.Name" xml:space="preserve">
+    <value>btnECCancel</value>
+  </data>
+  <data name="pnlECUIDCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 50</value>
+  </data>
+  <data name="&gt;&gt;tbxECUIDCol.Parent" xml:space="preserve">
+    <value>pnlECUIDCol</value>
+  </data>
+  <data name="rbtECUIDDelimCustom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 19</value>
+  </data>
+  <data name="&gt;&gt;lblECStartRow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rbtECUIDDelimCustom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDColName.Parent" xml:space="preserve">
+    <value>pnlECUIDCol</value>
+  </data>
+  <data name="lblECStartRow.Text" xml:space="preserve">
+    <value>Starting row #:</value>
+  </data>
+  <data name="&gt;&gt;lblECConfig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblECUIDCol.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnECOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnECCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="lblECUIDDelim.Text" xml:space="preserve">
+    <value>UID delimiter:</value>
+  </data>
+  <data name="&gt;&gt;tbxECUIDCol.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tbxECUIDCol.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tbxECUIDCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="rbtECUIDDelimCustom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDDelimNL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnECCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;rbtECUIDDelimNL.Name" xml:space="preserve">
+    <value>rbtECUIDDelimNL</value>
+  </data>
+  <data name="&gt;&gt;btnECCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numECUIDCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 26</value>
+  </data>
+  <data name="btnECOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 170</value>
+  </data>
+  <data name="&gt;&gt;numECStartRow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numECStartRow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblECUIDDelim.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbtECUIDDelimCustom.Text" xml:space="preserve">
+    <value>Custom:</value>
+  </data>
+  <data name="lblECConfig.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

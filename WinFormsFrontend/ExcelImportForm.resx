@@ -57,4 +57,120 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnExcelCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="lblExcelSheet.Text" xml:space="preserve">
+    <value>Please select the worksheet you want to use:</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Microsoft Excel workbook import</value>
+  </data>
+  <data name="&gt;&gt;cbxExcelSheet.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnExcelCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 56</value>
+  </data>
+  <data name="btnExcelCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cbxExcelSheet.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblExcelSheet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 15</value>
+  </data>
+  <data name="&gt;&gt;btnExcelOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblExcelSheet.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnExcelOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnExcelOK.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblExcelSheet.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnExcelOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="lblExcelSheet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="&gt;&gt;lblExcelSheet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExcelSheet.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnExcelOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 56</value>
+  </data>
+  <data name="btnExcelCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnExcelCancel.Name" xml:space="preserve">
+    <value>btnExcelCancel</value>
+  </data>
+  <data name="&gt;&gt;btnExcelCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbxExcelSheet.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnExcelOK.Name" xml:space="preserve">
+    <value>btnExcelOK</value>
+  </data>
+  <data name="&gt;&gt;lblExcelSheet.Name" xml:space="preserve">
+    <value>lblExcelSheet</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>328, 95</value>
+  </data>
+  <data name="btnExcelOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;cbxExcelSheet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExcelOK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ExcelImportForm</value>
+  </data>
+  <data name="lblExcelSheet.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnExcelCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cbxExcelSheet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;cbxExcelSheet.Name" xml:space="preserve">
+    <value>cbxExcelSheet</value>
+  </data>
+  <data name="cbxExcelSheet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 23</value>
+  </data>
+  <data name="&gt;&gt;btnExcelCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

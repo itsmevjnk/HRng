@@ -117,10 +117,151 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="StatusInit7zDownload" xml:space="preserve">
+  <data name="DlgOpenCookiesTxt" xml:space="preserve">
+    <value>Chọn file cookies.txt</value>
+  </data>
+  <data name="DlgOpenEC" xml:space="preserve">
+    <value>Mở sheet danh sách check</value>
+  </data>
+  <data name="DlgSaveEC" xml:space="preserve">
+    <value>Lưu sheet danh sách check</value>
+  </data>
+  <data name="MsgActionsCancelled_Body" xml:space="preserve">
+    <value>Việc check đã bị hủy bởi người dùng.</value>
+  </data>
+  <data name="MsgActionsCancelled_Title" xml:space="preserve">
+    <value>HRng WinForms Frontend</value>
+  </data>
+  <data name="MsgActionsECExportSuccess_Body" xml:space="preserve">
+    <value>Lưu danh sách thành công.</value>
+  </data>
+  <data name="MsgActionsECExportSuccess_Title" xml:space="preserve">
+    <value>Xuất danh sách check</value>
+  </data>
+  <data name="MsgActionsECImportSuccess_Body" xml:space="preserve">
+    <value>Nhập danh sách thành công.</value>
+  </data>
+  <data name="MsgActionsECImportSuccess_Title" xml:space="preserve">
+    <value>Nhập danh sách check.</value>
+  </data>
+  <data name="MsgActionsSuccess_Body" xml:space="preserve">
+    <value>Đã check xong. Bạn muốn lưu kết quả luôn không?</value>
+  </data>
+  <data name="MsgActionsSuccess_Title" xml:space="preserve">
+    <value>HRng WinForms Frontend</value>
+  </data>
+  <data name="MsgInitUpdateFail_Body" xml:space="preserve">
+    <value>Cập nhật trình duyệt/trình điều khiển trình duyệt thất bại (mã lỗi {0}).</value>
+  </data>
+  <data name="MsgInitUpdateFail_Title" xml:space="preserve">
+    <value>Cập nhật trình duyệt</value>
+  </data>
+  <data name="MsgInitUpdate_Body" xml:space="preserve">
+    <value>Bạn muốn nâng cấp trình duyệt/trình điều khiển trình duyệt lên phiên bản mới nhất ({0}, {1}) không?</value>
+  </data>
+  <data name="MsgInitUpdate_Title" xml:space="preserve">
+    <value>Cập nhật trình duyệt</value>
+  </data>
+  <data name="MsgLoginFail_Body" xml:space="preserve">
+    <value>Đăng nhập thất bại ({0}).</value>
+  </data>
+  <data name="MsgLoginFail_Title" xml:space="preserve">
+    <value>Đăng nhập tài khoản</value>
+  </data>
+  <data name="MsgLoginSuccess_Body" xml:space="preserve">
+    <value>Đăng nhập thành công.</value>
+  </data>
+  <data name="MsgLoginSuccess_Title" xml:space="preserve">
+    <value>Đăng nhập tài khoản</value>
+  </data>
+  <data name="MsgLoginWrongOTP_Body" xml:space="preserve">
+    <value>Mã OTP không hợp lệ, vui lòng kiểm tra lại.</value>
+  </data>
+  <data name="MsgLoginWrongOTP_Title" xml:space="preserve">
+    <value>Xác thực hai yếu tố</value>
+  </data>
+  <data name="StaActionsAddECColumns" xml:space="preserve">
+    <value>Đang tạo các cột lưu thông tin check.</value>
+  </data>
+  <data name="StaActionsGetComments" xml:space="preserve">
+    <value>Đang lấy các bình luận.</value>
+  </data>
+  <data name="StaActionsGetCommentsMentions" xml:space="preserve">
+    <value>Đang lấy các bình luận và lượt tag.</value>
+  </data>
+  <data name="StaActionsGetLut" xml:space="preserve">
+    <value>Đang lấy danh sách tra cứu react.</value>
+  </data>
+  <data name="StaActionsGetReactions" xml:space="preserve">
+    <value>Đang lấy các lượt react.</value>
+  </data>
+  <data name="StaActionsGetShares" xml:space="preserve">
+    <value>Đang lấy các lượt chia sẻ.</value>
+  </data>
+  <data name="StaActionsLoadPost" xml:space="preserve">
+    <value>Đang load bài viết.</value>
+  </data>
+  <data name="StaActionsReady" xml:space="preserve">
+    <value>Nhấn Bắt đầu để thực hiện check...</value>
+  </data>
+  <data name="StaActionsSummarize" xml:space="preserve">
+    <value>Đang tổng hợp kết quả check.</value>
+  </data>
+  <data name="StaInit7zDownload" xml:space="preserve">
     <value>Đang tải 7-Zip.</value>
   </data>
-  <data name="StatusInit7zFound" xml:space="preserve">
+  <data name="StaInit7zFound" xml:space="preserve">
     <value>Đã tìm thấy 7-Zip.</value>
+  </data>
+  <data name="StaInitBrowserFetchVer" xml:space="preserve">
+    <value>Đang lấy phiên bản trình duyệt và trình điều khiển trình duyệt mới nhất.</value>
+  </data>
+  <data name="StaInitBrowserFound" xml:space="preserve">
+    <value>Đã tìm thấy trình duyệt được cài sẵn.</value>
+  </data>
+  <data name="StaInitBrowserNotFound" xml:space="preserve">
+    <value>Không tìm thấy trình duyệt được cài sẵn, sẽ tải trình duyệt về.</value>
+  </data>
+  <data name="StaInitBrowserStart" xml:space="preserve">
+    <value>Đang khởi động trình duyệt.</value>
+  </data>
+  <data name="StaInitBrowserUpdate" xml:space="preserve">
+    <value>Đang tải/cập nhật trình duyệt/trình điều khiển trình duyệt.</value>
+  </data>
+  <data name="StaInitBrowserUpdated" xml:space="preserve">
+    <value>Trình duyệt/trình điều khiển trình duyệt đã được cập nhật lên phiên bản mới nhất.</value>
+  </data>
+  <data name="StaInitDriverFound" xml:space="preserve">
+    <value>Đã tìm thấy trình điều khiển trình duyệt được tải sẵn.</value>
+  </data>
+  <data name="StaInitDriverNotFound" xml:space="preserve">
+    <value>Không tìm thấy trình điều khiển trình duyệt được tải sẵn.</value>
+  </data>
+  <data name="StrAllFiles" xml:space="preserve">
+    <value>Tất cả file (*.*)</value>
+  </data>
+  <data name="StrCSVSpreadsheet" xml:space="preserve">
+    <value>Sheet CSV (*.csv)</value>
+  </data>
+  <data name="StrExcelWorkbook" xml:space="preserve">
+    <value>Sheet Excel (*.xlsx,*.xls)</value>
+  </data>
+  <data name="StrFuncReturnVal" xml:space="preserve">
+    <value>hàm {0} trả về mã lỗi {1}</value>
+  </data>
+  <data name="StrLoggedInUID" xml:space="preserve">
+    <value>Đã đăng nhập (UID: {0})</value>
+  </data>
+  <data name="StrNotLoggedIn" xml:space="preserve">
+    <value>Chưa đăng nhập</value>
+  </data>
+  <data name="StrOTPRefused" xml:space="preserve">
+    <value>Mã OTP không được nhập</value>
+  </data>
+  <data name="StrTextFiles" xml:space="preserve">
+    <value>File text (*.txt)</value>
+  </data>
+  <data name="StrUnknown" xml:space="preserve">
+    <value>không rõ</value>
   </data>
 </root>

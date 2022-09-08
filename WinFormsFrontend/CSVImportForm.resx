@@ -57,4 +57,291 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblCSVConfig.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="lblCSVConfig.Size" type="System.Drawing.Size, System.Drawing">
+    <value>348, 34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblCSVConfig.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblCSVConfig.Text" xml:space="preserve">
+    <value>Please set the spreadsheet's CSV settings below. Please note that this is only required for non-standard CSV files.</value>
+  </data>
+  <data name="&gt;&gt;lblCSVConfig.Name" xml:space="preserve">
+    <value>lblCSVConfig</value>
+  </data>
+  <data name="&gt;&gt;lblCSVConfig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCSVConfig.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCSVConfig.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblCSVBOM.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCSVBOM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 43</value>
+  </data>
+  <data name="lblCSVBOM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 15</value>
+  </data>
+  <data name="lblCSVBOM.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblCSVBOM.Text" xml:space="preserve">
+    <value>Byte-order mark (BOM) header:</value>
+  </data>
+  <data name="&gt;&gt;lblCSVBOM.Name" xml:space="preserve">
+    <value>lblCSVBOM</value>
+  </data>
+  <data name="&gt;&gt;lblCSVBOM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCSVBOM.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCSVBOM.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="rbtCSVBOMYes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbtCSVBOMYes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 41</value>
+  </data>
+  <data name="rbtCSVBOMYes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 19</value>
+  </data>
+  <data name="rbtCSVBOMYes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="rbtCSVBOMYes.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="&gt;&gt;rbtCSVBOMYes.Name" xml:space="preserve">
+    <value>rbtCSVBOMYes</value>
+  </data>
+  <data name="&gt;&gt;rbtCSVBOMYes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtCSVBOMYes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbtCSVBOMYes.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="rbtCSVBOMNo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbtCSVBOMNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 41</value>
+  </data>
+  <data name="rbtCSVBOMNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="rbtCSVBOMNo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rbtCSVBOMNo.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;rbtCSVBOMNo.Name" xml:space="preserve">
+    <value>rbtCSVBOMNo</value>
+  </data>
+  <data name="&gt;&gt;rbtCSVBOMNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtCSVBOMNo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbtCSVBOMNo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tbxCSVDelim.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 11.25pt</value>
+  </data>
+  <data name="tbxCSVDelim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 61</value>
+  </data>
+  <data name="tbxCSVDelim.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbxCSVDelim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 24</value>
+  </data>
+  <data name="tbxCSVDelim.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tbxCSVDelim.Text" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="&gt;&gt;tbxCSVDelim.Name" xml:space="preserve">
+    <value>tbxCSVDelim</value>
+  </data>
+  <data name="&gt;&gt;tbxCSVDelim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxCSVDelim.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbxCSVDelim.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblCSVDelim.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCSVDelim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 64</value>
+  </data>
+  <data name="lblCSVDelim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="lblCSVDelim.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblCSVDelim.Text" xml:space="preserve">
+    <value>Delimiter character:</value>
+  </data>
+  <data name="&gt;&gt;lblCSVDelim.Name" xml:space="preserve">
+    <value>lblCSVDelim</value>
+  </data>
+  <data name="&gt;&gt;lblCSVDelim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCSVDelim.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCSVDelim.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tbxCSVEscape.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 11.25pt</value>
+  </data>
+  <data name="tbxCSVEscape.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 90</value>
+  </data>
+  <data name="tbxCSVEscape.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbxCSVEscape.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 24</value>
+  </data>
+  <data name="tbxCSVEscape.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tbxCSVEscape.Text" xml:space="preserve">
+    <value>"</value>
+  </data>
+  <data name="&gt;&gt;tbxCSVEscape.Name" xml:space="preserve">
+    <value>tbxCSVEscape</value>
+  </data>
+  <data name="&gt;&gt;tbxCSVEscape.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxCSVEscape.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbxCSVEscape.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblCSVEscape.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCSVEscape.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 93</value>
+  </data>
+  <data name="lblCSVEscape.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 15</value>
+  </data>
+  <data name="lblCSVEscape.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblCSVEscape.Text" xml:space="preserve">
+    <value>Escape character:</value>
+  </data>
+  <data name="&gt;&gt;lblCSVEscape.Name" xml:space="preserve">
+    <value>lblCSVEscape</value>
+  </data>
+  <data name="&gt;&gt;lblCSVEscape.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCSVEscape.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCSVEscape.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnCSVOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 120</value>
+  </data>
+  <data name="btnCSVOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnCSVOK.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnCSVOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;btnCSVOK.Name" xml:space="preserve">
+    <value>btnCSVOK</value>
+  </data>
+  <data name="&gt;&gt;btnCSVOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCSVOK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCSVOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnCSVCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 120</value>
+  </data>
+  <data name="btnCSVCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnCSVCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnCSVCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnCSVCancel.Name" xml:space="preserve">
+    <value>btnCSVCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCSVCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCSVCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCSVCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>368, 157</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CSV spreadsheet import</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CSVImportForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

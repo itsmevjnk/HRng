@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CSVImportForm));
             this.lblCSVConfig = new System.Windows.Forms.Label();
             this.lblCSVBOM = new System.Windows.Forms.Label();
             this.rbtCSVBOMYes = new System.Windows.Forms.RadioButton();
@@ -42,111 +43,70 @@
             // 
             // lblCSVConfig
             // 
-            this.lblCSVConfig.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.lblCSVConfig, "lblCSVConfig");
             this.lblCSVConfig.Name = "lblCSVConfig";
-            this.lblCSVConfig.Size = new System.Drawing.Size(348, 34);
-            this.lblCSVConfig.TabIndex = 0;
-            this.lblCSVConfig.Text = "Please set the spreadsheet\'s CSV settings below. Please note that this is only re" +
-    "quired for non-standard CSV files.";
             // 
             // lblCSVBOM
             // 
-            this.lblCSVBOM.AutoSize = true;
-            this.lblCSVBOM.Location = new System.Drawing.Point(12, 43);
+            resources.ApplyResources(this.lblCSVBOM, "lblCSVBOM");
             this.lblCSVBOM.Name = "lblCSVBOM";
-            this.lblCSVBOM.Size = new System.Drawing.Size(173, 15);
-            this.lblCSVBOM.TabIndex = 1;
-            this.lblCSVBOM.Text = "Byte-order mark (BOM) header:";
             // 
             // rbtCSVBOMYes
             // 
-            this.rbtCSVBOMYes.AutoSize = true;
+            resources.ApplyResources(this.rbtCSVBOMYes, "rbtCSVBOMYes");
             this.rbtCSVBOMYes.Checked = true;
-            this.rbtCSVBOMYes.Location = new System.Drawing.Point(191, 41);
             this.rbtCSVBOMYes.Name = "rbtCSVBOMYes";
-            this.rbtCSVBOMYes.Size = new System.Drawing.Size(42, 19);
-            this.rbtCSVBOMYes.TabIndex = 2;
             this.rbtCSVBOMYes.TabStop = true;
-            this.rbtCSVBOMYes.Text = "Yes";
             this.rbtCSVBOMYes.UseVisualStyleBackColor = true;
             // 
             // rbtCSVBOMNo
             // 
-            this.rbtCSVBOMNo.AutoSize = true;
-            this.rbtCSVBOMNo.Location = new System.Drawing.Point(239, 41);
+            resources.ApplyResources(this.rbtCSVBOMNo, "rbtCSVBOMNo");
             this.rbtCSVBOMNo.Name = "rbtCSVBOMNo";
-            this.rbtCSVBOMNo.Size = new System.Drawing.Size(41, 19);
-            this.rbtCSVBOMNo.TabIndex = 3;
-            this.rbtCSVBOMNo.Text = "No";
             this.rbtCSVBOMNo.UseVisualStyleBackColor = true;
             // 
             // tbxCSVDelim
             // 
             this.tbxCSVDelim.AcceptsTab = true;
-            this.tbxCSVDelim.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbxCSVDelim.Location = new System.Drawing.Point(128, 61);
-            this.tbxCSVDelim.MaxLength = 1;
+            resources.ApplyResources(this.tbxCSVDelim, "tbxCSVDelim");
             this.tbxCSVDelim.Name = "tbxCSVDelim";
-            this.tbxCSVDelim.Size = new System.Drawing.Size(57, 24);
-            this.tbxCSVDelim.TabIndex = 4;
-            this.tbxCSVDelim.Text = ",";
             // 
             // lblCSVDelim
             // 
-            this.lblCSVDelim.AutoSize = true;
-            this.lblCSVDelim.Location = new System.Drawing.Point(12, 64);
+            resources.ApplyResources(this.lblCSVDelim, "lblCSVDelim");
             this.lblCSVDelim.Name = "lblCSVDelim";
-            this.lblCSVDelim.Size = new System.Drawing.Size(110, 15);
-            this.lblCSVDelim.TabIndex = 5;
-            this.lblCSVDelim.Text = "Delimiter character:";
             // 
             // tbxCSVEscape
             // 
             this.tbxCSVEscape.AcceptsTab = true;
-            this.tbxCSVEscape.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbxCSVEscape.Location = new System.Drawing.Point(128, 90);
-            this.tbxCSVEscape.MaxLength = 1;
+            resources.ApplyResources(this.tbxCSVEscape, "tbxCSVEscape");
             this.tbxCSVEscape.Name = "tbxCSVEscape";
-            this.tbxCSVEscape.Size = new System.Drawing.Size(57, 24);
-            this.tbxCSVEscape.TabIndex = 6;
-            this.tbxCSVEscape.Text = "\"";
             // 
             // lblCSVEscape
             // 
-            this.lblCSVEscape.AutoSize = true;
-            this.lblCSVEscape.Location = new System.Drawing.Point(12, 93);
+            resources.ApplyResources(this.lblCSVEscape, "lblCSVEscape");
             this.lblCSVEscape.Name = "lblCSVEscape";
-            this.lblCSVEscape.Size = new System.Drawing.Size(98, 15);
-            this.lblCSVEscape.TabIndex = 7;
-            this.lblCSVEscape.Text = "Escape character:";
             // 
             // btnCSVOK
             // 
             this.btnCSVOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnCSVOK.Location = new System.Drawing.Point(88, 120);
+            resources.ApplyResources(this.btnCSVOK, "btnCSVOK");
             this.btnCSVOK.Name = "btnCSVOK";
-            this.btnCSVOK.Size = new System.Drawing.Size(75, 23);
-            this.btnCSVOK.TabIndex = 8;
-            this.btnCSVOK.Text = "OK";
             this.btnCSVOK.UseVisualStyleBackColor = true;
             // 
             // btnCSVCancel
             // 
             this.btnCSVCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCSVCancel.Location = new System.Drawing.Point(197, 120);
+            resources.ApplyResources(this.btnCSVCancel, "btnCSVCancel");
             this.btnCSVCancel.Name = "btnCSVCancel";
-            this.btnCSVCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCSVCancel.TabIndex = 9;
-            this.btnCSVCancel.Text = "button2";
             this.btnCSVCancel.UseVisualStyleBackColor = true;
             // 
             // CSVImportForm
             // 
             this.AcceptButton = this.btnCSVOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCSVCancel;
-            this.ClientSize = new System.Drawing.Size(368, 157);
             this.Controls.Add(this.btnCSVCancel);
             this.Controls.Add(this.btnCSVOK);
             this.Controls.Add(this.lblCSVEscape);
@@ -158,7 +118,6 @@
             this.Controls.Add(this.lblCSVBOM);
             this.Controls.Add(this.lblCSVConfig);
             this.Name = "CSVImportForm";
-            this.Text = "CSV spreadsheet import";
             this.ResumeLayout(false);
             this.PerformLayout();
 

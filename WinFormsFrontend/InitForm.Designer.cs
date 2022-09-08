@@ -77,7 +77,6 @@
             // 
             // gbxSeSettings
             // 
-            resources.ApplyResources(this.gbxSeSettings, "gbxSeSettings");
             this.gbxSeSettings.Controls.Add(this.chkSeLoadImg);
             this.gbxSeSettings.Controls.Add(this.chkSeHeadless);
             this.gbxSeSettings.Controls.Add(this.chkSeLocalInst);
@@ -86,6 +85,7 @@
             this.gbxSeSettings.Controls.Add(this.chkSeConsole);
             this.gbxSeSettings.Controls.Add(this.cbxSeBrowser);
             this.gbxSeSettings.Controls.Add(this.lblSeBrowser);
+            resources.ApplyResources(this.gbxSeSettings, "gbxSeSettings");
             this.gbxSeSettings.Name = "gbxSeSettings";
             this.gbxSeSettings.TabStop = false;
             // 
@@ -131,12 +131,12 @@
             // 
             // cbxSeBrowser
             // 
-            resources.ApplyResources(this.cbxSeBrowser, "cbxSeBrowser");
             this.cbxSeBrowser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSeBrowser.FormattingEnabled = true;
             this.cbxSeBrowser.Items.AddRange(new object[] {
             resources.GetString("cbxSeBrowser.Items"),
             resources.GetString("cbxSeBrowser.Items1")});
+            resources.ApplyResources(this.cbxSeBrowser, "cbxSeBrowser");
             this.cbxSeBrowser.Name = "cbxSeBrowser";
             this.cbxSeBrowser.SelectedIndexChanged += new System.EventHandler(this.cbxSeBrowser_SelectedIndexChanged);
             // 
@@ -159,13 +159,14 @@
             // 
             // cbxLanguage
             // 
-            resources.ApplyResources(this.cbxLanguage, "cbxLanguage");
             this.cbxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxLanguage.FormattingEnabled = true;
             this.cbxLanguage.Items.AddRange(new object[] {
             resources.GetString("cbxLanguage.Items"),
             resources.GetString("cbxLanguage.Items1")});
+            resources.ApplyResources(this.cbxLanguage, "cbxLanguage");
             this.cbxLanguage.Name = "cbxLanguage";
+            this.cbxLanguage.SelectedIndexChanged += new System.EventHandler(this.cbxLanguage_SelectedIndexChanged);
             // 
             // lblLanguage
             // 

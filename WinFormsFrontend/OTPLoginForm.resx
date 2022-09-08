@@ -57,4 +57,127 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tbxLoginOTP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 35</value>
+  </data>
+  <data name="&gt;&gt;btnLoginOTPSubmit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Facebook two-factor authentication</value>
+  </data>
+  <data name="&gt;&gt;btnLoginOTPSubmit.Name" xml:space="preserve">
+    <value>btnLoginOTPSubmit</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnLoginOTPSubmit.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnLoginOTPCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 94</value>
+  </data>
+  <data name="btnLoginOTPCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnLoginOTPSubmit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginOTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnLoginOTPCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="lblLoginOTP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>385, 34</value>
+  </data>
+  <data name="btnLoginOTPSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 94</value>
+  </data>
+  <data name="lblLoginOTP.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tbxLoginOTP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 18pt</value>
+  </data>
+  <data name="&gt;&gt;btnLoginOTPCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginOTP.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnLoginOTPCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblLoginOTP.Text" xml:space="preserve">
+    <value>Two-factor authentication is required. Please enter the verification code (OTP) from your code generator in the text box below:</value>
+  </data>
+  <data name="tbxLoginOTP.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblLoginOTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>416, 129</value>
+  </data>
+  <data name="tbxLoginOTP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 46</value>
+  </data>
+  <data name="btnLoginOTPSubmit.Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbxLoginOTP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;lblLoginOTP.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginOTP.Name" xml:space="preserve">
+    <value>tbxLoginOTP</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>OTPLoginForm</value>
+  </data>
+  <data name="&gt;&gt;btnLoginOTPCancel.Name" xml:space="preserve">
+    <value>btnLoginOTPCancel</value>
+  </data>
+  <data name="btnLoginOTPSubmit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;btnLoginOTPCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxLoginOTP.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLoginOTPSubmit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLoginOTP.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tbxLoginOTP.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblLoginOTP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="&gt;&gt;lblLoginOTP.Name" xml:space="preserve">
+    <value>lblLoginOTP</value>
+  </data>
+  <data name="btnLoginOTPCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

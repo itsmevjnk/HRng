@@ -126,5 +126,22 @@ namespace WinFormsFrontend
             main_form.ShowDialog();
             this.Close();
         }
+
+        private void ApplyResources(ComponentResourceManager resources, Control.ControlCollection ctls)
+        {
+            foreach (Control ctl in ctls)
+            {
+                resources.ApplyResources(ctl, ctl.Name);
+                ApplyResources(resources, ctl.Controls);
+            }
+        }
+
+        private void cbxLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo((cbxLanguage.SelectedIndex == 1) ? "vi-VN" : "en-US");
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(InitForm));
+            resources.ApplyResources(this, "$this");
+            ApplyResources(resources, this.Controls);
+        }
     }
 }
