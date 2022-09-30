@@ -357,23 +357,22 @@ namespace WinFormsFrontend
         }
 
         /* Callback functions for 1st, 2nd and 3rd steps */
-        private bool ActionsCancelled = false; // Set by the cancel button
         private bool PostCB1(float perc)
         {
             pbrActions.Value = 0 + (int)perc;
-            return !ActionsCancelled;
+            return true;
         }
 
         private bool PostCB2(float perc)
         {
             pbrActions.Value = 100 + (int)perc;
-            return !ActionsCancelled;
+            return true;
         }
 
         private bool PostCB3(float perc)
         {
             pbrActions.Value = 200 + (int)perc;
-            return !ActionsCancelled;
+            return true;
         }
 
         private async void btnActionsStart_Click(object sender, EventArgs e)
