@@ -79,11 +79,29 @@ namespace WinFormsFrontend.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open accounts list.
+        /// </summary>
+        internal static string DlgOpenInputList {
+            get {
+                return ResourceManager.GetString("DlgOpenInputList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save EntryCollection sheet.
         /// </summary>
         internal static string DlgSaveEC {
             get {
                 return ResourceManager.GetString("DlgSaveEC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save UID list.
+        /// </summary>
+        internal static string DlgSaveOutputList {
+            get {
+                return ResourceManager.GetString("DlgSaveOutputList", resourceCulture);
             }
         }
         
@@ -246,6 +264,24 @@ namespace WinFormsFrontend.Properties {
         internal static string MsgLoginWrongOTP_Title {
             get {
                 return ResourceManager.GetString("MsgLoginWrongOTP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UID retrieval completed successfully..
+        /// </summary>
+        internal static string MsgUIDCompleted_Body {
+            get {
+                return ResourceManager.GetString("MsgUIDCompleted_Body", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HRng WinForms Frontend.
+        /// </summary>
+        internal static string MsgUIDCompleted_Title {
+            get {
+                return ResourceManager.GetString("MsgUIDCompleted_Title", resourceCulture);
             }
         }
         

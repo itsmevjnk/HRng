@@ -1,5 +1,6 @@
 using HRngBackend;
 using HRngSelenium;
+using OpenQA.Selenium.DevTools.V102.Debugger;
 using OpenQA.Selenium.Interactions;
 using static System.Windows.Forms.AxHost;
 
@@ -157,10 +158,10 @@ namespace WinFormsFrontend
                 MessageBox.Show(Properties.Resources.MsgLoginSuccess_Body, Properties.Resources.MsgLoginSuccess_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else MessageBox.Show(String.Format(Properties.Resources.MsgLoginFail_Body, String.Format(Properties.Resources.StrFuncReturnVal, "FBLogin.VerifyLogin", login_verify)), Properties.Resources.MsgLoginFail_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            ValidateStartButton(sender, e);
+            ValidateActionsStartButton(sender, e);
         }
 
-        private void ValidateStartButton(object sender, EventArgs e)
+        private void ValidateActionsStartButton(object sender, EventArgs e)
         {
             btnActionsStart.Enabled = (GlobalData.FBLoggedIn
                 && (tbxActionsFBLink.Text.Trim().Length != 0)
@@ -320,7 +321,7 @@ namespace WinFormsFrontend
                         GlobalData.EC.FromSpreadsheet(sheet, (int)imp_form.numECStartRow.Value - 1, imp_form.tbxECUIDCol.Text, ((imp_form.rbtECUIDColNum.Checked) ? ((int)imp_form.numECUIDCol.Value - 1) : -1), ((imp_form.rbtECUIDDelimCustom.Checked) ? imp_form.rbtECUIDDelimCustom.Text : null));
                     }
                     btnActionsECShow.Enabled = btnActionsECSave.Enabled = true;
-                    ValidateStartButton(sender, e);
+                    ValidateActionsStartButton(sender, e);
                     MessageBox.Show(Properties.Resources.MsgActionsECImportSuccess_Body, Properties.Resources.MsgActionsECImportSuccess_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -465,15 +466,156 @@ namespace WinFormsFrontend
 
             ((Control)tabActions).Enabled = true;
             if (MessageBox.Show(Properties.Resources.MsgActionsSuccess_Body, Properties.Resources.MsgActionsSuccess_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) btnActionsECSave_Click(sender, e); // save EC now
-finalize:
+        finalize:
             pbrActions.Value = 0;
             lblActionsStatus.Text = Properties.Resources.StaActionsReady;
-            ActionsCancelled = false;
         }
 
         private void cbxActionsSummary_CheckedChanged(object sender, EventArgs e)
         {
             tbxActionsSummaryCol.Enabled = tbxActionsSummaryTextFull.Enabled = tbxActionsSummaryTextPartial.Enabled = tbxActionsSummaryTextNo.Enabled = cbxActionsSummary.Checked;
+        }
+
+        private void ValidateUIDStartButton(object sender, EventArgs e)
+        {
+            btnUIDStart.Enabled =
+                (rbtUIDSingle.Checked && tbxUIDSingleInput.Text.Trim().Length > 0) ||
+                (rbtUIDBatch.Checked && tbxUIDBatchInput.Text.Length > 0 && tbxUIDBatchOutputColName.Text.Trim().Length > 0 && (rbtUIDBatchInputColNum.Checked || tbxUIDBatchInputCol.Text.Trim().Length > 0));
+        }
+
+        private void rbtUIDSingle_CheckedChanged(object sender, EventArgs e)
+        {
+            tbxUIDSingleInput.Enabled = btnUIDSingleCopy.Enabled = tbxUIDSingleOutput.Enabled = rbtUIDSingle.Checked;
+            ValidateUIDStartButton(sender, e);
+        }
+
+        private void rbtUIDBatch_CheckedChanged(object sender, EventArgs e)
+        {
+            btnUIDBatchBrowseInput.Enabled = tbxUIDBatchInput.Enabled = numUIDBatchInputStartRow.Enabled = pnlUIDBatchInputCol.Enabled = tbxUIDBatchOutputColName.Enabled = rbtUIDBatch.Checked;
+            ValidateUIDStartButton(sender, e);
+        }
+
+        private void rbtUIDBatchInputColName_CheckedChanged(object sender, EventArgs e)
+        {
+            tbxUIDBatchInputCol.Enabled = rbtUIDBatchInputColName.Checked;
+            ValidateUIDStartButton(sender, e);
+        }
+
+        private void rbtUIDBatchInputColNum_CheckedChanged(object sender, EventArgs e)
+        {
+            numUIDBatchInputCol.Enabled = rbtUIDBatchInputColNum.Checked;
+            ValidateUIDStartButton(sender, e);
+        }
+
+        private async void btnUIDStart_Click(object sender, EventArgs e)
+        {
+            ((Control)tabUID).Enabled = false;
+
+            if(rbtUIDBatch.Checked)
+            {
+                /* Batch retrieval */
+                Spreadsheet sheet = GlobalData.Sheet;
+                int start_row = (int)numUIDBatchInputStartRow.Value - 1;
+                pbrUID.Maximum = GlobalData.Sheet.Rows - (start_row + 1);
+                int link_col = -1, uid_col = sheet.Columns;
+                sheet.Update((start_row, uid_col), tbxUIDBatchOutputColName.Text);
+                if (rbtUIDBatchInputColNum.Checked) link_col = (int)numUIDBatchInputCol.Value;
+                else
+                {
+                    // Search for column by name
+                    for(int i = 0; i < sheet.Columns; i++)
+                    {
+                        if (sheet.Data.ContainsKey((start_row, i)) && sheet.Data[(start_row, i)] == tbxUIDBatchInputCol.Text)
+                        {
+                            link_col = i;
+                            break;
+                        }
+                    }
+                }
+                for(int i = start_row + 1; i < sheet.Rows; i++)
+                {
+                    if (sheet.Data.ContainsKey((i, link_col))) sheet.Update((i, uid_col), Convert.ToString(await UID.Get(sheet.Data[(i, link_col)])));
+                    pbrUID.Value++;
+                }
+                SaveFileDialog save_list = new SaveFileDialog
+                {
+                    Title = Properties.Resources.DlgSaveOutputList,
+
+                    DefaultExt = "xlsx",
+                    Filter = $"{Properties.Resources.StrCSVSpreadsheet}|*.csv",
+                    FilterIndex = 0,
+
+                    RestoreDirectory = true
+                };
+                if (save_list.ShowDialog() == DialogResult.OK) CSV.ToFile(sheet, save_list.FileName);
+            }
+            else
+            {
+                /* Single UID retrieval */
+                pbrUID.Maximum = 1;
+                tbxUIDSingleOutput.Text = Convert.ToString(await UID.Get(tbxUIDSingleInput.Text.Trim()));
+                pbrUID.Value = 1;
+            }
+
+        finalize:
+            ((Control)tabUID).Enabled = true;
+            MessageBox.Show(Properties.Resources.MsgUIDCompleted_Body, Properties.Resources.MsgUIDCompleted_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            pbrUID.Value = 0;
+        }
+
+        private void btnUIDSingleCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbxUIDSingleOutput.Text);
+        }
+
+        private void btnUIDBatchBrowseInput_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open_list = new OpenFileDialog
+            {
+                Title = Properties.Resources.DlgOpenInputList,
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "xlsx",
+                Filter = $"{Properties.Resources.StrExcelWorkbook}|*.xlsx;*.xls|{Properties.Resources.StrCSVSpreadsheet}|*.csv",
+                FilterIndex = 0,
+
+                RestoreDirectory = true
+            };
+
+            if (open_list.ShowDialog() == DialogResult.OK)
+            {
+                Spreadsheet sheet = null;
+                if (Path.GetExtension(open_list.FileName).ToLower().StartsWith(".xls"))
+                {
+                    /* Excel file */
+                    ExcelImportForm imp_form = new ExcelImportForm();
+                    var sheets = ExcelWorkbook.FromFile(open_list.FileName);
+                    foreach (var s in sheets) imp_form.cbxExcelSheet.Items.Add(s.Key);
+                    imp_form.cbxExcelSheet.SelectedIndex = 0;
+                    if (imp_form.ShowDialog() == DialogResult.OK)
+                    {
+                        sheet = sheets[imp_form.cbxExcelSheet.SelectedIndex].Value;
+                    }
+                }
+                else
+                {
+                    /* CSV file */
+                    CSVImportForm imp_form = new CSVImportForm();
+                    if (imp_form.ShowDialog() == DialogResult.OK)
+                    {
+                        sheet = CSV.FromFile(open_list.FileName, bom: imp_form.rbtCSVBOMYes.Checked, delimiter: imp_form.tbxCSVDelim.Text[0], escape: imp_form.tbxCSVEscape.Text[0]);
+                    }
+                }
+
+                if (sheet != null)
+                {
+                    GlobalData.Sheet = sheet;
+                    tbxUIDBatchInput.Text = open_list.FileName;
+                    ValidateUIDStartButton(sender, e);
+                }
+            }
         }
     }
 }

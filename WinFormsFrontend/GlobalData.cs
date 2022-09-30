@@ -19,5 +19,7 @@ namespace WinFormsFrontend
         public static bool FBLoggedIn = false;
 
         public static EntryCollection EC = null;
+
+        public static Spreadsheet Sheet = null;
     }
 }

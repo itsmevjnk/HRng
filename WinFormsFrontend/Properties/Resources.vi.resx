@@ -123,8 +123,14 @@
   <data name="DlgOpenEC" xml:space="preserve">
     <value>Mở sheet danh sách check</value>
   </data>
+  <data name="DlgOpenInputList" xml:space="preserve">
+    <value>Mở danh sách tài khoản</value>
+  </data>
   <data name="DlgSaveEC" xml:space="preserve">
     <value>Lưu sheet danh sách check</value>
+  </data>
+  <data name="DlgSaveOutputList" xml:space="preserve">
+    <value>Lưu danh sách UID</value>
   </data>
   <data name="MsgActionsCancelled_Body" xml:space="preserve">
     <value>Việc check đã bị hủy bởi người dùng.</value>
@@ -179,6 +185,12 @@
   </data>
   <data name="MsgLoginWrongOTP_Title" xml:space="preserve">
     <value>Xác thực hai yếu tố</value>
+  </data>
+  <data name="MSgUIDCompleted_Body" xml:space="preserve">
+    <value>Đã lấy UID thành công.</value>
+  </data>
+  <data name="MsgUIDCompleted_Title" xml:space="preserve">
+    <value>HRng WinForms Frontend</value>
   </data>
   <data name="StaActionsAddECColumns" xml:space="preserve">
     <value>Đang tạo các cột lưu thông tin check.</value>

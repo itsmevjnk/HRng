@@ -123,8 +123,14 @@
   <data name="DlgOpenEC" xml:space="preserve">
     <value>Open EntryCollection sheet</value>
   </data>
+  <data name="DlgOpenInputList" xml:space="preserve">
+    <value>Open accounts list</value>
+  </data>
   <data name="DlgSaveEC" xml:space="preserve">
     <value>Save EntryCollection sheet</value>
+  </data>
+  <data name="DlgSaveOutputList" xml:space="preserve">
+    <value>Save UID list</value>
   </data>
   <data name="MsgActionsCancelled_Body" xml:space="preserve">
     <value>Actions have been cancelled.</value>
@@ -179,6 +185,12 @@
   </data>
   <data name="MsgLoginWrongOTP_Title" xml:space="preserve">
     <value>Facebook two-factor authentication</value>
+  </data>
+  <data name="MsgUIDCompleted_Body" xml:space="preserve">
+    <value>UID retrieval completed successfully.</value>
+  </data>
+  <data name="MsgUIDCompleted_Title" xml:space="preserve">
+    <value>HRng WinForms Frontend</value>
   </data>
   <data name="StaActionsAddECColumns" xml:space="preserve">
     <value>Adding columns to EntryCollection.</value>

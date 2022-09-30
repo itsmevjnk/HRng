@@ -100,6 +100,30 @@
             this.cbxActionsGetReactions = new System.Windows.Forms.CheckBox();
             this.tbxActionsFBLink = new System.Windows.Forms.TextBox();
             this.lblActionsFBLink = new System.Windows.Forms.Label();
+            this.tabUID = new System.Windows.Forms.TabPage();
+            this.pbrUID = new System.Windows.Forms.ProgressBar();
+            this.btnUIDStart = new System.Windows.Forms.Button();
+            this.tbxUIDBatchOutputColName = new System.Windows.Forms.TextBox();
+            this.lblUIDBatchOutputColName = new System.Windows.Forms.Label();
+            this.lblUIDBatchInputOpts = new System.Windows.Forms.Label();
+            this.pnlUIDBatchInputCol = new System.Windows.Forms.Panel();
+            this.rbtUIDBatchInputColNum = new System.Windows.Forms.RadioButton();
+            this.numUIDBatchInputCol = new System.Windows.Forms.NumericUpDown();
+            this.rbtUIDBatchInputColName = new System.Windows.Forms.RadioButton();
+            this.tbxUIDBatchInputCol = new System.Windows.Forms.TextBox();
+            this.lblUIDBatchInputCol = new System.Windows.Forms.Label();
+            this.numUIDBatchInputStartRow = new System.Windows.Forms.NumericUpDown();
+            this.lblUIDBatchInputStartRow = new System.Windows.Forms.Label();
+            this.btnUIDBatchBrowseInput = new System.Windows.Forms.Button();
+            this.tbxUIDBatchInput = new System.Windows.Forms.TextBox();
+            this.lblUIDBatchInput = new System.Windows.Forms.Label();
+            this.btnUIDSingleCopy = new System.Windows.Forms.Button();
+            this.tbxUIDSingleOutput = new System.Windows.Forms.TextBox();
+            this.lblUIDSingleOutput = new System.Windows.Forms.Label();
+            this.tbxUIDSingleInput = new System.Windows.Forms.TextBox();
+            this.lblUIDSingleInput = new System.Windows.Forms.Label();
+            this.rbtUIDBatch = new System.Windows.Forms.RadioButton();
+            this.rbtUIDSingle = new System.Windows.Forms.RadioButton();
             this.tctMain.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.tabActions.SuspendLayout();
@@ -113,19 +137,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.numActionsMinComments)).BeginInit();
             this.gbxActionsReactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numActionsMinReactions)).BeginInit();
+            this.tabUID.SuspendLayout();
+            this.pnlUIDBatchInputCol.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUIDBatchInputCol)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUIDBatchInputStartRow)).BeginInit();
             this.SuspendLayout();
             // 
             // tctMain
             // 
-            resources.ApplyResources(this.tctMain, "tctMain");
             this.tctMain.Controls.Add(this.tabLogin);
             this.tctMain.Controls.Add(this.tabActions);
+            this.tctMain.Controls.Add(this.tabUID);
+            resources.ApplyResources(this.tctMain, "tctMain");
             this.tctMain.Name = "tctMain";
             this.tctMain.SelectedIndex = 0;
             // 
             // tabLogin
             // 
-            resources.ApplyResources(this.tabLogin, "tabLogin");
             this.tabLogin.Controls.Add(this.btnLoginCookiesCopy);
             this.tabLogin.Controls.Add(this.lblLoginCookiesOutput);
             this.tabLogin.Controls.Add(this.tbxLoginCookiesOutput);
@@ -141,6 +169,7 @@
             this.tabLogin.Controls.Add(this.lblLoginMethod);
             this.tabLogin.Controls.Add(this.lblLoginStatus);
             this.tabLogin.Controls.Add(this.lblLoginStatusTitle);
+            resources.ApplyResources(this.tabLogin, "tabLogin");
             this.tabLogin.Name = "tabLogin";
             this.tabLogin.UseVisualStyleBackColor = true;
             // 
@@ -238,7 +267,6 @@
             // 
             // tabActions
             // 
-            resources.ApplyResources(this.tabActions, "tabActions");
             this.tabActions.Controls.Add(this.gbxActionsSummary);
             this.tabActions.Controls.Add(this.gbxActionsEC);
             this.tabActions.Controls.Add(this.lblActionsStatus);
@@ -250,12 +278,12 @@
             this.tabActions.Controls.Add(this.gbxActionsReactions);
             this.tabActions.Controls.Add(this.tbxActionsFBLink);
             this.tabActions.Controls.Add(this.lblActionsFBLink);
+            resources.ApplyResources(this.tabActions, "tabActions");
             this.tabActions.Name = "tabActions";
             this.tabActions.UseVisualStyleBackColor = true;
             // 
             // gbxActionsSummary
             // 
-            resources.ApplyResources(this.gbxActionsSummary, "gbxActionsSummary");
             this.gbxActionsSummary.Controls.Add(this.lblActionsSummaryTextNo);
             this.gbxActionsSummary.Controls.Add(this.tbxActionsSummaryTextNo);
             this.gbxActionsSummary.Controls.Add(this.tbxActionsSummaryTextPartial);
@@ -265,6 +293,7 @@
             this.gbxActionsSummary.Controls.Add(this.lblActionsSummaryText);
             this.gbxActionsSummary.Controls.Add(this.tbxActionsSummaryCol);
             this.gbxActionsSummary.Controls.Add(this.cbxActionsSummary);
+            resources.ApplyResources(this.gbxActionsSummary, "gbxActionsSummary");
             this.gbxActionsSummary.Name = "gbxActionsSummary";
             this.gbxActionsSummary.TabStop = false;
             // 
@@ -277,13 +306,13 @@
             // 
             resources.ApplyResources(this.tbxActionsSummaryTextNo, "tbxActionsSummaryTextNo");
             this.tbxActionsSummaryTextNo.Name = "tbxActionsSummaryTextNo";
-            this.tbxActionsSummaryTextNo.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsSummaryTextNo.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // tbxActionsSummaryTextPartial
             // 
             resources.ApplyResources(this.tbxActionsSummaryTextPartial, "tbxActionsSummaryTextPartial");
             this.tbxActionsSummaryTextPartial.Name = "tbxActionsSummaryTextPartial";
-            this.tbxActionsSummaryTextPartial.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsSummaryTextPartial.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // lblActionsSummaryTextPartial
             // 
@@ -294,7 +323,7 @@
             // 
             resources.ApplyResources(this.tbxActionsSummaryTextFull, "tbxActionsSummaryTextFull");
             this.tbxActionsSummaryTextFull.Name = "tbxActionsSummaryTextFull";
-            this.tbxActionsSummaryTextFull.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsSummaryTextFull.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // lblActionsSummaryTextFull
             // 
@@ -310,7 +339,7 @@
             // 
             resources.ApplyResources(this.tbxActionsSummaryCol, "tbxActionsSummaryCol");
             this.tbxActionsSummaryCol.Name = "tbxActionsSummaryCol";
-            this.tbxActionsSummaryCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsSummaryCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // cbxActionsSummary
             // 
@@ -323,10 +352,10 @@
             // 
             // gbxActionsEC
             // 
-            resources.ApplyResources(this.gbxActionsEC, "gbxActionsEC");
             this.gbxActionsEC.Controls.Add(this.btnActionsECShow);
             this.gbxActionsEC.Controls.Add(this.btnActionsECSave);
             this.gbxActionsEC.Controls.Add(this.btnActionsECLoad);
+            resources.ApplyResources(this.gbxActionsEC, "gbxActionsEC");
             this.gbxActionsEC.Name = "gbxActionsEC";
             this.gbxActionsEC.TabStop = false;
             // 
@@ -371,13 +400,13 @@
             // 
             // gbxActionsShares
             // 
-            resources.ApplyResources(this.gbxActionsShares, "gbxActionsShares");
             this.gbxActionsShares.Controls.Add(this.tbxActionsSharesDetailsCol);
             this.gbxActionsShares.Controls.Add(this.cbxActionsShareDetails);
             this.gbxActionsShares.Controls.Add(this.numActionsMinShares);
             this.gbxActionsShares.Controls.Add(this.cbxActionsCheckShares);
             this.gbxActionsShares.Controls.Add(this.tbxActionsSharesCountCol);
             this.gbxActionsShares.Controls.Add(this.cbxActionsGetShares);
+            resources.ApplyResources(this.gbxActionsShares, "gbxActionsShares");
             this.gbxActionsShares.Name = "gbxActionsShares";
             this.gbxActionsShares.TabStop = false;
             // 
@@ -385,7 +414,7 @@
             // 
             resources.ApplyResources(this.tbxActionsSharesDetailsCol, "tbxActionsSharesDetailsCol");
             this.tbxActionsSharesDetailsCol.Name = "tbxActionsSharesDetailsCol";
-            this.tbxActionsSharesDetailsCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsSharesDetailsCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // cbxActionsShareDetails
             // 
@@ -422,7 +451,7 @@
             // 
             resources.ApplyResources(this.tbxActionsSharesCountCol, "tbxActionsSharesCountCol");
             this.tbxActionsSharesCountCol.Name = "tbxActionsSharesCountCol";
-            this.tbxActionsSharesCountCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsSharesCountCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // cbxActionsGetShares
             // 
@@ -435,7 +464,6 @@
             // 
             // gbxActionsMentions
             // 
-            resources.ApplyResources(this.gbxActionsMentions, "gbxActionsMentions");
             this.gbxActionsMentions.Controls.Add(this.tbxActionsMentionedUIDCol);
             this.gbxActionsMentions.Controls.Add(this.cbxActionsMentionsExclude);
             this.gbxActionsMentions.Controls.Add(this.cbxActionsMentionsDetails);
@@ -443,6 +471,7 @@
             this.gbxActionsMentions.Controls.Add(this.cbxActionsCheckMentions);
             this.gbxActionsMentions.Controls.Add(this.tbxActionsMentionsCountCol);
             this.gbxActionsMentions.Controls.Add(this.cbxActionsGetMentions);
+            resources.ApplyResources(this.gbxActionsMentions, "gbxActionsMentions");
             this.gbxActionsMentions.Name = "gbxActionsMentions";
             this.gbxActionsMentions.TabStop = false;
             // 
@@ -450,7 +479,7 @@
             // 
             resources.ApplyResources(this.tbxActionsMentionedUIDCol, "tbxActionsMentionedUIDCol");
             this.tbxActionsMentionedUIDCol.Name = "tbxActionsMentionedUIDCol";
-            this.tbxActionsMentionedUIDCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsMentionedUIDCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // cbxActionsMentionsExclude
             // 
@@ -495,7 +524,7 @@
             // 
             resources.ApplyResources(this.tbxActionsMentionsCountCol, "tbxActionsMentionsCountCol");
             this.tbxActionsMentionsCountCol.Name = "tbxActionsMentionsCountCol";
-            this.tbxActionsMentionsCountCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsMentionsCountCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // cbxActionsGetMentions
             // 
@@ -506,7 +535,6 @@
             // 
             // gbxActionsComments
             // 
-            resources.ApplyResources(this.gbxActionsComments, "gbxActionsComments");
             this.gbxActionsComments.Controls.Add(this.tbxActionsCommentTxtCol);
             this.gbxActionsComments.Controls.Add(this.numActionsMinComments);
             this.gbxActionsComments.Controls.Add(this.tbxActionsCommentsCountCol);
@@ -518,6 +546,7 @@
             this.gbxActionsComments.Controls.Add(this.cbxActionsCommentsDetails);
             this.gbxActionsComments.Controls.Add(this.cbxActionsCheckComments);
             this.gbxActionsComments.Controls.Add(this.cbxActionsGetComments);
+            resources.ApplyResources(this.gbxActionsComments, "gbxActionsComments");
             this.gbxActionsComments.Name = "gbxActionsComments";
             this.gbxActionsComments.TabStop = false;
             // 
@@ -525,7 +554,7 @@
             // 
             resources.ApplyResources(this.tbxActionsCommentTxtCol, "tbxActionsCommentTxtCol");
             this.tbxActionsCommentTxtCol.Name = "tbxActionsCommentTxtCol";
-            this.tbxActionsCommentTxtCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsCommentTxtCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // numActionsMinComments
             // 
@@ -546,7 +575,7 @@
             // 
             resources.ApplyResources(this.tbxActionsCommentsCountCol, "tbxActionsCommentsCountCol");
             this.tbxActionsCommentsCountCol.Name = "tbxActionsCommentsCountCol";
-            this.tbxActionsCommentsCountCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsCommentsCountCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // rbtActionsCommentsBothPasses
             // 
@@ -606,13 +635,13 @@
             // 
             // gbxActionsReactions
             // 
-            resources.ApplyResources(this.gbxActionsReactions, "gbxActionsReactions");
             this.gbxActionsReactions.Controls.Add(this.tbxActionsReactionsDetailsCol);
             this.gbxActionsReactions.Controls.Add(this.cbxActionsReactionsDetails);
             this.gbxActionsReactions.Controls.Add(this.tbxActionsReactionsCountCol);
             this.gbxActionsReactions.Controls.Add(this.numActionsMinReactions);
             this.gbxActionsReactions.Controls.Add(this.cbxActionsCheckReactions);
             this.gbxActionsReactions.Controls.Add(this.cbxActionsGetReactions);
+            resources.ApplyResources(this.gbxActionsReactions, "gbxActionsReactions");
             this.gbxActionsReactions.Name = "gbxActionsReactions";
             this.gbxActionsReactions.TabStop = false;
             // 
@@ -620,7 +649,7 @@
             // 
             resources.ApplyResources(this.tbxActionsReactionsDetailsCol, "tbxActionsReactionsDetailsCol");
             this.tbxActionsReactionsDetailsCol.Name = "tbxActionsReactionsDetailsCol";
-            this.tbxActionsReactionsDetailsCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsReactionsDetailsCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // cbxActionsReactionsDetails
             // 
@@ -633,7 +662,7 @@
             // 
             resources.ApplyResources(this.tbxActionsReactionsCountCol, "tbxActionsReactionsCountCol");
             this.tbxActionsReactionsCountCol.Name = "tbxActionsReactionsCountCol";
-            this.tbxActionsReactionsCountCol.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsReactionsCountCol.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // numActionsMinReactions
             // 
@@ -672,12 +701,211 @@
             // 
             resources.ApplyResources(this.tbxActionsFBLink, "tbxActionsFBLink");
             this.tbxActionsFBLink.Name = "tbxActionsFBLink";
-            this.tbxActionsFBLink.TextChanged += new System.EventHandler(this.ValidateStartButton);
+            this.tbxActionsFBLink.TextChanged += new System.EventHandler(this.ValidateActionsStartButton);
             // 
             // lblActionsFBLink
             // 
             resources.ApplyResources(this.lblActionsFBLink, "lblActionsFBLink");
             this.lblActionsFBLink.Name = "lblActionsFBLink";
+            // 
+            // tabUID
+            // 
+            this.tabUID.Controls.Add(this.pbrUID);
+            this.tabUID.Controls.Add(this.btnUIDStart);
+            this.tabUID.Controls.Add(this.tbxUIDBatchOutputColName);
+            this.tabUID.Controls.Add(this.lblUIDBatchOutputColName);
+            this.tabUID.Controls.Add(this.lblUIDBatchInputOpts);
+            this.tabUID.Controls.Add(this.pnlUIDBatchInputCol);
+            this.tabUID.Controls.Add(this.lblUIDBatchInputCol);
+            this.tabUID.Controls.Add(this.numUIDBatchInputStartRow);
+            this.tabUID.Controls.Add(this.lblUIDBatchInputStartRow);
+            this.tabUID.Controls.Add(this.btnUIDBatchBrowseInput);
+            this.tabUID.Controls.Add(this.tbxUIDBatchInput);
+            this.tabUID.Controls.Add(this.lblUIDBatchInput);
+            this.tabUID.Controls.Add(this.btnUIDSingleCopy);
+            this.tabUID.Controls.Add(this.tbxUIDSingleOutput);
+            this.tabUID.Controls.Add(this.lblUIDSingleOutput);
+            this.tabUID.Controls.Add(this.tbxUIDSingleInput);
+            this.tabUID.Controls.Add(this.lblUIDSingleInput);
+            this.tabUID.Controls.Add(this.rbtUIDBatch);
+            this.tabUID.Controls.Add(this.rbtUIDSingle);
+            resources.ApplyResources(this.tabUID, "tabUID");
+            this.tabUID.Name = "tabUID";
+            this.tabUID.UseVisualStyleBackColor = true;
+            // 
+            // pbrUID
+            // 
+            resources.ApplyResources(this.pbrUID, "pbrUID");
+            this.pbrUID.Name = "pbrUID";
+            // 
+            // btnUIDStart
+            // 
+            resources.ApplyResources(this.btnUIDStart, "btnUIDStart");
+            this.btnUIDStart.Name = "btnUIDStart";
+            this.btnUIDStart.UseVisualStyleBackColor = true;
+            this.btnUIDStart.Click += new System.EventHandler(this.btnUIDStart_Click);
+            // 
+            // tbxUIDBatchOutputColName
+            // 
+            resources.ApplyResources(this.tbxUIDBatchOutputColName, "tbxUIDBatchOutputColName");
+            this.tbxUIDBatchOutputColName.Name = "tbxUIDBatchOutputColName";
+            this.tbxUIDBatchOutputColName.TextChanged += new System.EventHandler(this.ValidateUIDStartButton);
+            // 
+            // lblUIDBatchOutputColName
+            // 
+            resources.ApplyResources(this.lblUIDBatchOutputColName, "lblUIDBatchOutputColName");
+            this.lblUIDBatchOutputColName.Name = "lblUIDBatchOutputColName";
+            // 
+            // lblUIDBatchInputOpts
+            // 
+            resources.ApplyResources(this.lblUIDBatchInputOpts, "lblUIDBatchInputOpts");
+            this.lblUIDBatchInputOpts.Name = "lblUIDBatchInputOpts";
+            // 
+            // pnlUIDBatchInputCol
+            // 
+            this.pnlUIDBatchInputCol.Controls.Add(this.rbtUIDBatchInputColNum);
+            this.pnlUIDBatchInputCol.Controls.Add(this.numUIDBatchInputCol);
+            this.pnlUIDBatchInputCol.Controls.Add(this.rbtUIDBatchInputColName);
+            this.pnlUIDBatchInputCol.Controls.Add(this.tbxUIDBatchInputCol);
+            resources.ApplyResources(this.pnlUIDBatchInputCol, "pnlUIDBatchInputCol");
+            this.pnlUIDBatchInputCol.Name = "pnlUIDBatchInputCol";
+            // 
+            // rbtUIDBatchInputColNum
+            // 
+            resources.ApplyResources(this.rbtUIDBatchInputColNum, "rbtUIDBatchInputColNum");
+            this.rbtUIDBatchInputColNum.Name = "rbtUIDBatchInputColNum";
+            this.rbtUIDBatchInputColNum.TabStop = true;
+            this.rbtUIDBatchInputColNum.UseVisualStyleBackColor = true;
+            this.rbtUIDBatchInputColNum.CheckedChanged += new System.EventHandler(this.rbtUIDBatchInputColNum_CheckedChanged);
+            // 
+            // numUIDBatchInputCol
+            // 
+            resources.ApplyResources(this.numUIDBatchInputCol, "numUIDBatchInputCol");
+            this.numUIDBatchInputCol.Maximum = new decimal(new int[] {
+            1048576,
+            0,
+            0,
+            0});
+            this.numUIDBatchInputCol.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numUIDBatchInputCol.Name = "numUIDBatchInputCol";
+            this.numUIDBatchInputCol.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // rbtUIDBatchInputColName
+            // 
+            resources.ApplyResources(this.rbtUIDBatchInputColName, "rbtUIDBatchInputColName");
+            this.rbtUIDBatchInputColName.Checked = true;
+            this.rbtUIDBatchInputColName.Name = "rbtUIDBatchInputColName";
+            this.rbtUIDBatchInputColName.TabStop = true;
+            this.rbtUIDBatchInputColName.UseVisualStyleBackColor = true;
+            this.rbtUIDBatchInputColName.CheckedChanged += new System.EventHandler(this.rbtUIDBatchInputColName_CheckedChanged);
+            // 
+            // tbxUIDBatchInputCol
+            // 
+            resources.ApplyResources(this.tbxUIDBatchInputCol, "tbxUIDBatchInputCol");
+            this.tbxUIDBatchInputCol.Name = "tbxUIDBatchInputCol";
+            this.tbxUIDBatchInputCol.TextChanged += new System.EventHandler(this.ValidateUIDStartButton);
+            // 
+            // lblUIDBatchInputCol
+            // 
+            resources.ApplyResources(this.lblUIDBatchInputCol, "lblUIDBatchInputCol");
+            this.lblUIDBatchInputCol.Name = "lblUIDBatchInputCol";
+            // 
+            // numUIDBatchInputStartRow
+            // 
+            resources.ApplyResources(this.numUIDBatchInputStartRow, "numUIDBatchInputStartRow");
+            this.numUIDBatchInputStartRow.Maximum = new decimal(new int[] {
+            1048576,
+            0,
+            0,
+            0});
+            this.numUIDBatchInputStartRow.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numUIDBatchInputStartRow.Name = "numUIDBatchInputStartRow";
+            this.numUIDBatchInputStartRow.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblUIDBatchInputStartRow
+            // 
+            resources.ApplyResources(this.lblUIDBatchInputStartRow, "lblUIDBatchInputStartRow");
+            this.lblUIDBatchInputStartRow.Name = "lblUIDBatchInputStartRow";
+            // 
+            // btnUIDBatchBrowseInput
+            // 
+            resources.ApplyResources(this.btnUIDBatchBrowseInput, "btnUIDBatchBrowseInput");
+            this.btnUIDBatchBrowseInput.Name = "btnUIDBatchBrowseInput";
+            this.btnUIDBatchBrowseInput.UseVisualStyleBackColor = true;
+            this.btnUIDBatchBrowseInput.Click += new System.EventHandler(this.btnUIDBatchBrowseInput_Click);
+            // 
+            // tbxUIDBatchInput
+            // 
+            resources.ApplyResources(this.tbxUIDBatchInput, "tbxUIDBatchInput");
+            this.tbxUIDBatchInput.Name = "tbxUIDBatchInput";
+            this.tbxUIDBatchInput.ReadOnly = true;
+            // 
+            // lblUIDBatchInput
+            // 
+            resources.ApplyResources(this.lblUIDBatchInput, "lblUIDBatchInput");
+            this.lblUIDBatchInput.Name = "lblUIDBatchInput";
+            // 
+            // btnUIDSingleCopy
+            // 
+            resources.ApplyResources(this.btnUIDSingleCopy, "btnUIDSingleCopy");
+            this.btnUIDSingleCopy.Name = "btnUIDSingleCopy";
+            this.btnUIDSingleCopy.UseVisualStyleBackColor = true;
+            this.btnUIDSingleCopy.Click += new System.EventHandler(this.btnUIDSingleCopy_Click);
+            // 
+            // tbxUIDSingleOutput
+            // 
+            resources.ApplyResources(this.tbxUIDSingleOutput, "tbxUIDSingleOutput");
+            this.tbxUIDSingleOutput.Name = "tbxUIDSingleOutput";
+            this.tbxUIDSingleOutput.ReadOnly = true;
+            // 
+            // lblUIDSingleOutput
+            // 
+            resources.ApplyResources(this.lblUIDSingleOutput, "lblUIDSingleOutput");
+            this.lblUIDSingleOutput.ForeColor = System.Drawing.Color.Green;
+            this.lblUIDSingleOutput.Name = "lblUIDSingleOutput";
+            // 
+            // tbxUIDSingleInput
+            // 
+            resources.ApplyResources(this.tbxUIDSingleInput, "tbxUIDSingleInput");
+            this.tbxUIDSingleInput.Name = "tbxUIDSingleInput";
+            this.tbxUIDSingleInput.TextChanged += new System.EventHandler(this.ValidateUIDStartButton);
+            // 
+            // lblUIDSingleInput
+            // 
+            resources.ApplyResources(this.lblUIDSingleInput, "lblUIDSingleInput");
+            this.lblUIDSingleInput.Name = "lblUIDSingleInput";
+            // 
+            // rbtUIDBatch
+            // 
+            resources.ApplyResources(this.rbtUIDBatch, "rbtUIDBatch");
+            this.rbtUIDBatch.Name = "rbtUIDBatch";
+            this.rbtUIDBatch.UseVisualStyleBackColor = true;
+            this.rbtUIDBatch.CheckedChanged += new System.EventHandler(this.rbtUIDBatch_CheckedChanged);
+            // 
+            // rbtUIDSingle
+            // 
+            resources.ApplyResources(this.rbtUIDSingle, "rbtUIDSingle");
+            this.rbtUIDSingle.Checked = true;
+            this.rbtUIDSingle.Name = "rbtUIDSingle";
+            this.rbtUIDSingle.TabStop = true;
+            this.rbtUIDSingle.UseVisualStyleBackColor = true;
+            this.rbtUIDSingle.CheckedChanged += new System.EventHandler(this.rbtUIDSingle_CheckedChanged);
             // 
             // MainForm
             // 
@@ -706,6 +934,12 @@
             this.gbxActionsReactions.ResumeLayout(false);
             this.gbxActionsReactions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numActionsMinReactions)).EndInit();
+            this.tabUID.ResumeLayout(false);
+            this.tabUID.PerformLayout();
+            this.pnlUIDBatchInputCol.ResumeLayout(false);
+            this.pnlUIDBatchInputCol.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUIDBatchInputCol)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUIDBatchInputStartRow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -783,5 +1017,29 @@
         private Label lblActionsSummaryText;
         private TextBox tbxActionsSummaryCol;
         private CheckBox cbxActionsSummary;
+        private TabPage tabUID;
+        private RadioButton rbtUIDBatch;
+        private RadioButton rbtUIDSingle;
+        private Label lblUIDSingleOutput;
+        private TextBox tbxUIDSingleInput;
+        private Label lblUIDSingleInput;
+        private Button btnUIDBatchBrowseInput;
+        private TextBox tbxUIDBatchInput;
+        private Label lblUIDBatchInput;
+        private Button btnUIDSingleCopy;
+        private TextBox tbxUIDSingleOutput;
+        private Panel pnlUIDBatchInputCol;
+        public RadioButton rbtUIDBatchInputColNum;
+        public NumericUpDown numUIDBatchInputCol;
+        public RadioButton rbtUIDBatchInputColName;
+        public TextBox tbxUIDBatchInputCol;
+        private Label lblUIDBatchInputCol;
+        public NumericUpDown numUIDBatchInputStartRow;
+        private Label lblUIDBatchInputStartRow;
+        private Label lblUIDBatchInputOpts;
+        private Label lblUIDBatchOutputColName;
+        private TextBox tbxUIDBatchOutputColName;
+        private ProgressBar pbrUID;
+        private Button btnUIDStart;
     }
 }

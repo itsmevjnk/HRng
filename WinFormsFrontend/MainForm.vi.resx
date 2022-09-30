@@ -63,6 +63,9 @@
   <data name="tabActions.Text" xml:space="preserve">
     <value>Check</value>
   </data>
+  <data name="tabUID.Text" xml:space="preserve">
+    <value>Lấy UID</value>
+  </data>
   <data name="btnLoginCookiesCopy.Text" xml:space="preserve">
     <value>Sao chép</value>
   </data>
@@ -256,6 +259,9 @@
   <data name="tbxActionsMentionedUIDCol.Size" type="System.Drawing.Size, System.Drawing">
     <value>354, 23</value>
   </data>
+  <data name="tbxActionsMentionedUIDCol.Text" xml:space="preserve">
+    <value>Các UID được tag</value>
+  </data>
   <data name="cbxActionsMentionsExclude.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 19</value>
   </data>
@@ -405,5 +411,95 @@
   </data>
   <data name="lblActionsFBLink.Text" xml:space="preserve">
     <value>Link bài đăng:</value>
+  </data>
+  <data name="btnUIDStart.Text" xml:space="preserve">
+    <value>Bắt đầu</value>
+  </data>
+  <data name="lblUIDBatchOutputColName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 15</value>
+  </data>
+  <data name="lblUIDBatchOutputColName.Text" xml:space="preserve">
+    <value>Tên cột lưu UID:</value>
+  </data>
+  <data name="lblUIDBatchInputOpts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 15</value>
+  </data>
+  <data name="lblUIDBatchInputOpts.Text" xml:space="preserve">
+    <value>Tùy chọn cho danh sách:</value>
+  </data>
+  <data name="pnlUIDBatchInputCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 186</value>
+  </data>
+  <data name="lblUIDBatchInputColNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 19</value>
+  </data>
+  <data name="lblUIDBatchInputColNum.Text" xml:space="preserve">
+    <value>Số cột:</value>
+  </data>
+  <data name="numUIDBatchInputCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 26</value>
+  </data>
+  <data name="lblUIDBatchInputColName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 19</value>
+  </data>
+  <data name="lblUIDBatchInputColName.Text" xml:space="preserve">
+    <value>Tên:</value>
+  </data>
+  <data name="tbxUIDBatchInputCol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 0</value>
+  </data>
+  <data name="lblUIDBatchInputCol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 15</value>
+  </data>
+  <data name="lblUIDBatchInputCol.Text" xml:space="preserve">
+    <value>Cột link:</value>
+  </data>
+  <data name="numUIDBatchInputStartRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 157</value>
+  </data>
+  <data name="lblUIDBatchInputStartRow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 15</value>
+  </data>
+  <data name="lblUIDBatchInputStartRow.Text" xml:space="preserve">
+    <value>Bắt đầu từ dòng:</value>
+  </data>
+  <data name="tbxUIDBatchInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 109</value>
+  </data>
+  <data name="tbxUIDBatchInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 23</value>
+  </data>
+  <data name="lblUIDBatchInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 15</value>
+  </data>
+  <data name="lblUIDBatchInput.Text" xml:space="preserve">
+    <value>Danh sách nhập vào:</value>
+  </data>
+  <data name="btnUIDSingleCopy.Text" xml:space="preserve">
+    <value>Sao chép</value>
+  </data>
+  <data name="tbxUIDSingleInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 31</value>
+  </data>
+  <data name="tbxUIDSingleInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 23</value>
+  </data>
+  <data name="lblUIDSingleInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 15</value>
+  </data>
+  <data name="lblUIDSingleInput.Text" xml:space="preserve">
+    <value>Link tài khoản:</value>
+  </data>
+  <data name="rbtUIDBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 19</value>
+  </data>
+  <data name="rbtUIDBatch.Text" xml:space="preserve">
+    <value>Lấy UID cho nhiều tài khoản:</value>
+  </data>
+  <data name="rbtUIDSingle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 19</value>
+  </data>
+  <data name="rbtUIDSingle.Text" xml:space="preserve">
+    <value>Lấy UID của một tài khoản:</value>
   </data>
 </root>
