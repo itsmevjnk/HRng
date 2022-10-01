@@ -47,15 +47,15 @@
             // 
             // btnLoginOTPSubmit
             // 
-            resources.ApplyResources(this.btnLoginOTPSubmit, "btnLoginOTPSubmit");
             this.btnLoginOTPSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
+            resources.ApplyResources(this.btnLoginOTPSubmit, "btnLoginOTPSubmit");
             this.btnLoginOTPSubmit.Name = "btnLoginOTPSubmit";
             this.btnLoginOTPSubmit.UseVisualStyleBackColor = true;
             // 
             // btnLoginOTPCancel
             // 
-            resources.ApplyResources(this.btnLoginOTPCancel, "btnLoginOTPCancel");
             this.btnLoginOTPCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.btnLoginOTPCancel, "btnLoginOTPCancel");
             this.btnLoginOTPCancel.Name = "btnLoginOTPCancel";
             this.btnLoginOTPCancel.UseVisualStyleBackColor = true;
             // 
@@ -69,6 +69,8 @@
             this.Controls.Add(this.btnLoginOTPSubmit);
             this.Controls.Add(this.tbxLoginOTP);
             this.Controls.Add(this.lblLoginOTP);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "OTPLoginForm";
             this.ResumeLayout(false);
             this.PerformLayout();

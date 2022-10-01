@@ -19,5 +19,8 @@
     <Compile Update="OTPLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SpreadsheetView.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

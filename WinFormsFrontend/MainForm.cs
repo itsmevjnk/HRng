@@ -68,12 +68,23 @@ namespace WinFormsFrontend
             }
         }
 
+        private int TctWidthDelta, TctHeightDelta;
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             lblLoginStatus.Text = Properties.Resources.StrNotLoggedIn;
             lblLoginStatus.ForeColor = Color.Red;
 
             lblActionsStatus.Text = Properties.Resources.StaActionsReady;
+
+            TctWidthDelta = tctMain.Width - ((Control)sender).Width;
+            TctHeightDelta = tctMain.Height - ((Control)sender).Height;
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            tctMain.Width = ((Control)sender).Width + TctWidthDelta;
+            tctMain.Height = ((Control)sender).Height + TctHeightDelta;
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)
@@ -329,7 +340,8 @@ namespace WinFormsFrontend
 
         private void btnActionsECShow_Click(object sender, EventArgs e)
         {
-
+            SpreadsheetView sview = new SpreadsheetView(GlobalData.EC.ToSpreadsheet());
+            sview.ShowDialog();
         }
 
         private void btnActionsECSave_Click(object sender, EventArgs e)

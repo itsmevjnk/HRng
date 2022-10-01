@@ -180,6 +180,129 @@
   <data name="&gt;&gt;rbtBackendSelenium.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="&gt;&gt;chkSeLoadImg.Name" xml:space="preserve">
+    <value>chkSeLoadImg</value>
+  </data>
+  <data name="&gt;&gt;chkSeLoadImg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSeLoadImg.Parent" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;chkSeLoadImg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkSeHeadless.Name" xml:space="preserve">
+    <value>chkSeHeadless</value>
+  </data>
+  <data name="&gt;&gt;chkSeHeadless.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSeHeadless.Parent" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;chkSeHeadless.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkSeLocalInst.Name" xml:space="preserve">
+    <value>chkSeLocalInst</value>
+  </data>
+  <data name="&gt;&gt;chkSeLocalInst.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSeLocalInst.Parent" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;chkSeLocalInst.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkSeDisableLog.Name" xml:space="preserve">
+    <value>chkSeDisableLog</value>
+  </data>
+  <data name="&gt;&gt;chkSeDisableLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSeDisableLog.Parent" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;chkSeDisableLog.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkSeVerbose.Name" xml:space="preserve">
+    <value>chkSeVerbose</value>
+  </data>
+  <data name="&gt;&gt;chkSeVerbose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSeVerbose.Parent" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;chkSeVerbose.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chkSeConsole.Name" xml:space="preserve">
+    <value>chkSeConsole</value>
+  </data>
+  <data name="&gt;&gt;chkSeConsole.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSeConsole.Parent" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;chkSeConsole.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cbxSeBrowser.Name" xml:space="preserve">
+    <value>cbxSeBrowser</value>
+  </data>
+  <data name="&gt;&gt;cbxSeBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxSeBrowser.Parent" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;cbxSeBrowser.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblSeBrowser.Name" xml:space="preserve">
+    <value>lblSeBrowser</value>
+  </data>
+  <data name="&gt;&gt;lblSeBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSeBrowser.Parent" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;lblSeBrowser.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="gbxSeSettings.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gbxSeSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 95</value>
+  </data>
+  <data name="gbxSeSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 203</value>
+  </data>
+  <data name="gbxSeSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gbxSeSettings.Text" xml:space="preserve">
+    <value>HRngSelenium settings</value>
+  </data>
+  <data name="&gt;&gt;gbxSeSettings.Name" xml:space="preserve">
+    <value>gbxSeSettings</value>
+  </data>
+  <data name="&gt;&gt;gbxSeSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxSeSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxSeSettings.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="chkSeLoadImg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -416,33 +539,6 @@
   </data>
   <data name="&gt;&gt;lblSeBrowser.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="gbxSeSettings.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="gbxSeSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 95</value>
-  </data>
-  <data name="gbxSeSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 203</value>
-  </data>
-  <data name="gbxSeSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="gbxSeSettings.Text" xml:space="preserve">
-    <value>HRngSelenium settings</value>
-  </data>
-  <data name="&gt;&gt;gbxSeSettings.Name" xml:space="preserve">
-    <value>gbxSeSettings</value>
-  </data>
-  <data name="&gt;&gt;gbxSeSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxSeSettings.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gbxSeSettings.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="pbrInitialize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

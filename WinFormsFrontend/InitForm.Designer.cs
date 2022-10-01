@@ -192,6 +192,8 @@
             this.Controls.Add(this.rbtBackendLite);
             this.Controls.Add(this.lblBackendSelect);
             this.Controls.Add(this.lblWelcome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "InitForm";
             this.Load += new System.EventHandler(this.InitForm_Load);
             this.gbxSeSettings.ResumeLayout(false);

@@ -42,22 +42,22 @@
             // 
             // cbxExcelSheet
             // 
-            resources.ApplyResources(this.cbxExcelSheet, "cbxExcelSheet");
             this.cbxExcelSheet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxExcelSheet.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxExcelSheet, "cbxExcelSheet");
             this.cbxExcelSheet.Name = "cbxExcelSheet";
             // 
             // btnExcelOK
             // 
-            resources.ApplyResources(this.btnExcelOK, "btnExcelOK");
             this.btnExcelOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            resources.ApplyResources(this.btnExcelOK, "btnExcelOK");
             this.btnExcelOK.Name = "btnExcelOK";
             this.btnExcelOK.UseVisualStyleBackColor = true;
             // 
             // btnExcelCancel
             // 
-            resources.ApplyResources(this.btnExcelCancel, "btnExcelCancel");
             this.btnExcelCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.btnExcelCancel, "btnExcelCancel");
             this.btnExcelCancel.Name = "btnExcelCancel";
             this.btnExcelCancel.UseVisualStyleBackColor = true;
             // 
@@ -71,6 +71,8 @@
             this.Controls.Add(this.btnExcelOK);
             this.Controls.Add(this.cbxExcelSheet);
             this.Controls.Add(this.lblExcelSheet);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "ExcelImportForm";
             this.ResumeLayout(false);
             this.PerformLayout();

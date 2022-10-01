@@ -117,6 +117,8 @@
             this.Controls.Add(this.rbtCSVBOMYes);
             this.Controls.Add(this.lblCSVBOM);
             this.Controls.Add(this.lblCSVConfig);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "CSVImportForm";
             this.ResumeLayout(false);
             this.PerformLayout();

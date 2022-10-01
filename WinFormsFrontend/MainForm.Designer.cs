@@ -154,6 +154,7 @@
             // 
             // tabLogin
             // 
+            resources.ApplyResources(this.tabLogin, "tabLogin");
             this.tabLogin.Controls.Add(this.btnLoginCookiesCopy);
             this.tabLogin.Controls.Add(this.lblLoginCookiesOutput);
             this.tabLogin.Controls.Add(this.tbxLoginCookiesOutput);
@@ -169,7 +170,6 @@
             this.tabLogin.Controls.Add(this.lblLoginMethod);
             this.tabLogin.Controls.Add(this.lblLoginStatus);
             this.tabLogin.Controls.Add(this.lblLoginStatusTitle);
-            resources.ApplyResources(this.tabLogin, "tabLogin");
             this.tabLogin.Name = "tabLogin";
             this.tabLogin.UseVisualStyleBackColor = true;
             // 
@@ -267,6 +267,7 @@
             // 
             // tabActions
             // 
+            resources.ApplyResources(this.tabActions, "tabActions");
             this.tabActions.Controls.Add(this.gbxActionsSummary);
             this.tabActions.Controls.Add(this.gbxActionsEC);
             this.tabActions.Controls.Add(this.lblActionsStatus);
@@ -278,7 +279,6 @@
             this.tabActions.Controls.Add(this.gbxActionsReactions);
             this.tabActions.Controls.Add(this.tbxActionsFBLink);
             this.tabActions.Controls.Add(this.lblActionsFBLink);
-            resources.ApplyResources(this.tabActions, "tabActions");
             this.tabActions.Name = "tabActions";
             this.tabActions.UseVisualStyleBackColor = true;
             // 
@@ -710,6 +710,7 @@
             // 
             // tabUID
             // 
+            resources.ApplyResources(this.tabUID, "tabUID");
             this.tabUID.Controls.Add(this.pbrUID);
             this.tabUID.Controls.Add(this.btnUIDStart);
             this.tabUID.Controls.Add(this.tbxUIDBatchOutputColName);
@@ -729,7 +730,6 @@
             this.tabUID.Controls.Add(this.lblUIDSingleInput);
             this.tabUID.Controls.Add(this.rbtUIDBatch);
             this.tabUID.Controls.Add(this.rbtUIDSingle);
-            resources.ApplyResources(this.tabUID, "tabUID");
             this.tabUID.Name = "tabUID";
             this.tabUID.UseVisualStyleBackColor = true;
             // 
@@ -912,8 +912,10 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tctMain);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.tctMain.ResumeLayout(false);
             this.tabLogin.ResumeLayout(false);
             this.tabLogin.PerformLayout();

@@ -130,11 +130,11 @@
             // 
             // pnlECUIDCol
             // 
-            resources.ApplyResources(this.pnlECUIDCol, "pnlECUIDCol");
             this.pnlECUIDCol.Controls.Add(this.rbtECUIDColNum);
             this.pnlECUIDCol.Controls.Add(this.numECUIDCol);
             this.pnlECUIDCol.Controls.Add(this.rbtECUIDColName);
             this.pnlECUIDCol.Controls.Add(this.tbxECUIDCol);
+            resources.ApplyResources(this.pnlECUIDCol, "pnlECUIDCol");
             this.pnlECUIDCol.Name = "pnlECUIDCol";
             // 
             // lblECUIDDelim
@@ -144,10 +144,10 @@
             // 
             // pnlECUIDDelim
             // 
-            resources.ApplyResources(this.pnlECUIDDelim, "pnlECUIDDelim");
             this.pnlECUIDDelim.Controls.Add(this.tbxECUIDDelim);
             this.pnlECUIDDelim.Controls.Add(this.rbtECUIDDelimCustom);
             this.pnlECUIDDelim.Controls.Add(this.rbtECUIDDelimNL);
+            resources.ApplyResources(this.pnlECUIDDelim, "pnlECUIDDelim");
             this.pnlECUIDDelim.Name = "pnlECUIDDelim";
             // 
             // tbxECUIDDelim
@@ -173,15 +173,15 @@
             // 
             // btnECOK
             // 
-            resources.ApplyResources(this.btnECOK, "btnECOK");
             this.btnECOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            resources.ApplyResources(this.btnECOK, "btnECOK");
             this.btnECOK.Name = "btnECOK";
             this.btnECOK.UseVisualStyleBackColor = true;
             // 
             // btnECCancel
             // 
-            resources.ApplyResources(this.btnECCancel, "btnECCancel");
             this.btnECCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.btnECCancel, "btnECCancel");
             this.btnECCancel.Name = "btnECCancel";
             this.btnECCancel.UseVisualStyleBackColor = true;
             // 
@@ -200,6 +200,8 @@
             this.Controls.Add(this.numECStartRow);
             this.Controls.Add(this.lblECStartRow);
             this.Controls.Add(this.lblECConfig);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "ECImportForm";
             ((System.ComponentModel.ISupportInitialize)(this.numECStartRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numECUIDCol)).EndInit();
